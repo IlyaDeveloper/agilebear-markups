@@ -1,0 +1,79 @@
+// Function for convert to em & rem
+$baseFontSize: 16;
+
+//to rem
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+//to em
+@function em($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@function unicode($str) {
+  @return unquote('"') + $str + unquote('"');
+}
+
+@function use($key) {
+  @return map-get($theme-map, $key);
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+/// Replace `$search` with `$replace` in `$string`
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// Convert a hex value to comma-delimited rgb values
+@function convert-to-rgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Retrieve color Sass maps
+@function clr($key: 'primary') {
+  @return map-get($colors, $key);
+}
+
+// Retrieve screens Sass maps
+@function screens($key: '') {
+  @return map-get($wideScreens, $key);
+}
+
+/// Map deep get
+//@function map-deep-get($map, $keys...) {
+//  @each $key in $keys {
+//    $map: map-get($map, $key);
+//  }
+//  @return $map;
+//}

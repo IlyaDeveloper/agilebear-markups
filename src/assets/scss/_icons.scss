@@ -1,0 +1,35 @@
+@font-face {
+  font-family: '#{$icon-font-family}';
+  src: url('#{$icon-font-path}/#{$icon-font-family}.eot?k8whxl');
+  src: url('#{$icon-font-path}/#{$icon-font-family}.woff?k8whxl') format('woff'),
+  url('#{$icon-font-path}/#{$icon-font-family}.eot?k8whxl#iefix') format('embedded-opentype'),
+  url('#{$icon-font-path}/#{$icon-font-family}.svg?k8whxl##{$icon-font-family}') format('svg');
+  //src: url('#{$icon-font-path}/#{$icon-font-family}.ttf?k8whxl') format('truetype');
+  font-display: block;
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='#{'-' + $icon-font-prefix}'],
+[class*=' #{'-' + $icon-font-prefix}'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#{'.' + $icon-font-prefix} {
+  @each $icon-name, $name-var in $icons-font-map {
+    &-#{$icon-name}:before {
+      content: $name-var;
+    }
+  }
+}

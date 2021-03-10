@@ -1,0 +1,85 @@
+@mixin scroll-small {
+  scrollbar-width: thin;
+  scrollbar-color: $scroll-thumb-color $scroll-track-color;
+  scrollbar-face-color: $scroll-thumb-color;
+  scrollbar-track-color: $scroll-track-color;
+
+  &::-webkit-scrollbar {
+    width: $scroll-size;
+    height: $scroll-size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: rem(6);
+    background: $scroll-thumb-color;
+
+    transition: background-color $transition-default;
+    will-change: background-color;
+
+    &:hover {
+      background-color: $scroll-thumb-hover-color;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: rem(6);
+    background: $scroll-track-color;
+    //box-shadow: $scroll-track-line;
+  }
+}
+
+%scroll-small {
+  @include scroll-small;
+}
+
+%scroll-small-offset {
+  @include scroll-offset($scroll-size);
+}
+
+/**
+ * It is used to set a smooth transition on the edges of the block when scrolling.
+ * It has two orientations "vertical" and  "horizontal"
+ **/
+@mixin block-gradient-on-scroll($orient, $size, $color, $offset) {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: 1;
+
+    height: $size;
+
+    content: '';
+
+    background: linear-gradient(90deg, rgba($color, 1) 30%, rgba($color, 0) 100%);
+  }
+
+  @if $orient == 'y' {
+    &:before {
+      top: $offset;
+      right: 0;
+      left: 0;
+    }
+
+    &:after {
+      bottom: $offset;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  @if $orient == 'x' {
+    &:before {
+      top: 0;
+      bottom: 0;
+      left: $offset;
+    }
+
+    &:after {
+      top: 0;
+      right: $offset;
+      bottom: 0;
+    }
+  }
+}

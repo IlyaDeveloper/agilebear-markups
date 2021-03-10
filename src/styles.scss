@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* ------------------------------------------- core */
+@import 'assets/scss/functions';
+@import 'assets/scss/mixins';
+@import 'assets/scss/variables';
+@import 'assets/scss/guides';
+@import 'assets/scss/icons';
+@import 'assets/scss/fonts';
+@import 'assets/scss/root';
+@import 'assets/scss/scrolls';
+/* ------------------------------------------- libs */
+@import 'assets/scss/imports/bootstrap';
+@import 'assets/scss/imports/swiper';
+/* ------------------------------------------- layout-root */
+@import 'assets/scss/base';
+@import 'assets/scss/animations';
+@import 'assets/scss/global-modificators';
+/* ------------------------------------------- components */
+//@import 'assets/scss/components/';
+//@import 'assets/scss/components/';

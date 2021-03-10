@@ -1,0 +1,82 @@
+//* css guides
+
+@if $guides {
+  @if $guidesBody {
+    body {
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+
+        height: 100vh;
+
+        content: '';
+
+        background-size: calc((100% / #{$guides-column}));
+        background-image: linear-gradient(
+          to right,
+          rgba($guides-color, 0.6) 0%,
+          rgba($guides-color, 0.6) 40%,
+          rgba(#ff3e23, 0) 40%,
+          rgba(255, 17, 0, 0) 60%,
+          rgba(255, 17, 0, 0) 60%,
+          rgba($guides-color, 0.6) 60%,
+          rgba($guides-color, 0.6) 100%
+        );
+      }
+    }
+  }
+
+  @if $guidesContainer {
+    .container {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+
+        height: 100vh;
+
+        content: '';
+
+        background-size: calc((100% / 12));
+        background-image: linear-gradient(
+          to right,
+          rgba($guides-color, 0.6) 0%,
+          rgba($guides-color, 0.6) 40%,
+          rgba(#ff3e23, 0) 40%,
+          rgba(255, 17, 0, 0) 60%,
+          rgba(255, 17, 0, 0) 60%,
+          rgba($guides-color, 0.6) 60%,
+          rgba($guides-color, 0.6) 100%
+        );
+      }
+    }
+  }
+
+  @if $guidesCenter {
+    body {
+      &:after {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        bottom: 0;
+        z-index: 10000;
+
+        width: rem(2);
+        height: 100vh;
+
+        content: '';
+
+        background: $guides-color;
+
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
