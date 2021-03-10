@@ -1,0 +1,23 @@
+@import "core";
+
+:host {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: calc(var(--header-hgt) + #{$contentGutterX2}) 3vw $contentGutterX2;
+
+  background: var(--cl-bluey-grey);
+
+}
+
+
+.__nav {
+
+}
+
+.__link {
+  font-weight: bold;
+  font-size: rem(24);
+}

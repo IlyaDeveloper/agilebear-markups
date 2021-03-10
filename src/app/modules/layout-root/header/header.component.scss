@@ -1,5 +1,7 @@
 @import "core";
 
+$header-spacer: rem(10);
+
 :host {
   position: fixed;
   top: var(--header-top);
@@ -8,16 +10,15 @@
 
   min-height: var(--header-hgt);
 
-  padding: rem(10) 0;
+  padding: $header-spacer 0;
 
   color: var(--cl-white);
 
   background-color: rgba(clr('slate-grey'), 0.2);
-  background: red;
 }
 
 .__nav {
-  margin: 0 auto 0;
+  margin: (-$header-spacer) auto ;
   white-space: nowrap;
 }
 
@@ -28,6 +29,10 @@
   text-shadow: 0.5px 0.9px rem(4) rgba(2, 3, 3, 0.3);
 
   font-size: rem(16);
+
+  &.--active {
+
+  }
 
   &.--tell {
     letter-spacing: rem(-0.43);

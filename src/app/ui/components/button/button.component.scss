@@ -83,8 +83,7 @@
     will-change: transform;
 
     &:hover {
-      box-shadow: rem(6) rem(6) rem(25) rgba(181, 8, 123, 0.15), rem(4) rem(4) rem(25) rgba(181, 8, 123, 0.05),
-      rem(10) rem(6) rem(25) rgba(181, 8, 123, 0.15);
+      background-color: var(--cl-yellow-orange);
     }
 
     &:active {

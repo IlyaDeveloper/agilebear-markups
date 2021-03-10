@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import {FlexModule, GridModule} from '@angular/flex-layout';
 import {UiModule} from '@app/ui/ui.module';
+import {RouterModule} from '@angular/router';
+import {SharedModule} from '@shared/shared.module';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -11,7 +13,9 @@ import {UiModule} from '@app/ui/ui.module';
     CommonModule,
     FlexModule,
     GridModule,
-    UiModule
+    SharedModule,
+    UiModule,
+    RouterModule
   ]
 })
 export class HeaderModule { }

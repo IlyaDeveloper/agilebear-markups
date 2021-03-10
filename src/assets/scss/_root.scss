@@ -1,7 +1,7 @@
 :root {
   //* root sizes
   --container-limit: #{$containerLimit};
-  --container-gutter: #{rem(75)};
+  --container-gutter: #{$contentGutter};
 
   --header-hgt: #{rem(65)};
   --header-top: 0px;
@@ -13,15 +13,4 @@
   }
 
   //  * colors end
-  @include min-wide(notebookLg) {
-    --container-limit: #{rem(screens(desktop))};
-  }
-
-  @include max-wide(desktopMd) {
-    --container-gutter: #{rem(56)};
-  }
-
-  @include max-wide(tablet) {
-    --header-hgt: #{rem(100)};
-  }
 }

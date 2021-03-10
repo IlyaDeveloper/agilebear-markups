@@ -4,18 +4,26 @@
     <agl-logo></agl-logo>
 
     <nav class="__nav" gdInline gdGap="1.5rem" gdAuto="column" gdAlignColumns="center">
-      <a class="__link" href="">Home</a>
-      <a class="__link" href="">About Us</a>
-      <a class="__link" href="">Services</a>
+      <a class="__link" routerLink="/">Home</a>
+      <a class="__link" routerLink="/about-us">About Us</a>
+      <a class="__link" routerLink="/services">Services</a>
       <a class="__link" href="">Scrum Training</a>
       <a class="__link" href="">Contact Us</a>
     </nav>
 
-    <div class="__right"  fxLayout="row nowrap" fxLayoutAlign="center center">
+    <div class="__right" fxLayout="row nowrap" fxLayoutAlign="center center">
       <agl-button>Book</agl-button>
 
       <a class="__link --tell" href="tel:01173179269">0117 317 9269</a>
     </div>
 
+    <agl-button-menu [class.--is-open]="toggleMenu" (click)="openMenu()"></agl-button-menu>
   </div>
 </header>
+
+
+<agl-main-menu [class.--open]="toggleMenu" [ngClass]="{ '--is-open': isMenuOpen }" (clickLinkEvent)="triggerMenu()"></agl-main-menu>
+
+<vero-side-menu [ngClass]="{ '--is-open': isMenuOpen }" (clickLinkEvent)="triggerMenu()">
+  <vero-button-menu [ngClass]="{ '--is-open --open-small': isMenuOpen }" (click)="triggerMenu()"></vero-button-menu>
+</vero-side-menu>

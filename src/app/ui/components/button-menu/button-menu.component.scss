@@ -1,0 +1,132 @@
+@import 'core';
+
+$button-menu-z-index: z-index(start);
+$button-menu-line: 2px;
+$button-menu-size: rem(22);
+$button-menu-line-offset: 3px;
+$button-menu-line-transition: var(--button-menu-line-transition, 0.2s linear);
+
+:host {
+  display: inline-flex;
+
+  height: max-content;
+
+  &.--show-substrate {
+    .__button:before {
+      width: 0;
+
+      content: '';
+
+      transform: translateX(-100vw);
+    }
+  }
+
+  &:not(.--not-transform) {
+    &.--is-open {
+      .__button {
+        z-index: $button-menu-z-index;
+
+        span {
+          background-color: currentColor; //var(--cl-white);
+
+          &:nth-child(1) {
+            top: rem(10);
+
+            transform: rotate(135deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+            left: rem(-60);
+          }
+
+          &:nth-child(3) {
+            top: rem(10);
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+  }
+
+  &.--is-open {
+    .__button {
+      &:before {
+        position: absolute;
+        top: rem(-48);
+        left: 0;
+
+        width: 100vw;
+        height: calc(100vh - #{rem(-48)});
+
+        background: transparent;
+        transform: none;
+      }
+    }
+  }
+
+}
+
+.__button {
+  width: $button-menu-size;
+  height: $button-menu-size;
+
+  padding: 0;
+
+  border: none;
+  color: inherit;
+
+  transform: rotate(0deg);
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    display: block;
+
+    height: $button-menu-line;
+    min-height: $button-menu-line;
+    width: 100%;
+
+    border-radius: $button-menu-line * 2;
+    background: currentColor;
+
+    opacity: 1;
+
+    transform: rotate(0deg);
+    transition: $button-menu-line-transition;
+
+    &:nth-child(1) {
+      top: $button-menu-line-offset;
+    }
+
+    &:nth-child(2) {
+      top: calc(50% - #{$button-menu-line/2});
+    }
+
+    &:nth-child(3) {
+      top: calc(100% - #{$button-menu-line} - #{$button-menu-line-offset});
+    }
+  }
+
+  @include max-wide(phones) {
+    &:before {
+      content: none;
+    }
+  }
+}
+
+@include only-mouse {
+  :host {
+
+    &.--open-small .__button:hover {
+      transform: scale(1.5);
+    }
+  }
+}
