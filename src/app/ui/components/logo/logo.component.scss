@@ -1,0 +1,27 @@
+@import "core";
+
+$logo-color-1: var(--logo-color-1, var(--cl-white)) !default;
+$logo-color-2: var(--logo-color-2, #28373c) !default;
+
+:host {
+  display: inline-flex;
+  align-items: center;
+
+  width: rem(190);
+  //min-height: rem(45);
+
+  filter: drop-shadow($sh-text);
+}
+
+.__logo {
+  width: inherit;
+  path {
+    &:first-child {
+      fill: $logo-color-1;
+    }
+
+    &:last-child {
+      fill: $logo-color-2;
+    }
+  }
+}

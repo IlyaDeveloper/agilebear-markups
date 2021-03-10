@@ -1,0 +1,7 @@
+@import "core";
+
+:host {
+  display: block;
+
+  padding: (calc(var(--header-top) + var(--header-hgt))) 0 0;
+}

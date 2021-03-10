@@ -1,1 +1,3 @@
-<p>button works!</p>
+<button class="__button" [attr.type]="typeButton" [disabled]="disabled" (click)="onClick($event)">
+  <ng-content></ng-content>
+</button>

@@ -1,38 +1,38 @@
 //* Map size devices for media query
 $wideScreens: (
-    phonesSm: 340px,
-    phones: 480px,
-    phonesLg: 640px,
-    tablet: 768px,
-    laptop: 992px,
-    desktopSm: 1024px,
-    desktopMd: 1170px,
-    desktop: 1280px,
-    notebook: 1366px,
-    notebookLg: 1600px,
-    fullHD: 1800px,
-    retina: 2100px,
-    retina4k: 3656px,
-    retina5k: 5100px,
-    retina8k: 7600px
+  phonesSm: 340px,
+  phones: 480px,
+  phonesLg: 640px,
+  tablet: 768px,
+  laptop: 992px,
+  desktopSm: 1024px,
+  desktopMd: 1170px,
+  desktop: 1280px,
+  notebook: 1366px,
+  notebookLg: 1600px,
+  fullHD: 1800px,
+  retina: 2100px,
+  retina4k: 3656px,
+  retina5k: 5100px,
+  retina8k: 7600px
 );
 
 $contentScale: (
-    //(
-    //    direction: 'max-width',
-    //    wide: screens(phonesSm),
-    //    scale: 92%
-    //),
-    //(
-    //  direction: 'max-width',
-    //  wide: screens(notebookLg),
-    //  scale: 86%
-    //),
-    //(
-    //  direction: 'max-width',
-    //  wide: screens(desktopMd),
-    //  scale: 80%
-    //),
+  //(
+  //    direction: 'max-width',
+  //    wide: screens(phonesSm),
+  //    scale: 92%
+  //),
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(notebookLg),
+  //  scale: 86%
+  //),
+  //(
+  //  direction: 'max-width',
+  //  wide: screens(desktopMd),
+  //  scale: 80%
+  //),
 );
 
 //* Main content && elements sizes
@@ -58,41 +58,57 @@ $multiplier: 1.25 !default;
 
 $elemRadius: rem(40) !default;
 $elemRadiusNormal: rem(10) !default;
-$elemRadiusSmall: rem(8) !default;
+$elemRadiusSmall: rem(4) !default;
 
 //* z-index
 $z-index-step: 10 !default;
 $z-index: (
-    start: 10,
-    middle: 50,
-    header: 100,
-    modal: 1000
+  start: 10,
+  middle: 50,
+  header: 100,
+  modal: 1000
 ) !default;
 
 // * colors
 $colors: (
-    'primary': #000000,
-    'secondary': #ffffff,
-    'gray': #b2b2b2,
-    'red': #FF0000,
+  's-green': #4c9d2f,
+  'green': #69b941,
+  's-green-lime': #7fbb00,
+  's-green-lime-dark': #79b708,
+  's-dark-lime-green': #78b700,
+  's-green-lemon': #a0e802,
+  'steel': #7a8,
+  's-greyish-brown': #3c3327,
+  'black': #120e09,
+  'black-s': #13110c,
+  'blue-light': #d6e7ef,
+  'orange': #ed6523,
+  'yellow-orange': #faaf00,
+  'yellow-orange-s': #f9af01,
+  'slate-grey': #565f6a,
+  'battleship-grey': #787a83,
+  'bluey-grey': #99a2ac,
+  'pale-violet': #cfcdd9,
+  'brown-grey': #b5b5b5,
+  'pale-grey': #f5f5f8,
+  'pale-lilac-two': #e7e7e9,
+  'pale-lilac': #e6e6e8,
+  'white':#ffffff
 ) !default;
 
-$cl-primary: var(--cl-primary) !default;
-$cl-primary-light: var(--cl-gray) !default;
-
-$cl-secondary: var(--cl-secondary) !default;
-$cl-secondary-light: var(--cl-light-background) !default;
-
-$base-font-color: $cl-primary !default;
+$base-font-color: var(--cl-slate-grey) !default;
 $base-font-size-color: 16px !default;
 
 $body-color: $base-font-color;
 
+$border-color: var(--cl-pale-violet);
+
 $cl-red: var(--cl-red);
 
-$cl-placeholder: var(--cl-text-field);
+$cl-placeholder: var(--cl-brown-grey);
 
 // * shadows
+$sh-text: 1px 1.7px rem(5) rgba(2, 3, 3, 0.1);
 
 // * gradients
 //$gr-btn: linear-gradient(90deg, #cc229a 0%, #cc229a 1%, #941887 100%);
@@ -111,14 +127,13 @@ $letter-spacing: 0.25px !default;
 $font-path: '/assets/fonts' !default;
 $font-inter-path: $font-path + '/Inter/' !default;
 
-$font-family-primary: 'DIN Next LT Pro'; //'Inter', sans-serif;
-$font-family-secondary: 'Halenoir Compact';
-$font-family-tertiary: 'Halenoir Compact Black Outline';
+$font-family-primary: 'Montserrat', sans-serif; //'Inter', sans-serif;
+//$font-family-secondary: 'Halenoir Compact';
 
 
 //* Icons
-$icon-font-family: 'growfast' !default;
-$icon-font-prefix: 'grf';
+$icon-font-family: 'agilebear' !default;
+$icon-font-prefix: 'agi';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
 $icons-font-map: (
@@ -130,21 +145,14 @@ $button-primary-hover-bg-color: var(--cl-violet);
 
 $button-primary-disabled-color: var(--cl-white);
 $button-primary-disabled-bg-color: var(--cl-violet-1);
-//$button-primary-disabled-border-color: $cl-stroke;
+$disabled-opacity: 0.9;
 
 $button-transition: background-color 0.3s ease-in-out, transform 0.3s cubic-bezier(0.17, 0.67, 0.82, 0.59),
 box-shadow 0.4s ease-in-out, color 0.2s ease-in-out;
 
-// * buttons arrow
-$button-arrow-font-size: rem(16);
-$button-arrow-icon-size: 0.88em;
-$button-arrow-color: var(--button-arrow-color, var(--cl-dark-stroke));
-$button-arrow-hover-color: $cl-primary;
-//$button-arrow-disabled: $cl-stroke;
-
 //* links
 $link-color: currentColor !default;
-$link-hover-color: $cl-primary !default;
+$link-hover-color: var(--cl-yellow-orange-s) !default;
 
 //* transitions && animations
 $transition-default: 0.3s ease-in-out !default;
