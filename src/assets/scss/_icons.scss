@@ -26,10 +26,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#{'.' + $icon-font-prefix} {
+.agi {
   @each $icon-name, $name-var in $icons-font-map {
     &-#{$icon-name}:before {
       content: $name-var;
     }
+  }
+}
+
+.agi-file-pdf {
+  &:before {
+    content: $agi-file-pdf-path1;
+    color: rgb(255, 33, 22);
+  }
+
+  &:after {
+    margin-left: -1em;
+
+    content: $agi-file-pdf-path2;
+    color: rgb(44, 44, 44);
   }
 }

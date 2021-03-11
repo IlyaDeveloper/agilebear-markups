@@ -81,9 +81,16 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   color: var(--cl-steel);
 
   @include insert-icons {
+    max-width: rem(40);
+    height: rem(40);
+
     font-size: rem(40);
     color: var(--cl-white);
   }
+}
+
+.__soc {
+
 }
 
 .__copy {

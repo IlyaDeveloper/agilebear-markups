@@ -136,7 +136,34 @@ $icon-font-family: 'agilebear' !default;
 $icon-font-prefix: 'agi-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
+$agi-file-pdf-path1: "\e90c";
+$agi-file-pdf-path2: "\e90d";
+$agi-arrow-lt: "\e900";
+$agi-arrow-rt: "\e901";
+$agi-arrow-dw: "\e902";
+$agi-arrow-up: "\e903";
+$agi-chat: "\e904";
+$agi-check-round: "\e905";
+$agi-check: "\e906";
+$agi-close: "\e907";
+$agi-soc-fb: "\e908";
+$agi-soc-ln: "\e909";
+$agi-soc-tw: "\e90a";
+$agi-upload: "\e90b";
+
 $icons-font-map: (
+  arrow-lt: $agi-arrow-lt,
+  arrow-rt: $agi-arrow-rt,
+  arrow-dw: $agi-arrow-dw,
+  arrow-up: $agi-arrow-up,
+  chat: $agi-chat,
+  check-round: $agi-check-round,
+  check: $agi-check,
+  close: $agi-close,
+  soc-fb: $agi-soc-fb,
+  soc-ln: $agi-soc-ln,
+  soc-tw: $agi-soc-tw,
+  upload: $agi-upload
 );
 
 // * buttons
