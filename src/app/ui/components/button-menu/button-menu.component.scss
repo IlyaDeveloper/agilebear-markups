@@ -65,6 +65,17 @@ $button-menu-line-transition: var(--button-menu-line-transition, 0.2s linear);
     }
   }
 
+  &.--is-open-hide {
+    .__button {
+      width: 0;
+    }
+  }
+
+  &.--open-small {
+    .__button {
+      width: rem(12);
+    }
+  }
 }
 
 .__button {
@@ -124,6 +135,11 @@ $button-menu-line-transition: var(--button-menu-line-transition, 0.2s linear);
 
 @include only-mouse {
   :host {
+    &.--not-transform {
+      .__button:hover {
+        color: red;
+      }
+    }
 
     &.--open-small .__button:hover {
       transform: scale(1.5);

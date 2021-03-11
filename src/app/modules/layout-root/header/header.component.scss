@@ -3,6 +3,9 @@
 $header-spacer: rem(10);
 
 :host {
+  //--link-color: #{var(--cl-white)};
+  --link-color-hover: #{var(--cl-white)};
+
   position: fixed;
   top: var(--header-top);
   left: 0;
@@ -15,14 +18,22 @@ $header-spacer: rem(10);
   color: var(--cl-white);
 
   background-color: rgba(clr('slate-grey'), 0.2);
+
+  //background: red;
 }
 
 .__nav {
-  margin: (-$header-spacer) auto ;
+  margin: (-$header-spacer) auto;
   white-space: nowrap;
 }
 
+.__btn-menu {
+  margin: auto 0 auto auto;
+}
+
 .__link {
+  position: relative;
+
   padding: 0 rem(10);
 
   font-weight: 500;
@@ -30,19 +41,94 @@ $header-spacer: rem(10);
 
   font-size: rem(16);
 
-  &.--active {
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: var(--header-link-before-bottom, 100%);
+    z-index: -1;
 
+    content: var(--header-link-before, '');
+
+    clip-path: polygon(0 0, 100% 0%, 100% 71%, 0% 100%);
+
+    background-color: var(--cl-slate-grey);
+    transition: bottom .33s linear;
+    opacity: 0.4;
+  }
+
+  &[ngbDropdown]:after {
+    content: none;
+  }
+
+  &:not([ngbDropdown]) {
+    &.--active {
+      --header-link-before-bottom: #{rem(-26)};
+      //--header-link-before: '';
+    }
+
+    @include only-mouse {
+      &:hover {
+        --header-link-before-bottom: #{rem(-26)};
+        //--header-link-before: '';
+      }
+    }
   }
 
   &.--tell {
+    --header-link-before: none;
+    --link-color-hover: #{var(--cl-yellow-orange)};
+
+    margin-left: rem(30);
+
     letter-spacing: rem(-0.43);
     font-size: rem(17);
     font-weight: 600;
     text-shadow: $sh-text;
-
   }
 }
 
 .__right {
   white-space: nowrap;
+}
+
+.__dropdown {
+  width: rem(400);
+
+  margin-top: -1px;
+  padding: rem(24) rem(10) 58%;
+
+  color: var(--cl-white);
+
+  border-radius: 0;
+
+  clip-path: polygon(0 0, 100% 0%, 100% 81%, 0% 100%);
+  background-color: var(--cl-slate-grey);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    bottom: rem(-10);
+  }
+}
+
+.__dropdown-item {
+  padding: 0;
+
+  color: var(--cl-white);
+  white-space: normal;
+
+  &:before {
+    width: max-content;
+    margin-right: rem(5);
+    content: '-';
+  }
+
+  img {
+    width: rem(26);
+  }
 }

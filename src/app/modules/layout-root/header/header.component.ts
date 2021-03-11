@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'agl-header',
@@ -7,15 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  toggleMenu: boolean =false
+  html: HTMLElement = this.document.getElementsByTagName('html')[0];
+  body: HTMLElement = this.document.getElementsByTagName('body')[0];
+  isMenuOpen: boolean;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  openMenu(): void{
-    this.toggleMenu =!this.toggleMenu;
-  }
+  triggerMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
 
+    this.isMenuOpen ? this.body.classList.add('gm-scroll-hide') : this.body.classList.remove('gm-scroll-hide');
+  }
 }

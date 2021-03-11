@@ -1,29 +1,108 @@
 <header>
-  <div class="container" fxLayout="row nowrap">
-
+  <div class="container" fxLayout="row nowrap" fxLayoutGap.lt-md="1rem">
     <agl-logo></agl-logo>
 
-    <nav class="__nav" gdInline gdGap="1.5rem" gdAuto="column" gdAlignColumns="center">
-      <a class="__link" routerLink="/">Home</a>
-      <a class="__link" routerLink="/about-us">About Us</a>
-      <a class="__link" routerLink="/services">Services</a>
-      <a class="__link" href="">Scrum Training</a>
-      <a class="__link" href="">Contact Us</a>
+    <nav class="__nav" gdInline gdGap="1.5rem" gdAuto="column" fxHide.lt-md>
+      <a class="__link" routerLink="/" routerLinkActive="--active"
+         [routerLinkActiveOptions]="{exact:true}"
+         gdAlignColumns="center">Home</a>
+      <a class="__link" routerLink="/about-us" routerLinkActive="--active" gdAlignColumns="center">About Us</a>
+
+      <a class="__link" id="dropdownServices" gdAlignColumns="center" ngbDropdown ngbDropdownToggle>
+        <span>Services</span>
+
+        <div class="__dropdown" ngbDropdownMenu aria-labelledby="dropdownServices">
+          <div gdGap="0.5rem">
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Overview</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Certified ScrumMaster Training</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Certified Product Owner Training</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>The Cultural Change</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Advanced Certified ScrumMaster Training</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>User Story Workshops</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Agile Coaching Sessions</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Lean Workshops</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Scrum Overview</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Scrum Dragon</span>
+              <img src="/assets/img/">
+            </a>
+          </div>
+        </div>
+      </a>
+
+      <a class="__link" id="dropdownTraining" gdAlignColumns="center" ngbDropdown ngbDropdownToggle>
+        <span>Scrum Training</span>
+
+        <div class="__dropdown" ngbDropdownMenu aria-labelledby="dropdownTraining">
+          <div gdGap="0.5rem">
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Overview</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Certified ScrumMaster Training   2 - 4 March 2021</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Certified Product Owner Training   23 - 25 March 2021</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Advanced Certified ScrumMaster Training   27 - 29 April 2021</span>
+              <img src="/assets/img/">
+            </a>
+            <a class="__dropdown-item" routerLink="/" ngbDropdownItem fxLayoutGap="0.5rem" fxLayoutAlign="start center">
+              <span>Certified Product Owner Training   15 - 17 June 2021</span>
+              <img src="/assets/img/">
+            </a>
+          </div>
+        </div>
+      </a>
+
+
+      <a class="__link" routerLink="/contact" routerLinkActive="--active" gdAlignColumns="center">Contact Us</a>
     </nav>
 
-    <div class="__right" fxLayout="row nowrap" fxLayoutAlign="center center">
+    <div class="__right" fxLayout="row nowrap" fxLayoutAlign="center center"  fxHide.lt-md>
       <agl-button>Book</agl-button>
 
       <a class="__link --tell" href="tel:01173179269">0117 317 9269</a>
     </div>
 
-    <agl-button-menu [class.--is-open]="toggleMenu" (click)="openMenu()"></agl-button-menu>
+    <agl-button-menu class="__btn-menu"
+                     fxHide.gt-md
+                     [ngClass]="{ '--is-open --is-open-hide': isMenuOpen }"
+                     (click)="triggerMenu()"></agl-button-menu>
   </div>
 </header>
 
-
-<agl-main-menu [class.--open]="toggleMenu" [ngClass]="{ '--is-open': isMenuOpen }" (clickLinkEvent)="triggerMenu()"></agl-main-menu>
-
-<vero-side-menu [ngClass]="{ '--is-open': isMenuOpen }" (clickLinkEvent)="triggerMenu()">
-  <vero-button-menu [ngClass]="{ '--is-open --open-small': isMenuOpen }" (click)="triggerMenu()"></vero-button-menu>
-</vero-side-menu>
+<agl-main-menu [class.--is-open]="isMenuOpen" [ngClass]="{ '--is-open': isMenuOpen }" (clickLinkEvent)="triggerMenu()">
+  <agl-button-menu [ngClass]="{ '--is-open': isMenuOpen }" (click)="triggerMenu()"></agl-button-menu>
+</agl-main-menu>
