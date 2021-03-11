@@ -8,6 +8,7 @@ import {FlexModule, GridModule} from '@angular/flex-layout';
 import {UiModule} from '../ui/ui.module';
 import {ServicesPlaceComponent} from './components/services-place/services-place.component';
 import {ServicesLogosComponent} from './components/services-logos/services-logos.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const COMPONENTS = [
   TopBgSectionComponent,
@@ -25,7 +26,8 @@ const COMPONENTS = [
     RouterModule,
     FlexModule,
     GridModule,
-    UiModule
+    UiModule,
+    NgbModule
   ]
 })
 export class SharedModule {

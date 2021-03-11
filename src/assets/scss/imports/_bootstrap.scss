@@ -1,16 +1,16 @@
 // * Include all bootstrap
-//@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 
 // * include only component
-@import '../../../../node_modules/bootstrap/scss/functions';
-@import '../../../../node_modules/bootstrap/scss/variables';
-@import '../../../../node_modules/bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 //@import "~bootstrap/scss/root";
-@import '../../../../node_modules/bootstrap/scss/reboot';
+@import '~bootstrap/scss/reboot';
 //@import "~bootstrap/scss/type";
 //@import "~bootstrap/scss/images";
 //@import "~bootstrap/scss/code";
-//@import '../../../../node_modules/bootstrap/scss/grid';
+//@import '~bootstrap/scss/grid';
 //@import "~bootstrap/scss/tables";
 //@import "~bootstrap/scss/forms";
 //@import "~bootstrap/scss/buttons";
@@ -26,14 +26,14 @@
 //@import "~bootstrap/scss/pagination";
 //@import "~bootstrap/scss/badge";
 //@import "~bootstrap/scss/jumbotron";
-//@import '../../../../node_modules/bootstrap/scss/alert';
-//@import '../../../../node_modules/bootstrap/scss/progress';
+//@import '~bootstrap/scss/alert';
+//@import '~bootstrap/scss/progress';
 //@import "~bootstrap/scss/media";
 //@import "~bootstrap/scss/list-group";
 //@import "~bootstrap/scss/close";
-//@import '../../../../node_modules/bootstrap/scss/modal';
+//@import '~bootstrap/scss/modal';
 //@import "~bootstrap/scss/tooltip";
-//@import '../../../../node_modules/bootstrap/scss/popover';
+@import '~bootstrap/scss/popover';
 //@import "~bootstrap/scss/carousel";
 //@import "~bootstrap/scss/utilities";
 //@import "~bootstrap/scss/print";

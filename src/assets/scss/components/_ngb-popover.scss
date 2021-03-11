@@ -1,0 +1,33 @@
+.popover {
+  filter: $popover-box-shadow;
+
+  .popover-body {
+    width: max-content;
+    max-width: $popover-max-width;
+
+    padding-top: 0;
+
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  .popover-header {
+    padding-bottom: 0;
+
+    text-align: center;
+
+    border: none;
+  }
+}
+
+@include max-wide(phonesLg) {
+  .popover {
+    .popover-body {
+      max-width: rem(200);
+
+      padding: $contentGutter;
+
+      font-size: rem(12);
+    }
+  }
+}

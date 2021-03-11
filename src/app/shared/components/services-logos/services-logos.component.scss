@@ -1,16 +1,23 @@
 @import "core";
 
-:host{
-  &.--s22{
-
+:host {
+  &.--s22 {
+    --services-logos-wdh: #{rem(22)}
   }
 
-  &.--s70{
-
+  &.--s70 {
+    --services-logos-wdh: #{rem(70)}
   }
 
-  &.--s100{
-
+  &.--s100 {
+    --services-logos-wdh: #{rem(100)}
   }
 }
 
+
+.__img {
+  width: var(--services-logos-wdh, rem(78));
+
+  object-fit: cover;
+  object-position: center;
+}

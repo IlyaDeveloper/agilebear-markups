@@ -1,3 +1,10 @@
-<figure gdAuto="column" gdGap="1.5rem">
-  <img class="__img" src="assets/img/agilebear_csp.png" alt="">
+<figure gdInline gdAuto="column" gdGap="1.5rem">
+  <img class="__img"
+       *ngFor="let item of list"
+       [attr.src]="['assets/img/services/'+ item.img]" alt=""
+
+       [disablePopover]="popoverTrigger"
+       [popoverTitle]="item.caption"
+       [ngbPopover]="item.text"
+  >
 </figure>

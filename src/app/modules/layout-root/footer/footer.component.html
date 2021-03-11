@@ -1,7 +1,8 @@
 <footer class="__footer container" fxLayout="column">
   <article class="__book" gdColumns="4.875rem 1fr 1fr" gdGap="1.5rem">
     <figure class="__figure">
-      <img src="assets/img/agilebear_csm.png" alt="">
+      <!--      <img src="assets/img/agilebear_csm.png" alt="">-->
+
     </figure>
 
     <agl-services-place></agl-services-place>
@@ -12,7 +13,11 @@
     </div>
   </article>
 
+  <agl-services-logos [usedLogo]="logos"></agl-services-logos>
+  <agl-services-logos></agl-services-logos>
+
   <article class="__book" gdColumns=" 1fr 1fr" gdGap="1.5rem">
+
 
     <div fxLayoutGap="2rem" fxLayoutAlign="center center">
       <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
