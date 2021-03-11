@@ -6,14 +6,16 @@ import {ButtonMenuComponent} from '@app/ui/components/button-menu/button-menu.co
 import { LinkComponent } from './components/link/link.component';
 import {RouterModule} from '@angular/router';
 import {FlexModule, GridModule} from '@angular/flex-layout';
+import { ButtonDownloadComponent } from './components/button-download/button-download.component';
 
 @NgModule({
-  declarations: [ButtonComponent, ButtonMenuComponent, LogoComponent, LinkComponent],
+  declarations: [ButtonComponent, ButtonMenuComponent, LogoComponent, LinkComponent, ButtonDownloadComponent],
   exports: [
     ButtonComponent,
     ButtonMenuComponent,
     LogoComponent,
-    LinkComponent
+    LinkComponent,
+    ButtonDownloadComponent
   ],
   imports: [
     CommonModule,

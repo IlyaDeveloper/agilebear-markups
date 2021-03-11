@@ -5,6 +5,7 @@ import {FlexModule, GridModule} from '@angular/flex-layout';
 import {RouterModule} from '@angular/router';
 import {UiModule} from '@app/ui/ui.module';
 import {SharedModule} from '@shared/shared.module';
+import {NgbButtonsModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {SharedModule} from '@shared/shared.module';
     GridModule,
     RouterModule,
     SharedModule,
-    UiModule
+    UiModule,
+    NgbButtonsModule
   ]
 })
 export class FooterModule {

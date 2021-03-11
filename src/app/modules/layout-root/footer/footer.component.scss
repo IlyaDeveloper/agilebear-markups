@@ -86,11 +86,13 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
     font-size: rem(40);
     color: var(--cl-white);
+
+    @include only-mouse {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
-}
-
-.__soc {
-
 }
 
 .__copy {
@@ -104,3 +106,49 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     font-size: rem(11);
   }
 }
+
+
+.__book {
+  position: relative;
+
+  padding: rem(5) 0;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50vw;
+    right: 0;
+    z-index: -1;
+
+    //width: 100%;
+
+    content: '';
+
+    border: 1px solid var(--cl-pale-lilac-two);
+    border-left: none;
+    border-right: none;
+  }
+
+}
+
+
+.__left {
+  //float:left;
+  //background: red;
+  //clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.__right {
+
+  background: black url(https://pp.userapi.com/c849120/v849120857/cc331/XftS2mpmwHo.jpg) center top no-repeat;
+  height:100vh;
+  width:40vw;
+
+  background-size:cover;
+  float:right;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  shape-outside: polygon(100% 0, 0% 100%, 100% 100%)
+}
+
+

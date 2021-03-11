@@ -1,8 +1,30 @@
 <footer class="__footer container" fxLayout="column">
-  <div class="__content" fxFlex="1 1">
-    <p class="__text-l" fxLayout="row" fxLayoutGap="0.4rem">
-      <mark>*</mark>
-      <span>
+
+
+  <div class="">
+
+
+    <article class="__right" fxFlex="1 1">
+      <p class="__text-r">
+        “Your obvious enthusiasm and knowledge makes the time fly and brings to life the material!”
+      </p>
+    </article>
+
+    <div class="__left">
+
+      <article class="__book" fxLayout="nowrap" fxLayoutGap="1rem">
+        <span>Enquiries…</span>
+        <span>Upcoming Courses</span>
+
+        <agl-button class="--orange">Book Your Place</agl-button>
+
+        <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
+        <agl-button class="--upload"></agl-button>
+      </article>
+
+      <p class="__text-l" fxLayout="row" fxLayoutGap="0.4rem">
+        <mark>*</mark>
+        <span>
           During the world crisis, the ScrumAlliance are permitting us to offer you the opportunity to attend live online
         courses. These virtual workshops comply with the ScrumAlliance values, standards and certifications. They
         include at least14 hours of face-to-face time with our world-leading Certified Scrum Trainer Nigel Baker. As
@@ -11,15 +33,16 @@
         traditionally two-day events over three shorter days. We want to ensure yourexperience is enjoyable,
         sustainable and to support your work-life balance.
         </span>
-    </p>
+      </p>
 
-    <p class="__text-r">
-      “Your obvious enthusiasm and knowledge makes the time fly and brings to life the material!”
-    </p>
+    </div>
+
+
   </div>
 
-  <div class="__down" gdGap="1rem" gdColumns="1fr 2fr 1fr" gdAlignColumns="center">
-    <div class="__soc" fxLayout="inline" fxLayoutGap="0.625rem">
+
+  <article class="__down" gdGap="1rem" gdColumns="1fr 2fr 1fr" gdAlignColumns="center">
+    <div fxLayout="inline" fxLayoutGap="0.625rem">
       <a class="agi-soc-fb"></a>
       <a class="agi-soc-tw"></a>
       <a class="agi-soc-ln"></a>
@@ -31,10 +54,10 @@
       <span>Registered Company Number: 6453580 VAT Number: 924403937</span>
     </div>
 
-    <div class="" fxLayoutGap="1rem" fxLayoutAlign="center">
+    <div fxLayoutGap="1rem" fxLayoutAlign="center">
       <agl-link [link]="'/privacy'">Privacy Policy</agl-link>
       <span>|</span>
       <agl-link [link]="'/terms-of-use'">Terms Of Use</agl-link>
     </div>
-  </div>
+  </article>
 </footer>

@@ -9,8 +9,8 @@
     --link-color-hover: var(--cl-yellow-orange);
   }
 
-  &.--arrow{
-    .__link{
+  &.--arrow {
+    .__link {
       //&:after {
       //  @include pseudo-icon($cgi-arrow-right, 12);
       //}
@@ -33,13 +33,14 @@
     right: 2px;
     bottom: 0;
 
-    height: 2px;
+    //height: 2px;
 
     content: '';
 
-    background-color: currentColor;
+    border-bottom: 2px dotted currentColor;
 
     transition: left .4s linear;
+    opacity: 0.8;
   }
 
   @include only-mouse {

@@ -12,6 +12,27 @@
   &.--close {
   }
 
+  &.--upload {
+    .__button {
+      width: rem(50);
+      height: rem(50);
+
+      line-height: 1;
+
+      color: var(--cl-pale-violet);
+
+      background: transparent;
+
+      &:before {
+        @include pseudo-icon($agi-upload, 50)
+      }
+    }
+  }
+
+  &.--orange {
+    --btn-bg: var(--cl-yellow-orange);
+  }
+
   //* Disabled styles
 
   &.--disabled,
