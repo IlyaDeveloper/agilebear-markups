@@ -1,0 +1,60 @@
+@import "core";
+
+:host {
+  font-size: rem(15);
+  font-weight: 500;
+
+  &.--orange {
+    --link-color: var(--cl-orange);
+    --link-color-hover: var(--cl-yellow-orange);
+  }
+
+  &.--arrow{
+    .__link{
+      //&:after {
+      //  @include pseudo-icon($cgi-arrow-right, 12);
+      //}
+      //
+    }
+  }
+}
+
+.__link {
+  position: relative;
+  //color: currentColor;
+
+  padding: 0 0 rem(4);
+
+  text-decoration: none;
+
+  &:before {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+
+    height: 2px;
+
+    content: '';
+
+    background-color: currentColor;
+
+    transition: left .4s linear;
+  }
+
+  @include only-mouse {
+    &:hover {
+      &:before {
+        left: 10%;
+        animation: link-side .6s linear;
+      }
+    }
+  }
+
+}
+
+@include keyframes(link-side) {
+  50% {
+    left: 100%;
+  }
+}

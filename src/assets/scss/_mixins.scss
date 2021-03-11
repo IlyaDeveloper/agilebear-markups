@@ -379,8 +379,9 @@
 //  }
 //}
 
+
 @mixin insert-icons {
-  [class*='#{'-' + $icon-font-prefix}'] {
+  [class*='#{$icon-font-prefix}'] {
     @content;
   }
 }

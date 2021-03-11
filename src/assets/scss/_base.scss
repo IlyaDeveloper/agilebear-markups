@@ -32,7 +32,7 @@ body {
   background-color: var(--cl-white);
 
   opacity: 0;
-  animation: smooth-opacity 2s .6s 1 forwards cubic-bezier(.17,.67,.83,.67) ;
+  animation: smooth-opacity 2s .6s 1 forwards cubic-bezier(.17, .67, .83, .67);
 }
 
 ul,
@@ -54,13 +54,15 @@ a {
   cursor: pointer;
   user-select: none;
 
-  &:hover {
-    color: var(--link-color-hover, $link-hover-color);
+  @include only-mouse {
+    &:hover {
+      color: var(--link-color-hover, $link-hover-color);
+    }
   }
 
-  @include only-edge {
-    color: var(--link-color, $base-font-color);
-  }
+  /*  @include only-edge {
+      color: var(--link-color, $base-font-color);
+    }*/
 }
 
 a,

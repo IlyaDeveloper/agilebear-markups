@@ -10,8 +10,8 @@
   font-style: normal;
 }
 
-[class^='#{'-' + $icon-font-prefix}'],
-[class*=' #{'-' + $icon-font-prefix}'] {
+[class^='#{$icon-font-prefix}'],
+[class*=' #{$icon-font-prefix}'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icon-font-family}' !important;
   speak: none;

@@ -77,7 +77,6 @@ $colors: (
   's-green-lime-dark': #79b708,
   's-dark-lime-green': #78b700,
   's-green-lemon': #a0e802,
-  'steel': #7a8,
   's-greyish-brown': #3c3327,
   'black': #120e09,
   'black-s': #13110c,
@@ -87,6 +86,7 @@ $colors: (
   'yellow-orange-s': #f9af01,
   'slate-grey': #565f6a,
   'battleship-grey': #787a83,
+  'steel': #7a838e,
   'bluey-grey': #99a2ac,
   'pale-violet': #cfcdd9,
   'brown-grey': #b5b5b5,
@@ -133,7 +133,7 @@ $font-family-primary: 'Montserrat', sans-serif; //'Inter', sans-serif;
 
 //* Icons
 $icon-font-family: 'agilebear' !default;
-$icon-font-prefix: 'agi';
+$icon-font-prefix: 'agi-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
 $icons-font-map: (
