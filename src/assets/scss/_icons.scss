@@ -37,7 +37,7 @@
 .agi-file-pdf {
   &:before {
     content: $agi-file-pdf-path1;
-    color: rgb(255, 33, 22);
+    color: $cl-red;
   }
 
   &:after {

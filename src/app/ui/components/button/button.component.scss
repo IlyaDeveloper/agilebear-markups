@@ -30,7 +30,19 @@
   }
 
   &.--orange {
+    --btn-bg: var(--cl-orange);
+  }
+
+  &.--yellow-orange {
     --btn-bg: var(--cl-yellow-orange);
+  }
+
+  &.--nowrap {
+    .__button {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden
+    }
   }
 
   //* Disabled styles
@@ -96,7 +108,11 @@
 
 @include only-mouse {
   :host {
-
+    &.--upload {
+      .__button:hover {
+        color: var(--cl-yellow-orange);
+      }
+    }
   }
 
   .__button {

@@ -6,10 +6,20 @@ import {MainMenuComponent} from './components/main-menu/main-menu.component';
 import {RouterModule} from '@angular/router';
 import {FlexModule, GridModule} from '@angular/flex-layout';
 import {UiModule} from '../ui/ui.module';
+import {ServicesPlaceComponent} from './components/services-place/services-place.component';
+import {ServicesLogosComponent} from './components/services-logos/services-logos.component';
+
+const COMPONENTS = [
+  TopBgSectionComponent,
+  TopPanelComponent,
+  MainMenuComponent,
+  ServicesPlaceComponent,
+  ServicesLogosComponent
+];
 
 @NgModule({
-  declarations: [TopBgSectionComponent, TopPanelComponent, MainMenuComponent],
-  exports: [TopBgSectionComponent, TopPanelComponent, MainMenuComponent],
+  declarations: [...COMPONENTS],
+  exports: [...COMPONENTS],
   imports: [
     CommonModule,
     RouterModule,

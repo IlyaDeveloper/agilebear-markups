@@ -19,7 +19,6 @@
         }
       }
     }
-
   }
 }
 
@@ -34,6 +33,12 @@
 
   border: none;
   background: none;
+
+  @include only-mouse{
+    &:hover{
+      color: $cl-red;
+    }
+  }
 }
 
 @include insert-icons {
