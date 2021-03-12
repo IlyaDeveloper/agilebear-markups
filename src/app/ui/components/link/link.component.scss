@@ -9,12 +9,21 @@
     --link-color-hover: var(--cl-yellow-orange);
   }
 
+  &.--y-orange {
+    --link-color: var(--cl-yellow-orange);
+    --link-color-hover: var(--cl-orange);
+  }
+
   &.--arrow {
     .__link {
-      //&:after {
-      //  @include pseudo-icon($cgi-arrow-right, 12);
+      //&:before {
+      //  right: rem(14);
+      //  bottom: 2px;
       //}
-      //
+
+      &:after {
+        @include pseudo-icon($agi-arrow-rt, 12);
+      }
     }
   }
 }

@@ -1,1 +1,33 @@
-<p>top-panel works!</p>
+<div class="container" fxFlex="1 1" fxLayoutAlign="start center">
+  <ng-container *ngIf="(type === 'home') || (type === null)">
+    <h1 class="__capt" fxLayout="column">
+      <mark class="__capt-1">Agile Bear</mark>
+      <mark class="__capt-2">Certified Scrum Training</mark>
+      <mark class="__capt-3">& Consultancy</mark>
+    </h1>
+  </ng-container>
+
+  <ng-container *ngIf="type === 'services'">
+    <h1 class="__capt" fxLayout="column">
+      <mark class="__capt-1">Agile Bear</mark>
+      <mark class="__capt-2">Certified Scrum Training</mark>
+      <mark class="__capt-3">& Consultancy</mark>
+    </h1>
+  </ng-container>
+
+  <ng-container *ngIf="type === 'training'">
+    <h1 class="__capt" fxLayout="column">
+      <mark class="__capt-1">Agile Bear</mark>
+      <mark class="__capt-2">Certified Scrum Training</mark>
+      <mark class="__capt-3">& Consultancy</mark>
+    </h1>
+  </ng-container>
+
+  <ng-container *ngIf="type === 'contacts'">
+    <h1 class="__capt" fxLayout="column">
+      <mark class="__capt-1">Agile Bear</mark>
+      <mark class="__capt-2">Certified Scrum Training</mark>
+      <mark class="__capt-3">& Consultancy</mark>
+    </h1>
+  </ng-container>
+</div>

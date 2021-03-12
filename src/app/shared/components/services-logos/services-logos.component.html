@@ -1,4 +1,4 @@
-<figure fxLayout="inline row wrap"  fxLayoutGap="1.5rem"
+<figure fxLayout="inline row" fxLayout.lt-sm=" inline row wrap" fxLayoutGap="1.5rem"
         fxLayoutGap.lt-sm="1rem" fxLayoutAlign="center center">
   <img class="__img"
        *ngFor="let item of list"
@@ -7,7 +7,7 @@
        [disablePopover]="popoverTrigger"
        [popoverTitle]="item.caption"
        [ngbPopover]="item.text"
-       [openDelay]="300" [closeDelay]="1600"
+       [openDelay]="300" [closeDelay]="600"
        triggers="mouseenter:mouseleave"
   >
 </figure>

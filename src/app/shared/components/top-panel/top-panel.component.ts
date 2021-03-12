@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'agl-top-panel',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopPanelComponent implements OnInit {
 
-  constructor() { }
+  @Input() type: string = 'home';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
