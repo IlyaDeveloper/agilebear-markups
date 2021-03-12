@@ -13,6 +13,9 @@
   }
 
   &.--upload {
+    width: max-content;
+    height: max-content;
+
     .__button {
       width: rem(50);
       height: rem(50);

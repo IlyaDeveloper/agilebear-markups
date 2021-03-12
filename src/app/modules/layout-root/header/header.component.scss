@@ -10,6 +10,7 @@ $header-spacer: rem(10);
   top: var(--header-top);
   left: 0;
   right: 0;
+  z-index: z-index(header);
 
   min-height: var(--header-hgt);
 
@@ -17,7 +18,7 @@ $header-spacer: rem(10);
 
   color: var(--cl-white);
 
-  background-color: rgba(clr('slate-grey'), 0.2);
+  background-color: rgba(clr('slate-grey'), 0.4);
 
   //background: red;
 }

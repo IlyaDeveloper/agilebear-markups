@@ -170,7 +170,65 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   margin: 0 auto -22%;
 }
 
+@include max-wide(laptop) {
+  .__text-r {
+    position: relative;
 
-@include max-wide(desktop) {
 
+    margin: rem(32) 0 0 auto;
+
+    text-align: right;
+
+  }
+
+  .__book:before {
+    transform: skewX(
+        144deg
+    );
+  }
+
+  .__book {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
+
+  .__btn-center {
+    margin: 0 auto;
+  }
+}
+
+
+@include max-wide(phonesLg) {
+  :host {
+    &:before {
+      top: 63%;
+      right: 20%;
+    }
+
+    &:after {
+      top: 37%;
+
+      left: 4%;
+    }
+  }
+
+  .__text-l:before {
+    height: 33vh;
+    width: 143%;
+
+    shape-outside: polygon(90% 0, 0% 232%, 100% 100%);
+  }
+
+  .__copy {
+    text-shadow: $sh-text;
+  }
+
+  .__down {
+    text-shadow: $sh-text;
+  }
+
+  .__book {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
 }

@@ -1,4 +1,5 @@
-<figure gdInline gdAuto="column" gdGap="1.5rem">
+<figure fxLayout="inline row wrap"  fxLayoutGap="1.5rem"
+        fxLayoutGap.lt-sm="1rem" fxLayoutAlign="center center">
   <img class="__img"
        *ngFor="let item of list"
        [attr.src]="['assets/img/services/'+ item.img]"

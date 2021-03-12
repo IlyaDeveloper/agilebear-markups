@@ -1,6 +1,6 @@
 <footer class="__footer container" fxLayout="column">
   <ng-container *ngIf="footerType === 'a' || footerType === null">
-    <article class="__book --a" gdColumns=" 2fr 1fr" gdGap="1.5rem">
+    <article class="__book --a" gdColumns.gt-sm=" 2fr 1fr" gdGap="1.5rem">
       <agl-services-logos [usedLogo]="logos"></agl-services-logos>
 
       <div fxLayoutGap="2rem" fxLayoutAlign="center center">
@@ -20,8 +20,8 @@
   <ng-container *ngIf="footerType == 'c' || footerType == 'c2'">
     <article class="__book" gdColumns="4.875rem 1fr 1fr"
              gdColumns.lt-md="1fr"
-             gdAlignColumns.lt-md="start"  gdAlignRows.lt-md="start"
-             gdGap="1.5rem"  gdGap.lt-md="1rem">
+             gdAlignColumns.lt-md="start" gdAlignRows.lt-md="start"
+             gdGap="1.5rem" gdGap.lt-md="1rem">
       <agl-services-logos [usedLogo]="[ orangeColor ?  'cspo' : 'csm']"></agl-services-logos>
 
       <agl-services-place gdGridAlign="start" [type]="orangeColor"></agl-services-place>
@@ -61,8 +61,8 @@
     </p>
   </article>
 
-  <article class="__down" gdGap="1rem" gdColumns="1fr 2fr 1fr" gdAlignColumns="center">
-    <div fxLayout="inline" fxLayoutGap="0.625rem">
+  <article class="__down" gdGap="1rem" gdColumns="1fr 2fr 1fr" gdColumns.lt-md="1fr" gdAlignColumns="center">
+    <div fxLayout="inline" fxLayoutGap="0.625rem" gdGridAlign.lt-sm="center">
       <a class="agi-soc-fb"></a>
       <a class="agi-soc-tw"></a>
       <a class="agi-soc-ln"></a>
