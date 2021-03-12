@@ -1,1 +1,20 @@
-<p>most-popular works!</p>
+<div class="container">
+  <header class="__top" fxLayoutAlign="space-between">
+    <agl-heading>Our Most Popular Certified Courses</agl-heading>
+
+    <agl-button>View All Courses</agl-button>
+  </header>
+
+  <div class="__list"
+       gdGap="1.875rem"
+       gdGap.gt-sm="1.5rem"
+       gdColumns="repeat(auto-fit, minmax(23.125rem, 1fr))"
+       gdColumns.lt-sm="repeat(auto-fit, minmax(23.125rem, 1fr))">
+    <agl-popular-card *ngFor="let item of list"
+                      [caption]="item.capt"
+                      [description]="item.desc"
+                      [logo]="item.logo"
+                      [image]="item.img"
+    ></agl-popular-card>
+  </div>
+</div>

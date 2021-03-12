@@ -1,0 +1,34 @@
+@import "core";
+
+:host {
+
+}
+
+.__img {
+  //min-width: rem(370);
+  min-height: rem(250);
+
+  object-position: center;
+  object-fit: cover;
+
+  border-radius: rem(11);
+  overflow: hidden;
+}
+
+.__capt {
+  font-size: rem(22);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -1.1px;
+  color: var(--cl-bluey-grey);
+}
+
+.__desk {
+  font-size: rem(15);
+  font-weight: 300;
+
+  text-align: left;
+  line-height: 1.47;
+  color: var(--cl-slate-grey);
+}
+

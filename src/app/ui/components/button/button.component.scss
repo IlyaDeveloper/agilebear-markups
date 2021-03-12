@@ -4,7 +4,7 @@
   display: inline-flex;
   align-items: center;
 
-  width: var(--btn-wdh, 100%);
+  width: var(--btn-wdh, auto);
   min-height: var(--btn-hgt, rem(29));
 
   outline: none;

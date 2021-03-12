@@ -9,13 +9,15 @@ import {UiModule} from '../ui/ui.module';
 import {ServicesPlaceComponent} from './components/services-place/services-place.component';
 import {ServicesLogosComponent} from './components/services-logos/services-logos.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PopularCardComponent } from './components/popular-card/popular-card.component';
 
 const COMPONENTS = [
   TopBgSectionComponent,
   TopPanelComponent,
   MainMenuComponent,
   ServicesPlaceComponent,
-  ServicesLogosComponent
+  ServicesLogosComponent,
+  PopularCardComponent
 ];
 
 @NgModule({
