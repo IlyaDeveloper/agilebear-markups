@@ -1,7 +1,9 @@
-<div class="__cont" fxLayoutAlign="center center" fxLayout="row nowrap" >
+<div class="__cont" fxLayoutAlign="center center" fxLayout="row nowrap">
   <span class="__item">Enquiries…</span>
 
-  <span class="__item">Upcoming Courses</span>
+  <span class="__item" *ngIf="!type">Upcoming Courses</span>
 
-  <agl-button class="--orange --nowrap">Book Your Place</agl-button>
+  <agl-button class="--nowrap"
+              [ngClass]="{'--yellow-orange': !type, '--orange': type }">Book Your Place
+  </agl-button>
 </div>

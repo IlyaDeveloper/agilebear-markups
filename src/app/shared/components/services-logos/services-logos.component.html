@@ -1,10 +1,12 @@
 <figure gdInline gdAuto="column" gdGap="1.5rem">
   <img class="__img"
        *ngFor="let item of list"
-       [attr.src]="['assets/img/services/'+ item.img]" alt=""
-
+       [attr.src]="['assets/img/services/'+ item.img]"
+       alt=""
        [disablePopover]="popoverTrigger"
        [popoverTitle]="item.caption"
        [ngbPopover]="item.text"
+       [openDelay]="300" [closeDelay]="1600"
+       triggers="mouseenter:mouseleave"
   >
 </figure>

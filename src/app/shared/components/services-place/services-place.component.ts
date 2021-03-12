@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'agl-services-place',
@@ -6,6 +6,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./services-place.component.scss']
 })
 export class ServicesPlaceComponent {
+
+  @Input() type: boolean;
 
   constructor() {
   }

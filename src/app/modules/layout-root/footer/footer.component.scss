@@ -40,16 +40,18 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     background: var(--footer-plash-bg-r, var(--cl-pale-lilac));
   }
-}
 
-.__footer {
+  &.--second {
+    --footer-color-main: var(--cl-orange)
+  }
 
+  &.--gray {
+    --footer-color-main: var(--cl-steel)
+  }
 }
 
 .__content {
   position: relative;
-
-  //padding: 0 0 rem(68);
 }
 
 .__text-r {
@@ -127,7 +129,6 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
 .__copy {
   font-size: rem(15);
-  //font-weight: 400;
   line-height: 1.25;
   text-align: center;
 
@@ -140,8 +141,8 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 .__book {
   position: relative;
 
-  margin: 0 15% 0 0;
-  padding: rem(5) 0;
+  margin: 0 16% 0 0;
+  padding: rem(5) 7% rem(5) 0;
 
   &:before {
     position: absolute;
@@ -159,13 +160,17 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
     transform: skewX(111deg);
   }
+
+  &.--a {
+    margin: 4% 26% 0 0;
+  }
+}
+
+.__btn-center {
+  margin: 0 auto -22%;
 }
 
 
-.__figure {
-
-}
-
-.__md {
+@include max-wide(desktop) {
 
 }

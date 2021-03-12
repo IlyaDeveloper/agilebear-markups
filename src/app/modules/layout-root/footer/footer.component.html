@@ -1,34 +1,50 @@
 <footer class="__footer container" fxLayout="column">
-  <article class="__book" gdColumns="4.875rem 1fr 1fr" gdGap="1.5rem">
-    <figure class="__figure">
-      <!--      <img src="assets/img/agilebear_csm.png" alt="">-->
+  <ng-container *ngIf="footerType === 'a' || footerType === null">
+    <article class="__book --a" gdColumns=" 2fr 1fr" gdGap="1.5rem">
+      <agl-services-logos [usedLogo]="logos"></agl-services-logos>
 
-    </figure>
+      <div fxLayoutGap="2rem" fxLayoutAlign="center center">
+        <agl-button class="--upload"></agl-button>
+      </div>
+    </article>
+  </ng-container>
 
-    <agl-services-place></agl-services-place>
-
-    <div fxLayoutGap="2rem" fxLayoutAlign="center center">
-      <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
-      <agl-button class="--upload"></agl-button>
+  <ng-container *ngIf="footerType === 'b'">
+    <div fxLayoutAlign="center center">
+      <div class="__btn-center">
+        <agl-button class="--upload"></agl-button>
+      </div>
     </div>
-  </article>
+  </ng-container>
 
-  <agl-services-logos [usedLogo]="logos"></agl-services-logos>
-  <agl-services-logos></agl-services-logos>
+  <ng-container *ngIf="footerType == 'c' || footerType == 'c2'">
+    <article class="__book" gdColumns="4.875rem 1fr 1fr"
+             gdColumns.lt-md="1fr"
+             gdAlignColumns.lt-md="start"  gdAlignRows.lt-md="start"
+             gdGap="1.5rem"  gdGap.lt-md="1rem">
+      <agl-services-logos [usedLogo]="[ orangeColor ?  'cspo' : 'csm']"></agl-services-logos>
 
-  <article class="__book" gdColumns=" 1fr 1fr" gdGap="1.5rem">
+      <agl-services-place gdGridAlign="start" [type]="orangeColor"></agl-services-place>
 
-
-    <div fxLayoutGap="2rem" fxLayoutAlign="center center">
-      <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
-      <agl-button class="--upload"></agl-button>
-    </div>
-  </article>
+      <div fxLayoutGap="2rem" fxLayoutAlign="center center" gdGridAlign.gt-md="end">
+        <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
+        <agl-button class="--upload"></agl-button>
+      </div>
+    </article>
+  </ng-container>
 
   <article class="__content" fxFlex="1 1">
-    <p class="__text-l">
-      <mark>*</mark>
-      <span>
+    <ng-container *ngIf="footerType === 'a' || footerType === null">
+      <p class="__text-l">
+        <span>Something here that explains that Nigel is certified in all the above ScrumAlliance Course.The same may also true of your other trainers - either way - I think it would be a goodidea ifwe explain here exactly what these certifications means. and also itwould be nice if when we rollover each badge we have a little explainer appear that give the full title etc.
+        </span>
+      </p>
+    </ng-container>
+
+    <ng-container *ngIf="footerType === 'c' || footerType === 'c2'">
+      <p class="__text-l">
+        <mark>*</mark>
+        <span>
           During the world crisis, the ScrumAlliance are permitting us to offer you the opportunity to attend live online
         courses. These virtual workshops comply with the ScrumAlliance values, standards and certifications. They
         include at least14 hours of face-to-face time with our world-leading Certified Scrum Trainer Nigel Baker. As
@@ -37,7 +53,8 @@
         traditionally two-day events over three shorter days. We want to ensure yourexperience is enjoyable,
         sustainable and to support your work-life balance.
         </span>
-    </p>
+      </p>
+    </ng-container>
 
     <p class="__text-r">
       “Your obvious enthusiasm and knowledge makes the time fly and brings to life the material!”
