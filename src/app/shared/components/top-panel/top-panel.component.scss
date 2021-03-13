@@ -8,12 +8,10 @@ $top-panel-bg-3: url('/assets/img/p-services.jpg');
   display: flex;
   flex-direction: column;
 
-  //width: 1596px;
   min-height: rem(560);
 
-  margin: calc(var(--header-hgt) * (-1)) 0 rem(50) 0 0;
-  padding: 0 0 112px;
-  //opacity: 0.25;
+  margin: calc(var(--header-hgt) * (-1)) rem(50) 0 0;
+  padding: 0 0 rem(112);
 
   background: var(--top-pannel-img, $top-panel-bg-1) no-repeat top center / cover;
   overflow: hidden;
@@ -43,15 +41,10 @@ $top-panel-bg-3: url('/assets/img/p-services.jpg');
   color: var(--cl-slate-grey);
 }
 
-.__capt-2 {
-
-}
-
 .__capt-3 {
   font-size: rem(64);
   font-weight: 200;
   line-height: 0.75;
 
   opacity: 0.9;
-
 }
