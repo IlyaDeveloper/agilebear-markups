@@ -1,0 +1,38 @@
+@import "core";
+
+:host {
+  display: block;
+
+  width: 100%;
+
+  padding: calc(#{$sectionSpacer} + #{rem(30)}) 0;
+}
+
+.__card {
+  min-width: rem(170);
+  min-height: rem(165);
+
+  padding: rem(25) rem(18);
+
+  font-size: rem(14);
+  font-weight: 300;
+  text-align: center;
+  color: var(--cl-slate-grey);
+
+  border-radius: rem(16);
+  border: solid 1px var(--cl-pale-lilac-two);
+  background-color: var(--cl-white);
+
+  transition: transform $transition-default;
+
+  @include only-mouse {
+    &:hover {
+      color: var(--cl-slate-grey);
+
+      //border-color: var(--cl-yellow-orange);
+      box-shadow: $sh-text;
+
+      transform: scale(1.05);
+    }
+  }
+}

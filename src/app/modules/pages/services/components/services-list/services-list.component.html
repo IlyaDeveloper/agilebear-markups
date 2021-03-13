@@ -1,0 +1,13 @@
+<div class="container" gdGap="2.4375rem">
+    <agl-heading>The Agile Bear Training Portfolio…</agl-heading>
+
+  <div class="" gdGap="1.875rem" gdColumns="repeat(auto-fit, minmax(10.625rem,1fr))">
+    <a class="__card"
+       fxLayout="column" fxLayoutAlign="center center" fxLayoutGap=""
+       *ngFor="let item of list" [routerLink]="item.link">
+      <agl-services-logos class="--s100" [usedLogo]="[item.icon]" [popoverTrigger]="true"></agl-services-logos>
+
+      <span>{{item.name}}</span>
+    </a>
+  </div>
+</div>
