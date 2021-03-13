@@ -5,6 +5,8 @@
 
   display: block;
 
+  overflow: hidden;
+
   &:before {
     position: absolute;
     top: 0;
@@ -15,7 +17,7 @@
 
     content: '';
 
-    clip-path: polygon(0 3%, 0 100%, 100% 0);
+    clip-path: polygon(0 0%, 0 100%, 100% 0);
 
     background: var(--cl-pale-lilac-two);;
   }

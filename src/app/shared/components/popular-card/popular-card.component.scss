@@ -4,18 +4,10 @@
   display: inline-flex;
 
   width: 100%;
-
-  //padding: 0 0 rem(24);
-
-}
-
-.__head {
-  //@include text-dot-vertical(2);
 }
 
 .__img {
-  //min-width: rem(370);
-  min-height: rem(250);
+  height: rem(250);
 
   object-position: center;
   object-fit: cover;
