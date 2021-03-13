@@ -1,5 +1,17 @@
 @import "core";
 
-:host{
+:host {
+  display: block;
 
+  padding: calc(#{$sectionSpacer} + #{rem(30)}) 0 0;
+
+  overflow: hidden;
+}
+
+.__item {
+  padding: rem(68) 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--cl-pale-violet);
+  }
 }

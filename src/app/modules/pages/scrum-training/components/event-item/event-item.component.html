@@ -2,19 +2,36 @@
   <agl-services-logos class="--s62" [usedLogo]="['a-csm']"></agl-services-logos>
 
   <div>
-    <div class="__name">{{ name }}</div>
-    <div class="__category">In-Person, <strong>Live Online Training</strong></div>
+    <div class="__head" gdGap="1.5rem">
+      <div class="__name"><strong>{{ name }}</strong> Training</div>
+      <div class="__type">
+        {{type ==='personal'? 'In-Person': '' }}, <strong>Live Online Training</strong>
+      </div>
+
+    </div>
 
     <p class="__desk">{{ description }}</p>
   </div>
 
-  <div>
-    <figure>
-      <img [attr.src]="image" alt="">
+  <div gdGap="1.875rem" gdAlignRows="end end">
+    <figure class="__picture">
+      <img [attr.src]="'/assets/img/popular/' + image" alt="">
     </figure>
-    <div fxLayoutAlign="center center end" fxLayoutGap="1.75rem">
+
+    <div gdGap="1.5rem" *ngIf="available <=0">
+      <mark class="__available">
+        This event is sold out.
+        We can, however, add you to our reserve list - and will notify you if anyone drops out.
+      </mark>
+
+      <agl-link class="--arrow --y-orange">Add me to the reserve list</agl-link>
+    </div>
+
+    <div fxLayoutAlign="center center end" fxLayoutGap="1.75rem" *ngIf="available > 0">
       <agl-link class="--arrow --y-orange">Find out more</agl-link>
       <agl-button class="--yellow-orange">Book Your Place</agl-button>
     </div>
+
+
   </div>
 </article>

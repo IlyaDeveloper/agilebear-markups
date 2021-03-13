@@ -2,3 +2,58 @@
 
 :host {
 }
+
+.__head {
+  text-transform: uppercase;
+}
+.__name {
+  font-size: rem(28);
+
+  font-weight: 300;
+  line-height: 0.93;
+  letter-spacing: -1.4px;
+
+  color: var(--cl-bluey-grey);
+
+  strong {
+    font-weight: 800;
+  }
+}
+
+.__type {
+  font-size: rem(22);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -1.1px;
+  color: var(--cl-steel);
+
+  span {
+    letter-spacing: 1.1px;
+  }
+}
+
+.__desk {
+}
+
+.__status {
+  font-size: rem(13);
+  line-height: 1.38;
+  color: var(--cl-bluey-grey);
+
+  span {
+    font-weight: 600;
+    color: var(--cl-steel);
+  }
+}
+
+.__picture{
+
+  border-radius: $elemRadius;
+
+  overflow: hidden;
+}
+
+
+.__available {
+
+}

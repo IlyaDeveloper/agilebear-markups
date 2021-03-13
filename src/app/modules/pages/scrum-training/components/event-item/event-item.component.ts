@@ -10,7 +10,12 @@ export class EventItemComponent implements OnInit {
   @Input() name: string;
   @Input() description: string;
   @Input() image: string;
-  @Input() date: string;
+  @Input() type: string;
+  @Input() available: any;
+  @Input() dates: string;
+  @Input() category: string;
+  @Input() status: boolean;
+
 
   constructor() {
   }

@@ -1,10 +1,15 @@
-<div gdGap="3rem">
+<article class="container">
+  <div class="__list" gdGap="3rem">
+    <div class="__item" *ngFor="let item of list">
+      <agl-event-item
+        [name]="item.name"
+        [description]="item.description"
+        [available]="item.available"
+        [image]="item.image"
+        [dates]="item.dates">
+      </agl-event-item>
+    </div>
 
-  <agl-event-item [name]=""
-                  [description]=""
-                  [image]=""
-                  [
-                  [date]="">
+  </div>
 
-  </agl-event-item>
-</div>
+</article>
