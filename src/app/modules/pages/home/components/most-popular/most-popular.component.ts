@@ -4,19 +4,19 @@ const MOST_POPULARS = [
   {
     capt: 'Certified ScrumMaster Training',
     desc: 'Quae quo sunt excelsiores, eo dant indicia naturae. Causa autem fuit huc veniendi ut hinc.',
-    logo: '',
+    logo: 'csm',
     img: 'most-popular-1.jpg'
   },
   {
-    capt: 'Certified ProductOwner Training',
+    capt: 'Certified Product Owner Training',
     desc: 'Quae quo sunt excelsiores, eo dant indicia naturae. Causa autem fuit huc veniendi ut hinc.',
-    logo: '',
+    logo: 'csm',
     img: 'most-popular-2.jpg'
   },
   {
     capt: 'Advanced Certified ScrumMaster Training',
     desc: 'Quae quo sunt excelsiores, eo dant indicia naturae. Causa autem fuit huc veniendi ut hinc.',
-    logo: '',
+    logo: 'csm',
     img: 'most-popular-3.jpg'
   }
 ];

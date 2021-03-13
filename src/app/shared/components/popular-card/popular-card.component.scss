@@ -1,7 +1,16 @@
 @import "core";
 
 :host {
+  display: inline-flex;
 
+  width: 100%;
+
+  //padding: 0 0 rem(24);
+
+}
+
+.__head {
+  //@include text-dot-vertical(2);
 }
 
 .__img {
@@ -11,24 +20,32 @@
   object-position: center;
   object-fit: cover;
 
-  border-radius: rem(11);
+  border-radius: rem(8);
   overflow: hidden;
 }
 
 .__capt {
+  margin: 0;
+
   font-size: rem(22);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: -1.1px;
   color: var(--cl-bluey-grey);
+  line-height: 1.1;
+
+  @include text-dot-vertical(2);
 }
 
 .__desk {
+  margin: rem(10) 0 rem(45);
+
   font-size: rem(15);
   font-weight: 300;
-
   text-align: left;
   line-height: 1.47;
   color: var(--cl-slate-grey);
+
+  @include text-dot-vertical(2);
 }
 

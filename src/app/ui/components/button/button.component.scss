@@ -116,6 +116,14 @@
         color: var(--cl-yellow-orange);
       }
     }
+
+    &.--yellow-orange {
+      .__button {
+        &:hover {
+          background-color: var(--cl-orange);
+        }
+      }
+    }
   }
 
   .__button {

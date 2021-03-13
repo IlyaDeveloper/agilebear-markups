@@ -2,7 +2,7 @@
         fxLayoutGap.lt-sm="1rem" fxLayoutAlign="center center">
   <img class="__img"
        *ngFor="let item of list"
-       [attr.src]="['assets/img/services/'+ item.img]"
+       [attr.src]="[ 'assets/img/services/'+ (isGray ?  item.imgS : item.img )]"
        alt=""
        [disablePopover]="popoverTrigger"
        [popoverTitle]="item.caption"

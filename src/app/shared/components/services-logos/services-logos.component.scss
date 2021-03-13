@@ -1,16 +1,22 @@
 @import "core";
 
 :host {
+  display: inline-flex;
+
   &.--s22 {
     --services-logos-wdh: #{rem(22)}
   }
 
-  &.--s70 {
-    --services-logos-wdh: #{rem(70)}
+  &.--s62 {
+    --services-logos-wdh: #{rem(62)}
   }
 
   &.--s100 {
     --services-logos-wdh: #{rem(100)}
+  }
+
+  &.--gray {
+    filter: grayscale(1) ; //hue-rotate(157deg);
   }
 }
 

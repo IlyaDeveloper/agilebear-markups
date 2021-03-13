@@ -124,6 +124,7 @@ const SERVICES_LOGOS = [
 export class ServicesLogosComponent implements OnInit {
 
   @Input() usedLogo: any = [];
+  @Input() isGray: boolean;
   @Input() popoverTrigger: boolean = false;
 
   list: any = SERVICES_LOGOS;
