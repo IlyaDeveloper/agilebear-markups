@@ -14,7 +14,7 @@
       width: rem(157);
       height: rem(188);
 
-      margin: 0 0 rem(20) -4.5%;
+      margin: 0 0 rem(20) rem(-60);
     }
   }
 
@@ -22,7 +22,7 @@
     width: rem(278);
     height: rem(259);
 
-    margin: 0 -12% rem(20) 0;
+    margin: 0 rem(-140) rem(20) 0;
 
     content: '';
 
@@ -36,12 +36,10 @@
 .__figure {
   z-index: 1;
 
-
   img {
     width: var(--team-photo-img-w, rem(370));
     height: var(--team-photo-img-h, rem(345));
 
     border-radius: rem(8);
   }
-
 }

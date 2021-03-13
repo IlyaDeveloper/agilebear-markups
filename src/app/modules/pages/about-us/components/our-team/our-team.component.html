@@ -3,28 +3,73 @@
     <agl-heading>Meet The Team</agl-heading>
   </div>
 
-  <div class="" gdGap="2.2rem">
-    <div gdGap="1rem">
-      <agl-heading class="--second">Nigel Baker</agl-heading>
-      <p>
-        Nigel is a Certified Scrum Trainer – one of only a few in the UK. He has been working with Agile techniques for
-        over 12 years and was one of the Lead Agile Consultants for BT – Who undertook the largest Agile transformation
-        in the world, at that time.
-      </p>
-      <p>
-        Nigel’s background includes being a software developer in traditional and Scrum teams before moving into Project
-        Management and ScrumMaster roles on many projects across the IT sector. Nigel has been coaching and training
-        Scrum and Agile techniques for the last decade and is regarded as one of the leading experts in training in this
-        industry.
-      </p>
+  <div gdGap="5rem" gdGap.lt-md=" 2.5rem">
+    <div gdColumns.gt-md="2fr minmax(30rem,1fr)" gdGap="2rem" gdColumns="1fr">
+      <article gdGap="1rem">
+        <agl-heading class="--second">Nigel Baker</agl-heading>
+        <p class="__text">
+          Nigel is a Certified Scrum Trainer – one of only a few in the UK. He has been working with Agile techniques
+          for over 12 years and was one of the Lead Agile Consultants for BT – Who undertook the largest Agile
+          transformation in the world, at that time.
+        </p>
+        <p class="__text">
+          Nigel’s background includes being a software developer in traditional and Scrum teams before moving into
+          Project Management and ScrumMaster roles on many projects across the IT sector. Nigel has been coaching and
+          training Scrum and Agile techniques for the last decade and is regarded as one of the leading experts in
+          training in this industry.
+        </p>
+      </article>
+
+      <agl-team-photo [src]="'team-member-1.jpg'"></agl-team-photo>
     </div>
 
-    <agl-team-photo [src]="'team-member-1.jpg'"></agl-team-photo>
+    <div class="__list" gdColumns="repeat(auto-fit, minmax(0, 1fr))"
+         gdAlignRows="start start"
+         gdAlignColumns="start start"ß
+         gdGap="1.875rem">
+      <article gdGap="1rem">
+        <agl-team-photo class="--small" [src]="'team-member-2.jpg'"></agl-team-photo>
 
-    <agl-team-photo class="--small" [src]="'team-member-2.jpg'"></agl-team-photo>
+        <agl-heading class="--second">Paul Goddard</agl-heading>
 
-    <agl-team-photo class="--small" [src]="'team-member-3.jpg'"></agl-team-photo>
+        <p class="__text">
+          Paul is a Certified Scrum Trainer. He has worked with a multitude of companies across the UK, helping them
+          discover the benefits of Scrum. Starting as one of the first practicing ScrumMasters within BT, he now acts as
+          coach for teams new to Scrum and agile techniques.
+        </p>
+        <p class="__text">
+          His coaching skills have been used on large scale agile transformation projects, including geographically
+          dispersed teams using an offshore model.
+        </p>
+      </article>
 
-    <agl-team-photo class="--small" [src]="'team-member-4.jpg'"></agl-team-photo>
+      <article gdGap="1rem">
+        <agl-team-photo class="--small" [src]="'team-member-3.jpg'"></agl-team-photo>
+
+        <agl-heading class="--second">Len Charles</agl-heading>
+
+        <p class="__text">
+          Len is the Head of Marketing and Sales at AgileBear. Len is a 20 year veteran in sales and marketing, covering
+          a diverse range of companies and industries.
+        </p>
+        <p class="__text">
+          Len has collated this experience and training in small and medium enterprises into keeping AgileBear on track.
+        </p>
+      </article>
+
+      <article gdGap="1rem">
+        <agl-team-photo class="--small" [src]="'team-member-4.jpg'"></agl-team-photo>
+
+        <agl-heading class="--second">Joanne Nye</agl-heading>
+
+        <p class="__text">
+          Jo is the Admin Manager of AgileBear and helps keep the show on the road! Jo has responsibility for taking
+          care of new and existing customers and is here to help with all of your course booking and invoicing needs.
+        </p>
+        <p class="__text">
+          Jo is an enthusiastic and experienced Manager and is always happy to help you out with your enquiries.
+        </p>
+      </article>
+    </div>
   </div>
 </article>

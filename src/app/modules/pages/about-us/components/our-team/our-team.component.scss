@@ -12,3 +12,10 @@
     border-bottom: 1px solid var(--cl-pale-violet);
   }
 }
+
+.__text {
+  font-size: rem(15);
+  font-weight: 300;
+  line-height: 1.87;
+  color: var(--cl-slate-grey);
+}
