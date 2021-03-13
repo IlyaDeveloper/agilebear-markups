@@ -11,6 +11,7 @@ import {ServicesLogosComponent} from './components/services-logos/services-logos
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PopularCardComponent} from './components/popular-card/popular-card.component';
 import {TeamPhotoComponent} from './components/team-photo/team-photo.component';
+import { EventDateLineComponent } from './components/event-date-line/event-date-line.component';
 
 const COMPONENTS = [
   TopBgSectionComponent,
@@ -23,7 +24,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS, EventDateLineComponent],
   exports: [...COMPONENTS],
   imports: [
     CommonModule,

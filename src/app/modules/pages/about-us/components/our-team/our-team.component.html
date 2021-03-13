@@ -4,7 +4,9 @@
   </div>
 
   <div gdGap="5rem" gdGap.lt-md=" 2.5rem">
-    <div gdColumns.gt-md="2fr minmax(30rem,1fr)" gdGap="2rem" gdColumns="1fr">
+    <div gdColumns.gt-md="2fr minmax(30rem,1fr)"
+         gdColumns.lt-md="1fr"
+         gdGap="2rem">
       <article gdGap="1rem">
         <agl-heading class="--second">Nigel Baker</agl-heading>
         <p class="__text">
@@ -20,12 +22,14 @@
         </p>
       </article>
 
-      <agl-team-photo [src]="'team-member-1.jpg'"></agl-team-photo>
+      <agl-team-photo [ngClass.lt-md]="'--small'"  fxFlexOrder.lt-md="-1" [src]="'team-member-1.jpg'"></agl-team-photo>
     </div>
 
-    <div class="__list" gdColumns="repeat(auto-fit, minmax(0, 1fr))"
+    <div class="__list"
+         gdColumns.gt-md="repeat(auto-fit, minmax(0, 1fr))"
+         gdColumns.lt-md="1fr"
          gdAlignRows="start start"
-         gdAlignColumns="start start"ß
+         gdAlignColumns="start start" ß
          gdGap="1.875rem">
       <article gdGap="1rem">
         <agl-team-photo class="--small" [src]="'team-member-2.jpg'"></agl-team-photo>

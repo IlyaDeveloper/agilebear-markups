@@ -1,0 +1,31 @@
+@import "core";
+
+:host {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 40%;
+    bottom: 60%;
+    z-index: -1;
+
+    content: '';
+
+    clip-path: polygon(0 0%, 0 100%, 100% 0);
+
+    background: var(--cl-pale-lilac-two);;
+  }
+
+  .container {
+    padding-top: calc(#{$sectionSpacer} + #{rem(30)});
+    padding-bottom: rem(65);
+
+    border-bottom: 1px solid var(--cl-pale-violet);
+  }
+}

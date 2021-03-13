@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ContactRoutingModule } from './contact-routing.module';
-import { ContactComponent } from './contact.component';
+import {ContactRoutingModule} from './contact-routing.module';
+import {ContactComponent} from './contact.component';
 import {FlexModule, GridModule} from '@angular/flex-layout';
 import {UiModule} from '../../../ui/ui.module';
-
+import {SharedModule} from '../../../shared/shared.module';
 
 @NgModule({
   declarations: [ContactComponent],
@@ -14,7 +14,9 @@ import {UiModule} from '../../../ui/ui.module';
     ContactRoutingModule,
     GridModule,
     FlexModule,
-    UiModule
+    UiModule,
+    SharedModule
   ]
 })
-export class ContactModule { }
+export class ContactModule {
+}

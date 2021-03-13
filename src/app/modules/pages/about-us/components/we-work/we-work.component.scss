@@ -1,0 +1,42 @@
+@import "core";
+
+:host {
+  display: block;
+
+  max-width: 100vw;
+
+  padding: $sectionSpacer 0;
+
+  font-size: rem(15);
+  font-weight: 300;
+  line-height: 1.87;
+  color: var(--cl-slate-grey);
+
+  overflow: hidden;
+}
+
+.__img{
+  border-radius: rem(8);
+}
+
+.__capt {
+  line-height: 1.47;
+  letter-spacing: -0.75px;
+}
+
+.__brands {
+  margin: rem(-30);
+  padding: rem(15);
+}
+
+.__logo {
+  min-width: rem(110);
+  max-width: rem(110);
+  height: rem(118);
+
+  margin: rem(15);
+  padding: rem(8);
+
+  border: 1px solid rgba(36, 36, 36, 0.1);
+  background-color: var(--cl-white);
+}
