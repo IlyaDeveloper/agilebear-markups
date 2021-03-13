@@ -25,7 +25,7 @@
       "@charts/*": ["src/app/charts/*"],
       "@layout/*": ["src/app/layout/*"],
       "@score/*": ["src/app/score/*"],
-      "@ui/*": ["src/app/score/*"],
+      "@ui/*": ["src/app/ui/*"],
       "@root-store/*": ["src/app/root-store/*"],
       "@modules/*": ["src/app/modules/*"],
       "@jsons/*": ["src/assets/json/*"]

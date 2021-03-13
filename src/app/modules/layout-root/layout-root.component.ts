@@ -16,7 +16,7 @@ export class LayoutRootComponent implements OnInit {
   get isFooterType(): string {
     if (this.url.includes('contact')) {
       return 'b';
-    } else if (this.url.includes('services')) {
+    } else if (this.url.includes('scrum-training')) {
       return 'c';
     } else if (this.url.includes('training')) {
       return 'c2';

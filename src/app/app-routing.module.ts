@@ -23,11 +23,11 @@ const routes: Routes = [
         {
           path: 'contact',
           loadChildren: () => import('./modules/pages/contact/contact.module').then(m => m.ContactModule)
-        }
-        // {
-        //   path: 'scrum-training',
-        //   loadChildren: () => import('./modules/pages/contact/contact.module').then(m => m.ContactModule)
-        // },
+        },
+        {
+          path: 'scrum-training',
+          loadChildren: () => import('./modules/pages/scrum-training/scrum-training.module').then(m => m.ScrumTrainingModule)
+        },
       ]
   }
 ];
