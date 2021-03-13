@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'agl-distance-learning',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DistanceLearningComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('video') videoRef: ElementRef;
+
+  isStartVideo: boolean;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  play(): void {
+    this.videoRef.nativeElement.play();
+  }
+
+  pause(): void {
+    this.videoRef.nativeElement.pause();
+  }
+
+  videoClick(): void {
+    console.log('sds');
+    this.isStartVideo = !this.isStartVideo;
+    this.isStartVideo ? this.play() : this.pause();
   }
 
 }

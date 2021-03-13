@@ -12,7 +12,7 @@
 .__video {
   position: relative;
 
-  height: rem(428);
+  //height: rem(428);
 
   padding: rem(15);
 
@@ -60,9 +60,30 @@
 }
 
 .__video-cont {
-  padding: 1px 0;
+  position: relative;
+  padding: 0;
+
+  &:before {
+    display: block;
+
+    padding-top: 56.25%;
+
+    content: '';
+  }
 
   border: solid 1px var(--cl-white);
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: scale(1.1);
+  }
 }
 
 .__step {
@@ -72,7 +93,7 @@
   font-weight: 300;
   color: var(--cl-slate-grey);
 
-  p{
+  p {
     margin: 0;
   }
 }

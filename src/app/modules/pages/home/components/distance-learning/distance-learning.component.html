@@ -1,7 +1,7 @@
-<article class="container" gdColumns="1fr 1.4fr" gdColumns.lt-sm="1fr" gdGap="3.125rem" gdGap.lt-sm="2rem">
+<article class="container" gdColumns="1fr 1.4fr" gdColumns.lt-md="1fr" gdGap="3.125rem" gdGap.lt-sm="2rem">
 
   <div fxLayout="column" fxLayoutGap="1.5rem">
-    <div fxLayoutAlign="center space-between" fxLayoutGap="1.25rem">
+    <div fxLayoutAlign="space-between center" fxLayoutGap="1.25rem">
       <agl-heading second="Distance Learning"></agl-heading>
 
       <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
@@ -34,7 +34,13 @@
 
   <div class="__video" fxLayout="column">
     <span class="__video-t-c" fxLayoutAlign="center"></span>
-    <div class="__video-cont" fxFlex="1 1">
+
+    <div class="__video-cont" fxFlex="1 1" >
+      <video poster="assets/img/agilebear_ipad-screen.jpg" #video (click)="videoClick()">
+        <source src="assets/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+        <source src="assets/video/video.mp4" type="'video/mp4">
+      </video>
     </div>
+
   </div>
 </article>
