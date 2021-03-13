@@ -1,0 +1,14 @@
+@import "core";
+
+:host {
+  display: block;
+
+  overflow: hidden;
+
+  .container {
+    padding-top: calc(#{$sectionSpacer} + #{rem(30)});
+    padding-bottom: rem(65);
+
+    border-bottom: 1px solid var(--cl-pale-violet);
+  }
+}

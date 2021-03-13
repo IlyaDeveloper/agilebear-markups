@@ -9,6 +9,13 @@
 
   font-weight: 800;
   color: var(--cl-bluey-grey);
+
+  &.--second {
+    font-size: rem(22);
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -1.1px;
+  }
 }
 
 .__hard {

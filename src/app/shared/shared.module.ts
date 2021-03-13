@@ -9,7 +9,8 @@ import {UiModule} from '../ui/ui.module';
 import {ServicesPlaceComponent} from './components/services-place/services-place.component';
 import {ServicesLogosComponent} from './components/services-logos/services-logos.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { PopularCardComponent } from './components/popular-card/popular-card.component';
+import {PopularCardComponent} from './components/popular-card/popular-card.component';
+import {TeamPhotoComponent} from './components/team-photo/team-photo.component';
 
 const COMPONENTS = [
   TopBgSectionComponent,
@@ -17,7 +18,8 @@ const COMPONENTS = [
   MainMenuComponent,
   ServicesPlaceComponent,
   ServicesLogosComponent,
-  PopularCardComponent
+  PopularCardComponent,
+  TeamPhotoComponent
 ];
 
 @NgModule({

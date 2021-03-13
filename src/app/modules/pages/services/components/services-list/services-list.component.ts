@@ -6,11 +6,7 @@ const SERVICES = [
     link: '/service/csm',
     icon: 'csm'
   },
-  {
-    name: '',
-    link: '/srvices/',
-    icon: ''
-  },
+
   {
     name: 'Certified Product Owner Training',
     link: '/srvices/cspo',
@@ -47,6 +43,11 @@ const SERVICES = [
     icon: 'so'
   },
   {
+    name: 'Testing On Agile Projects: A Roadmap For Success',
+    link: '/srvices/',
+    icon: 'toap'
+  },
+  {
     name: 'Certified Scrum Developer Training',
     link: '/srvices/csd',
     icon: 'csd'
@@ -61,6 +62,7 @@ const SERVICES = [
     link: '/srvices/sd',
     icon: 'sd'
   },
+
 ];
 
 @Component({

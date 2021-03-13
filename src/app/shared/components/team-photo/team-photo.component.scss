@@ -1,0 +1,47 @@
+@import "core";
+
+:host {
+  display: inline-flex;
+  align-items: flex-end;
+
+  &.--small {
+    --team-photo-img-w: #{rem(270)};
+    --team-photo-img-h: #{rem(250)};
+
+    &:before {
+      order: 1;
+
+      width: rem(157);
+      height: rem(188);
+
+      margin: 0 0 rem(20) -4.5%;
+    }
+  }
+
+  &:before {
+    width: rem(278);
+    height: rem(259);
+
+    margin: 0 -12% rem(20) 0;
+
+    content: '';
+
+    opacity: 0.5;
+    border-radius: rem(8);
+
+    background-color: var(--cl-pale-lilac-two);
+  }
+}
+
+.__figure {
+  z-index: 1;
+
+
+  img {
+    width: var(--team-photo-img-w, rem(370));
+    height: var(--team-photo-img-h, rem(345));
+
+    border-radius: rem(8);
+  }
+
+}

@@ -12,14 +12,16 @@
   min-width: rem(170);
   min-height: rem(165);
 
-  padding: rem(25) rem(18);
+  padding: rem(20) rem(18);
 
   font-size: rem(14);
   font-weight: 300;
   text-align: center;
+
   color: var(--cl-slate-grey);
 
   border-radius: rem(16);
+  line-height: 1.1;
   border: solid 1px var(--cl-pale-lilac-two);
   background-color: var(--cl-white);
 
@@ -34,5 +36,9 @@
 
       transform: scale(1.05);
     }
+  }
+
+  span  {
+    @include text-dot-vertical(3);
   }
 }
