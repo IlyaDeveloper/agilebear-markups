@@ -2,16 +2,25 @@
 
 :host {
   display: inline-flex;
+  align-items: center;
 
   font-size: rem(22);
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: -1.1px;
   color: var(--cl-steel);
-}
 
-.__days {
+  &.--second {
+    font-size: rem(38);
 
+    &:before {
+      margin-right: rem(6);
+
+      font-weight: 600;
+      @include pseudo-icon($agi-arrow-rt, 28);
+      color: var(--cl-white);
+    }
+  }
 }
 
 .__day {
@@ -28,16 +37,32 @@
     }
   }
 
-  &:not(:first-child):not(:last-of-type) {
+  &:first-child:before {
+    content: none !important;
+  }
+
+  &:not(:last-of-type) {
     &:before {
       content: ',';
     }
   }
 
-
   sup {
+    top: -0.6em;
+
+    margin-left: rem(3);
+
+    font-size: 0.60em;
     font-weight: 500;
     text-transform: none;
     color: #a8b1bb;
+  }
+}
+
+.__month {
+  &:after {
+    font-weight: 300;
+    color: #a8b1bb;
+    content: ',';
   }
 }

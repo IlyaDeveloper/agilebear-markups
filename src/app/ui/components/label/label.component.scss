@@ -1,0 +1,23 @@
+@import "core";
+
+:host {
+  display: inline-flex;
+  align-items: center;
+
+  padding: rem(2) rem(4);
+
+  font-size: rem(13);
+  //line-height: 3.54;
+  text-transform: uppercase;
+  color: var(--cl-white);
+
+  background-color: var(--cl-steel);
+
+  &.--blue {
+    background-color: #4bb3e6;
+  }
+
+  &.--orange {
+    background-color: var(--cl-orange);
+  }
+}

@@ -1,20 +1,17 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+
 
 @Component({
   selector: 'agl-event-date-line',
   templateUrl: './event-date-line.component.html',
   styleUrls: ['./event-date-line.component.scss']
 })
-export class EventDateLineComponent implements OnInit {
+export class EventDateLineComponent {
 
   @Input() days: any = [];
-  @Input() month: any = [];
-  @Input() year: any = [];
+  @Input() month: string;
+  @Input() year: number;
 
   constructor() {
   }
-
-  ngOnInit(): void {
-  }
-
 }

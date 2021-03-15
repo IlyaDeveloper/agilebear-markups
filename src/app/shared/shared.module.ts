@@ -12,7 +12,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PopularCardComponent} from './components/popular-card/popular-card.component';
 import {TeamPhotoComponent} from './components/team-photo/team-photo.component';
 import {EventDateLineComponent} from './components/event-date-line/event-date-line.component';
-import {EndingNumbers} from '@shared/pipes/ending-numbers.pipe';
+import {EndingNumb} from '@shared/pipes/ending-numb.pipe';
 
 const COMPONENTS = [
   TopBgSectionComponent,
@@ -25,7 +25,7 @@ const COMPONENTS = [
   EventDateLineComponent
 ];
 
-const PIPES = [EndingNumbers];
+const PIPES = [EndingNumb];
 
 @NgModule({
   declarations: [...COMPONENTS, ...PIPES],

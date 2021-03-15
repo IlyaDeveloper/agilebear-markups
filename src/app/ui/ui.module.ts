@@ -8,6 +8,7 @@ import {RouterModule} from '@angular/router';
 import {FlexModule, GridModule} from '@angular/flex-layout';
 import {ButtonDownloadComponent} from './components/button-download/button-download.component';
 import {HeadingComponent} from './components/heading/heading.component';
+import {LabelComponent} from './components/label/label.component';
 
 const COMPONENTS = [
     ButtonComponent,
@@ -15,7 +16,8 @@ const COMPONENTS = [
     LogoComponent,
     LinkComponent,
     ButtonDownloadComponent,
-    HeadingComponent
+    HeadingComponent,
+    LabelComponent
   ]
 ;
 

@@ -2,14 +2,14 @@
   <agl-services-logos class="--s62" [usedLogo]="['a-csm']"></agl-services-logos>
 
   <div>
-    <div class="__head" gdgap="1.5rem">
+    <div class="__head" gdGap="1.5rem">
+      <agl-label></agl-label>
       <div class="__name"><strong>{{ name }}</strong> training</div>
       <div class="__type">
-        {{type =='personal'? 'in-person': 'sds' }}, <strong>live online training</strong>
+        {{type == 'personal' ? 'in-person' : 'in-general' }}, <strong>live online training</strong>
       </div>
 
-      <agl-event-date-line></agl-event-date-line>
-
+      <agl-event-date-line [days]="dateDays" [month]="dateMouth" [year]="dateYear"></agl-event-date-line>
     </div>
 
     <p class="__desk">{{ description }}</p>
