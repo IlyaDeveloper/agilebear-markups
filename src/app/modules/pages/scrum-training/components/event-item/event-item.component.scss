@@ -4,13 +4,16 @@
 }
 
 .__head {
-  text-transform: uppercase;
 }
+
 .__name {
+  margin-top: rem(10);
+
   font-size: rem(28);
 
   font-weight: 300;
   line-height: 0.93;
+  text-transform: uppercase;
   letter-spacing: -1.4px;
 
   color: var(--cl-bluey-grey);
@@ -18,21 +21,39 @@
   strong {
     font-weight: 800;
   }
+
+  mark {
+    font-weight: 900;
+    letter-spacing: -2.8px;
+    color: #667a84;
+  }
 }
 
 .__type {
+  margin: rem(30) 0 rem(24);
+
   font-size: rem(22);
-  font-weight: 800;
+
   line-height: 1.18;
+  text-transform: uppercase;
   letter-spacing: -1.1px;
   color: var(--cl-steel);
 
   span {
+    font-weight: 800;
     letter-spacing: 1.1px;
   }
 }
 
 .__desk {
+  margin-top: rem(56);
+
+  font-size: rem(15);
+  font-weight: 300;
+  line-height: 1.87;
+  color: var(--cl-slate-grey);
+
+  @include text-dot-vertical(5)
 }
 
 .__status {
@@ -46,7 +67,7 @@
   }
 }
 
-.__picture{
+.__picture {
 
   border-radius: $elemRadius;
 

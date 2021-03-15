@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class EventItemComponent implements OnInit {
 
   @Input() name: string;
+  @Input() advanced: boolean;
   @Input() description: string;
   @Input() image: string;
   @Input() type: string;
@@ -17,7 +18,6 @@ export class EventItemComponent implements OnInit {
   @Input() dateYear: any;
   @Input() category: string;
   @Input() status: boolean;
-
 
   constructor() {
   }

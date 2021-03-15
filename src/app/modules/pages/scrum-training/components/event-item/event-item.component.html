@@ -2,17 +2,27 @@
   <agl-services-logos class="--s62" [usedLogo]="['a-csm']"></agl-services-logos>
 
   <div>
-    <div class="__head" gdGap="1.5rem">
-      <agl-label></agl-label>
-      <div class="__name"><strong>{{ name }}</strong> training</div>
+    <div class="__head">
+      <agl-label [ngClass]="{ '--blue': (available > 5),  '--orange': (available == 0) }">
+        <ng-container *ngIf="available <= 5">LAST FEW PLACES</ng-container>
+        <ng-container *ngIf="available > 5">NEWLY ANNOUNCED'</ng-container>
+        <ng-container *ngIf="available == 0">SOLD OUT</ng-container>
+      </agl-label>
+
+      <div class="__name">
+        <mark *ngIf="advanced">Advanced</mark>
+        <br>
+        <strong>{{ name }}</strong> training
+      </div>
+
       <div class="__type">
         {{type == 'personal' ? 'in-person' : 'in-general' }}, <strong>live online training</strong>
       </div>
 
       <agl-event-date-line [days]="dateDays" [month]="dateMouth" [year]="dateYear"></agl-event-date-line>
-    </div>
 
-    <p class="__desk">{{ description }}</p>
+      <p class="__desk">{{ description }}</p>
+    </div>
   </div>
 
   <div gdGap="1.875rem" gdAlignRows="end end">

@@ -4,13 +4,15 @@
   display: inline-flex;
   align-items: center;
 
-  padding: rem(2) rem(4);
+  padding: rem(2) rem(6);
 
   font-size: rem(13);
+  font-weight: 400;
   //line-height: 3.54;
   text-transform: uppercase;
   color: var(--cl-white);
 
+  border-radius: rem(3);
   background-color: var(--cl-steel);
 
   &.--blue {
