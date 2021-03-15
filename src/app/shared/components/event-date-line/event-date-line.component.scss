@@ -1,5 +1,43 @@
 @import "core";
 
-:host{
+:host {
+  display: inline-flex;
 
+  font-size: rem(22);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -1.1px;
+  color: var(--cl-steel);
+}
+
+.__days {
+
+}
+
+.__day {
+  &:before {
+    font-weight: 300;
+    color: #a8b1bb;
+  }
+
+  &:not(:first-child):last-of-type {
+    &:before {
+      content: '&';
+      font-weight: 300;
+      color: #a8b1bb;
+    }
+  }
+
+  &:not(:first-child):not(:last-of-type) {
+    &:before {
+      content: ',';
+    }
+  }
+
+
+  sup {
+    font-weight: 500;
+    text-transform: none;
+    color: #a8b1bb;
+  }
 }

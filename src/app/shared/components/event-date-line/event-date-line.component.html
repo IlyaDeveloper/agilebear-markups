@@ -1,7 +1,18 @@
-<span>2<sup>nd</sup></span>
-<span>3<sup>rd</sup></span>
+<div class="__wrap" fxLayoutAlign="center" fxLayoutGap="0.3rem">
+  <div class="__days" fxLayoutGap="0.3rem">
+    <span class="__day" *ngFor="let item of days">
+      {{item}}<sup>{{ item | endingNumbers}}</sup>
+    </span>
 
-&
-<span>2<sup>th</sup></span>
+    <span class="__day">
+      3<sup>nd</sup>
+    </span>
+    <span class="__day">
+      5<sup>nd</sup>
+    </span>
+  </div>
 
-marc
+  <div class="__month">{{ month }}</div>
+  <div class="__year">{{ year}}</div>
+
+</div>

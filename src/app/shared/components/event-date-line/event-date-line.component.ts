@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'agl-event-date-line',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDateLineComponent implements OnInit {
 
-  constructor() { }
+  @Input() days: any = [];
+  @Input() month: any = [];
+  @Input() year: any = [];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

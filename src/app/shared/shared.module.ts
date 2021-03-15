@@ -11,7 +11,8 @@ import {ServicesLogosComponent} from './components/services-logos/services-logos
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {PopularCardComponent} from './components/popular-card/popular-card.component';
 import {TeamPhotoComponent} from './components/team-photo/team-photo.component';
-import { EventDateLineComponent } from './components/event-date-line/event-date-line.component';
+import {EventDateLineComponent} from './components/event-date-line/event-date-line.component';
+import {EndingNumbers} from '@shared/pipes/ending-numbers.pipe';
 
 const COMPONENTS = [
   TopBgSectionComponent,
@@ -20,12 +21,15 @@ const COMPONENTS = [
   ServicesPlaceComponent,
   ServicesLogosComponent,
   PopularCardComponent,
-  TeamPhotoComponent
+  TeamPhotoComponent,
+  EventDateLineComponent
 ];
 
+const PIPES = [EndingNumbers];
+
 @NgModule({
-  declarations: [...COMPONENTS, EventDateLineComponent],
-  exports: [...COMPONENTS],
+  declarations: [...COMPONENTS, ...PIPES],
+  exports: [...COMPONENTS, ...PIPES],
   imports: [
     CommonModule,
     RouterModule,
