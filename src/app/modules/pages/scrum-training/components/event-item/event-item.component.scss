@@ -1,16 +1,7 @@
 @import "core";
 
-:host {
-}
-
-.__head {
-}
-
 .__name {
-  margin-top: rem(10);
-
   font-size: rem(28);
-
   font-weight: 300;
   line-height: 0.93;
   text-transform: uppercase;
@@ -39,14 +30,22 @@
   letter-spacing: -1.1px;
   color: var(--cl-steel);
 
-  span {
+  strong {
     font-weight: 800;
-    letter-spacing: 1.1px;
+    //letter-spacing: 1.1px;
   }
 }
 
+.__label {
+  margin-bottom: rem(10);
+}
+
+.__bottom {
+  margin-top: rem(30);
+}
+
 .__desk {
-  margin-top: rem(56);
+  margin-top: rem(50);
 
   font-size: rem(15);
   font-weight: 300;
@@ -68,13 +67,25 @@
 }
 
 .__picture {
+  width: 100%;
 
   border-radius: $elemRadius;
 
   overflow: hidden;
 }
 
-
 .__available {
+  margin-top: rem(20);
 
+  text-transform: uppercase;
+
+  strong{
+
+  }
+}
+
+@include max-wide(phonesLg) {
+  .__picture {
+    margin-bottom: rem(30);
+  }
 }

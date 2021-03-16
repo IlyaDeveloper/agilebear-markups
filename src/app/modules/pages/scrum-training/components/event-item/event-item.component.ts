@@ -18,6 +18,7 @@ export class EventItemComponent implements OnInit {
   @Input() dateYear: any;
   @Input() category: string;
   @Input() status: boolean;
+  @Input() logo: string;
 
   constructor() {
   }

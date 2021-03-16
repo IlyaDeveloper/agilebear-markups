@@ -24,28 +24,29 @@
 }
 
 .__day {
-  &:before {
+  &:after {
+    content: ',';
     font-weight: 300;
     color: #a8b1bb;
   }
 
-  &:not(:first-child):last-of-type {
+  &:last-of-type {
     &:before {
       content: '&';
       font-weight: 300;
       color: #a8b1bb;
     }
-  }
 
-  &:first-child:before {
-    content: none !important;
-  }
-
-  &:not(:last-of-type) {
-    &:before {
-      content: ',';
+    &:after{
+      content: none !important;
     }
   }
+/*
+  &:not(:last-of-type) {
+    &:after {
+
+    }
+  }*/
 
   sup {
     top: -0.6em;

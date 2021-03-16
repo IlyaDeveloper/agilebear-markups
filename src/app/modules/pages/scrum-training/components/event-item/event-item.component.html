@@ -1,47 +1,59 @@
-<article gdColumns="max-content 1fr 23.125rem" gdGap="1.75rem" gdAlignColumns="start start start">
-  <agl-services-logos class="--s62" [usedLogo]="['a-csm']"></agl-services-logos>
+<article
+  gdColumns.gt-sm="3.875rem 1fr 23.125rem"
+  gdGap="0 1.75rem" gdAlignColumns="start start start">
 
-  <div>
-    <div class="__head">
-      <agl-label [ngClass]="{ '--blue': (available > 5),  '--orange': (available == 0) }">
-        <ng-container *ngIf="available <= 5">LAST FEW PLACES</ng-container>
-        <ng-container *ngIf="available > 5">NEWLY ANNOUNCED'</ng-container>
-        <ng-container *ngIf="available == 0">SOLD OUT</ng-container>
-      </agl-label>
-
-      <div class="__name">
-        <mark *ngIf="advanced">Advanced</mark>
-        <br>
-        <strong>{{ name }}</strong> training
-      </div>
-
-      <div class="__type">
-        {{type == 'personal' ? 'in-person' : 'in-general' }}, <strong>live online training</strong>
-      </div>
-
-      <agl-event-date-line [days]="dateDays" [month]="dateMouth" [year]="dateYear"></agl-event-date-line>
-
-      <p class="__desk">{{ description }}</p>
-    </div>
+  <div gdColumn.gt-sm="1" gdRow.gt-sm="1 span">
+    <agl-services-logos class="--s62" [usedLogo]="[logo]">
+    </agl-services-logos>
   </div>
 
-  <div gdGap="1.875rem" gdAlignRows="end end">
+  <div gdColumn.gt-sm="2" gdRow.gt-sm="1/4">
+
+    <ng-container *ngIf=" (available <= 5) || (available > 20) || (available == 0)">
+      <div>
+        <agl-label class="__label" [ngClass]="{ '--blue': (available > 5),  '--orange': (available == 0) }">
+          <ng-container *ngIf="available <= 5">LAST FEW PLACES</ng-container>
+          <ng-container *ngIf="available > 20">NEWLY ANNOUNCED'</ng-container>
+          <ng-container *ngIf="available == 0">SOLD OUT</ng-container>
+        </agl-label>
+      </div>
+    </ng-container>
+
+    <div class="__name" gdGap="0">
+      <mark *ngIf="advanced">Advanced</mark>
+      <strong>{{ name }}</strong> training
+    </div>
+
+    <div class="__type">
+      {{type == 'personal' ? 'in-person' : 'in-general' }}, <strong>live online training</strong>
+    </div>
+
+    <agl-event-date-line [days]="dateDays" [month]="dateMouth" [year]="dateYear"></agl-event-date-line>
+
+    <p class="__desk">{{ description }}</p>
+  </div>
+
+  <div fxFlexOrder.lt-sm="-1" gdColumn.gt-sm="3" gdRow.gt-sm="1"
+       gdGap="1.875rem" gdAlignRows="stretch end">
     <figure class="__picture">
       <img [attr.src]="'/assets/img/popular/' + image" alt="">
     </figure>
+  </div>
 
-    <div gdGap="1.5rem" *ngIf="available <=0">
-      <mark class="__available">
-        This event is sold out.
-        We can, however, add you to our reserve list - and will notify you if anyone drops out.
-      </mark>
+  <div gdColumn.gt-sm="3" gdRow.gt-sm="2" gdGap="1.5rem" *ngIf="available <=0">
+    <mark class="__available">
+      <strong>This event is sold out. <br></strong>
+      We can, however, add you to our reserve list - and will notify you if anyone drops out.
+    </mark>
 
-      <agl-link class="--arrow --y-orange">Add me to the reserve list</agl-link>
-    </div>
+    <agl-link class="--arrow --y-orange">Add me to the reserve list</agl-link>
+  </div>
 
-    <div fxLayoutAlign="center center end" fxLayoutGap="1.75rem" *ngIf="available > 0">
-      <agl-link class="--arrow --y-orange">Find out more</agl-link>
-      <agl-button class="--yellow-orange">Book Your Place</agl-button>
-    </div>
+  <div class="__bottom" gdColumn.gt-sm="3" gdRow.gt-sm="2 span"
+       fxLayoutAlign="space-between center"
+       fxLayoutGap="1.75rem"
+       *ngIf="available > 0">
+    <agl-link class="--arrow --y-orange">Find out more</agl-link>
+    <agl-button class="--yellow-orange">Book Your Place</agl-button>
   </div>
 </article>
