@@ -3,21 +3,6 @@
 $who-img-1: url('/assets/img/who_1.jpg');
 $who-img-2: url('/assets/img/who_2.jpg');
 
-%text-big {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: -1;
-
-  font-size: 7.3vw; // rem(140);
-  font-weight: 900;
-  line-height: 0.86;
-  letter-spacing: rem(-11.2);
-  color: rgba(255, 255, 255, 0.85);
-
-  transform: translate(-15%, -50%);
-}
-
 :host {
   position: relative;
 
@@ -28,7 +13,7 @@ $who-img-2: url('/assets/img/who_2.jpg');
 
   font-size: rem(25);
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.15;
   color: #707a84;
 
   background-color: var(--cl-pale-lilac-two);
@@ -40,7 +25,7 @@ $who-img-2: url('/assets/img/who_2.jpg');
     top: 0;
     right: 0;
     bottom: 0;
-    left: 50%;
+    left: 52%;
 
     content: '';
 
@@ -61,7 +46,7 @@ $who-img-2: url('/assets/img/who_2.jpg');
 
   &.--second {
     &:before {
-      background: $who-img-2 no-repeat top center/cover!important;
+      background: $who-img-2 no-repeat top center/cover !important;
     }
   }
 }
@@ -70,13 +55,23 @@ $who-img-2: url('/assets/img/who_2.jpg');
   position: relative;
   z-index: 1;
 
-  padding: 10% 20% 10% 0;
+  padding: 15% 20% 12% 15%;
 
   &:before {
-    @extend %text-big;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
 
     content: 'WHO \0a SHOULD \0a ATTEND?\0a';
+    font-size: var(--who-should-attend-b-text-size, rem(140)); // ;
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: rem(-11.2);
+    color: rgba(255, 255, 255, 0.85);
     white-space: pre;
+
+    transform: translate(0, -50%);
   }
 }
 
@@ -89,13 +84,14 @@ $who-img-2: url('/assets/img/who_2.jpg');
 }
 
 .__text-top {
-  margin: -15% 0 0  -3.5vw;
+  margin: rem(-190) 0 0  -3.5vw;
 
-  font-size: rem(18);
+  font-size: rem(16);
+  line-height: 1.2;
 }
 
 .__text-r {
-  margin-top: 18%;
+  margin-top: rem(90);
 
   font-size: rem(24);
   font-weight: 400;
@@ -103,3 +99,51 @@ $who-img-2: url('/assets/img/who_2.jpg');
   text-align: right;
 }
 
+@include max-wide(notebook) {
+  :host {
+    &:before {
+      left: 58%;
+    }
+  }
+
+  .__left {
+    padding-right: 2%;
+  }
+}
+
+@include max-wide(laptop) {
+  :host {
+    --who-should-attend-b-text-size: 18.5vw;
+
+    text-shadow: $sh-text;
+
+    &:before {
+      left: 0;
+      opacity: .2;
+    }
+  }
+
+  .__text-top {
+    margin-top: 0%;
+  }
+
+  .__text-r {
+    margin-top: 24%;
+  }
+}
+
+@include max-wide(phonesLg) {
+  :host {
+    --who-should-attend-b-text-size: 21.5vw;
+
+    height: rem(450);
+  }
+
+  .__left{
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+  .__text-r {
+    margin-top: 54%;
+  }
+}
