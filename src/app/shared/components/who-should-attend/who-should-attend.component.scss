@@ -3,6 +3,21 @@
 $who-img-1: url('/assets/img/who_1.jpg');
 $who-img-2: url('/assets/img/who_2.jpg');
 
+%text-big {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+
+  font-size: rem(140);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: rem(-11.2);
+  color: rgba(255, 255, 255, 0.85);
+
+  transform: translate(-50%, -50%);
+}
+
 :host {
   position: relative;
 
@@ -34,19 +49,20 @@ $who-img-2: url('/assets/img/who_2.jpg');
   &.--second {
     background-image: $who-img-2;
   }
-
 }
 
 .__left {
   position: relative;
+  z-index: 1;
+
+  &:before {
+    @extend %text-big;
+
+    content: 'WHO \0a SHOULD \0a ATTEND?\0a';
+    white-space: pre;
+  }
 }
 
-.__text {
-  position: absolute;
-  font-size: rem(140);
-  font-weight: 900;
-  line-height: 0.86;
-  letter-spacing: rem(-11.2);
-  color: rgba(255, 255, 255, 0.85);
-}
-
+//.__text-b {
+//  @extend %text-big;
+//}

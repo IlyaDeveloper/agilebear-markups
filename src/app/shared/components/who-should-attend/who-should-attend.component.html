@@ -1,39 +1,32 @@
 <div class="__wrap container" gdColumns=" 1fr 1fr">
   <div class="__left">
-    <div>
-      <div class="__text">
-        WHO<br>SHOULD<br>ATTEND?
+    <ng-container *ngIf="type === 'a' || type === null ">
+
+      <div class="p">
+
+        <h3>Prerequisites</h3>
+        <p>
+          Delegates are expected to have basic knowledge of object-oriented programming as well as at least 1 month of
+          hands-on experience with an object-oriented programming language, for example C# or Java.
+        </p>
       </div>
+    </ng-container>
 
-      <ng-container *ngIf="type === 'a' || type === null ">
+    <ng-container *ngIf="type === 'b'">
 
-        <div class="p">
+      <mark class="__text-top">
+        Individuals who will perform the <br>
+        Product Owner role on Scrum projects, such as:
+      </mark>
 
-          <h3>Prerequisites</h3>
-          <p>
-            Delegates are expected to have basic knowledge of object-oriented programming as well as at least 1 month of
-            hands-on experience with an object-oriented programming language, for example C# or Java.
-          </p>
-        </div>
-      </ng-container>
-
-      <ng-container *ngIf="type === 'b'">
-
-        <mark class="__text-top">
-          Individuals who will perform the <br>
-          Product Owner role on Scrum projects, such as:
-        </mark>
-
-        <div class="__text-r">
-          Sponsors <br>
-          Stakeholders <br>
-          Product Management <br>
-          Business Analysts
-        </div>
-      </ng-container>
-
-    </div>
-
-    <div class=""></div>
+      <div class="__text-r">
+        Sponsors <br>
+        Stakeholders <br>
+        Product Management <br>
+        Business Analysts
+      </div>
+    </ng-container>
   </div>
+
+  <div></div>
 </div>
