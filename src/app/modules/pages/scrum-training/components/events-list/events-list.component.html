@@ -1,6 +1,14 @@
 <article class="container">
-  <div class="__list" gdGap="3rem">
-    <div class="__item" *ngFor="let item of list">
+  <div class="__list">
+
+    <div class="__item" *ngFor="let item of list; let index">
+
+      <div class="__caption" *ngIf="item.dateMouth === item.dateMouth">
+        {{item.dateMouth}}
+        <span>,&nbsp;</span>
+        {{item.dateYear}}
+      </div>
+
       <agl-event-item
         [name]="item.name"
         [advanced]="item.advanced"

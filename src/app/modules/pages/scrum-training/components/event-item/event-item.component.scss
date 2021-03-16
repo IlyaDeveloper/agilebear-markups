@@ -77,10 +77,14 @@
 .__available {
   margin-top: rem(20);
 
+  font-size: rem(13);
+  line-height: 1.38;
+  color: var(--cl-bluey-grey);
   text-transform: uppercase;
 
   strong{
-
+    font-weight: 600;
+    color: var(--cl-steel);
   }
 }
 

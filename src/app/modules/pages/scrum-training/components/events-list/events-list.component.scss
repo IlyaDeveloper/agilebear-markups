@@ -1,5 +1,7 @@
 @import "core";
 
+$item-spacer: rem(68);
+
 :host {
   display: block;
 
@@ -9,9 +11,30 @@
 }
 
 .__item {
-  padding: rem(68) 0;
+  padding: 0 0 $item-spacer;
 
   &:not(:last-child) {
-    border-bottom: 1px solid var(--cl-pale-violet);
+    //border-bottom: 1px solid var(--cl-pale-violet);
   }
 }
+
+.__caption {
+  margin: 0 0 $item-spacer;
+
+  font-size: rem(22);
+  font-weight: 800;
+  line-height: 1.18;
+  text-transform: uppercase;
+  letter-spacing: rem(-1.1);
+  text-align: left;
+  color: var(--cl-steel);
+
+  border-bottom: 1px solid var(--cl-pale-violet);
+
+  span {
+    font-weight: 300;
+    color: #a8b1bb;
+  }
+}
+
+
