@@ -1,0 +1,52 @@
+@import "core";
+
+$who-img-1: url('/assets/img/who_1.jpg');
+$who-img-2: url('/assets/img/who_2.jpg');
+
+:host {
+  position: relative;
+
+  display: block;
+
+  height: rem(550);
+
+  padding: 10% 0;
+
+  font-size: rem(25);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #707a84;
+
+  background-color: var(--cl-pale-lilac-two);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+
+    content: '';
+
+    background: $who-img-1 no-repeat top center/cover;
+  }
+
+  &.--second {
+    background-image: $who-img-2;
+  }
+
+}
+
+.__left {
+  position: relative;
+}
+
+.__text {
+  position: absolute;
+  font-size: rem(140);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: rem(-11.2);
+  color: rgba(255, 255, 255, 0.85);
+}
+

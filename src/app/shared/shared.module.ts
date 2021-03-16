@@ -13,6 +13,7 @@ import {PopularCardComponent} from './components/popular-card/popular-card.compo
 import {TeamPhotoComponent} from './components/team-photo/team-photo.component';
 import {EventDateLineComponent} from './components/event-date-line/event-date-line.component';
 import {EndingNumb} from '@shared/pipes/ending-numb.pipe';
+import { WhoShouldAttendComponent } from './components/who-should-attend/who-should-attend.component';
 
 const COMPONENTS = [
   TopBgSectionComponent,
@@ -22,7 +23,8 @@ const COMPONENTS = [
   ServicesLogosComponent,
   PopularCardComponent,
   TeamPhotoComponent,
-  EventDateLineComponent
+  EventDateLineComponent,
+  WhoShouldAttendComponent
 ];
 
 const PIPES = [EndingNumb];
