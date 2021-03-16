@@ -9,23 +9,22 @@ $who-img-2: url('/assets/img/who_2.jpg');
   left: 0;
   z-index: -1;
 
-  font-size: rem(140);
+  font-size: 7.3vw; // rem(140);
   font-weight: 900;
   line-height: 0.86;
   letter-spacing: rem(-11.2);
   color: rgba(255, 255, 255, 0.85);
 
-  transform: translate(-50%, -50%);
+  transform: translate(-15%, -50%);
 }
 
 :host {
   position: relative;
 
-  display: block;
+  display: flex;
+  align-items: center;
 
   height: rem(550);
-
-  padding: 10% 0;
 
   font-size: rem(25);
   font-weight: 300;
@@ -33,6 +32,8 @@ $who-img-2: url('/assets/img/who_2.jpg');
   color: #707a84;
 
   background-color: var(--cl-pale-lilac-two);
+
+  overflow: hidden;
 
   &:before {
     position: absolute;
@@ -46,14 +47,30 @@ $who-img-2: url('/assets/img/who_2.jpg');
     background: $who-img-1 no-repeat top center/cover;
   }
 
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    z-index: 1;
+
+    content: '';
+
+    box-shadow: rem(100) 4px rem(77) rem(92) var(--cl-pale-lilac-two);
+  }
+
   &.--second {
-    background-image: $who-img-2;
+    &:before {
+      background: $who-img-2 no-repeat top center/cover!important;
+    }
   }
 }
 
 .__left {
   position: relative;
   z-index: 1;
+
+  padding: 10% 20% 10% 0;
 
   &:before {
     @extend %text-big;
@@ -63,6 +80,26 @@ $who-img-2: url('/assets/img/who_2.jpg');
   }
 }
 
-//.__text-b {
-//  @extend %text-big;
-//}
+.__title {
+  font-weight: 900;
+}
+
+.__text {
+  max-width: rem(345);
+}
+
+.__text-top {
+  margin: -15% 0 0  -3.5vw;
+
+  font-size: rem(18);
+}
+
+.__text-r {
+  margin-top: 18%;
+
+  font-size: rem(24);
+  font-weight: 400;
+  line-height: 1.84;
+  text-align: right;
+}
+
