@@ -5,17 +5,18 @@ import {ContactRoutingModule} from './contact-routing.module';
 import {ContactComponent} from './contact.component';
 import {FlexModule, GridModule} from '@angular/flex-layout';
 import {UiModule} from '../../../ui/ui.module';
-import {SharedModule} from '../../../shared/shared.module';
+import {SharedModule} from '@shared/shared.module';
+import {FormContactComponent} from './components/form-contact/form-contact.component';
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [ContactComponent, FormContactComponent],
   imports: [
     CommonModule,
     ContactRoutingModule,
     GridModule,
     FlexModule,
     UiModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class ContactModule {

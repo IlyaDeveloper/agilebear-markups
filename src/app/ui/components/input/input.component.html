@@ -1,0 +1,30 @@
+<label class="__label">{{ label }}</label>
+
+<div class="__group" [class.--is-error]="isError">
+<!--  <mark class="__msg" *ngIf="isError">-->
+<!--    <agl-validation-messages-->
+<!--      [errors]="!errorsMsg ? [error] : null"-->
+<!--      [fieldName]="validationLabel || label"-->
+<!--      [prefix]="validationLabelPrefix"-->
+<!--      [type]="type"-->
+<!--      [errorsMsg]="errorsMsg"-->
+<!--    >-->
+<!--    </agl-validation-messages>-->
+<!--  </mark>-->
+
+  <input
+    class="__input"
+    [type]="type"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    (ngModelChange)="onChange($event)"
+    (keyup)="onChange($event)"
+    (focus)="onFocus($event)"
+    (blur)="onBlur($event)"
+    [(ngModel)]="value?.address || value"
+    [attr.inputmode]="inputMode"
+    #inputRef
+  />
+
+  <div class="__placeholder">{{ placeholder }}</div>
+</div>

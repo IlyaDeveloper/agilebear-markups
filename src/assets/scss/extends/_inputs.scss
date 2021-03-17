@@ -1,0 +1,116 @@
+%input-host {
+  display: inline-grid;
+  grid-gap: rem(16);
+
+  margin-bottom: rem(24);
+
+  font-family: $font-family-primary;
+  font-size: rem(16);
+  color: $input-color;
+  line-height: 138%;
+
+  //* Disabled styles
+  &.--disabled,
+  & > .__input:disabled {
+    opacity: $disabled-opacity;
+
+    pointer-events: none !important;
+  }
+
+  &.--disabled > .__input,
+  & > .__input:disabled {
+    --input-br-color: #{$disabled-bg-color} !important;
+    --input-bg-color: #{$disabled-bg-color-second} !important;
+
+    color: $disabled-color !important;
+  }
+}
+
+%input-label {
+  min-height: $form-label;
+
+  margin: 0;
+
+  color: var(--input-label-color, inherit);
+
+  line-height: 1;
+  text-align: initial;
+
+  &:empty {
+    display: none;
+  }
+}
+
+%input-field-container {
+  position: relative;
+  z-index: 1;
+}
+
+%input-field {
+  height: var(--input-hgt, rem(40));
+  width: var(--input-wdh, 100%);
+
+  padding: var(--input-pdd, rem(10.5) rem(16));
+
+  line-height: normal;
+
+  outline: none;
+
+  font-size: rem(14);
+  font-weight: 500;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  background-color: $input-background;
+  color: inherit;
+
+  transition: $input-transition;
+
+  @include placeholder {
+    font-weight: normal;
+    letter-spacing: normal !important;
+    color: $input-placeholder;
+  }
+
+  &:focus,
+  &:hover {
+    --input-br-color: #{$input-focus-bg-color};
+  }
+
+  &[type='password'] {
+    letter-spacing: rem(3);
+  }
+}
+
+%input-messages {
+  @extend %validation-message-position-left;
+  @include validation-message-empty(input, --input-br-color, $validation-color);
+}
+
+%input-placeholder {
+  position: absolute;
+  top: 50%;
+  right: rem(32);
+  left: $contentGutter;
+
+  font-weight: 600;
+  font-size: rem(18);
+  line-height: 133%;
+  color: var(--cl-text-field) !important;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  text-align: left;
+
+  transform: translate(0, -50%);
+  transition: top 0.3s ease-out;
+
+  @include text-dot;
+}
+
+%input-placeholder-up {
+  top: rem(16);
+
+  display: block !important;
+
+  font-weight: normal;
+  font-size: rem(12);
+}

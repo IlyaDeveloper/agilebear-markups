@@ -24,6 +24,7 @@ import {LayoutRootModule} from '@modules/layout-root/layout-root.module';
     NgbModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,0 +1,16 @@
+<input
+  class="__input"
+  type="checkbox"
+  [class]="{ '__input--is-checked': checked }"
+  [checked]="checked"
+  (change)="onChange($event)"
+  (click)="onClick($event)"
+/>
+
+<div>
+  <mark class="__mark" fxLayout="row inline"></mark>
+</div>
+
+<label class="__label">
+  <ng-content></ng-content>
+</label>

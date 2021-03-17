@@ -10,6 +10,12 @@ import {ButtonDownloadComponent} from './components/button-download/button-downl
 import {HeadingComponent} from './components/heading/heading.component';
 import {LabelComponent} from './components/label/label.component';
 import {ListComponent} from './components/list/list.component';
+import {InputComponent} from './components/input/input.component';
+import {CheckBoxComponent} from './components/check-box/check-box.component';
+import {ValidationMessagesComponent} from './components/validation-messages/validation-messages.component';
+import {TextareaComponent} from './components/textarea/textarea.component';
+import {FormsModule} from '@angular/forms';
+
 
 const COMPONENTS = [
     ButtonComponent,
@@ -19,18 +25,22 @@ const COMPONENTS = [
     ButtonDownloadComponent,
     HeadingComponent,
     LabelComponent,
-    ListComponent
+    ListComponent,
+    InputComponent,
+    CheckBoxComponent,
+    ValidationMessagesComponent
   ]
 ;
 
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS, TextareaComponent],
   exports: [...COMPONENTS],
   imports: [
     CommonModule,
     FlexModule,
     GridModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ]
 })
 export class UiModule {

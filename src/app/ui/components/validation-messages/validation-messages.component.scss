@@ -1,0 +1,16 @@
+@import 'core';
+
+:host {
+  display: block;
+}
+
+.__message {
+  font-size: $validation-font-size;
+  font-weight: $validation-font-weight;
+  //font-style: $validation-font-style;
+  color: $validation-color;
+  line-height: 1;
+  letter-spacing: 0.4px;
+
+  background-color: $validation-bg-color;
+}

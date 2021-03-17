@@ -1,0 +1,143 @@
+@import 'core';
+
+//* checkbox
+$checkbox-label-font-size: rem(16) !default;
+$checkbox-label-color: $cl-secondary !default;
+$checkbox-label-offset: 0 0 0 rem(12) !default;
+
+$checkbox-background: transparent !default;
+$checkbox-mark-size: rem(18) !default;
+$checkbox-mark-size: rem(18) !default;
+$checkbox-mark-radius: rem(3) !default;
+$checkbox-mark-border-size: 2px !default;
+$checkbox-mark-color: $button-secondary-border-color !default;
+$checkbox-active-background-color: $cl-primary !default;
+$checkbox-active-color: var(--cl-white) !default;
+
+:host {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  &.--small {
+    .__label {
+      font-size: rem(14);
+      line-height: 140%;
+
+      color: var(--cl-dark-stroke);
+    }
+
+    .__mark {
+      width: rem(16);
+      height: rem(16);
+
+      border-radius: 2px;
+    }
+  }
+
+  &.--radio {
+    .__mark {
+      width: rem(20);
+      height: rem(20);
+
+      border-radius: 50%;
+      border-width: 1px;
+      background-color: $cl-secondary-light;
+
+      &:before {
+        width: rem(6);
+        height: rem(6);
+
+        margin: auto;
+
+        content: '' !important;
+
+        border-radius: 50%;
+
+        transform: none !important;
+      }
+    }
+
+    .__input {
+      &--is-checked ~ div .__mark:before,
+      &:checked ~ div .__mark:before {
+        background-color: var(--cl-white) !important;
+      }
+    }
+  }
+
+  //* Disabled styles
+  &.--disabled > .__input,
+  & > .__input:disabled {
+    pointer-events: none !important;
+
+    & ~ div .__mark,
+    & ~ div .__label {
+      opacity: 0.5 !important;
+    }
+  }
+}
+
+.__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  &--is-checked ~ div .__mark,
+  &:checked ~ div .__mark {
+    color: $checkbox-active-color !important;
+    border-color: transparent !important;
+    background-color: $checkbox-active-background-color !important;
+  }
+
+  &:not(.__input--is-checked) ~ div .__mark,
+  &:not(:checked) ~ div .__mark {
+    color: transparent;
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.__label {
+  margin: $checkbox-label-offset;
+
+  font-size: $checkbox-label-font-size;
+  line-height: 138%;
+
+  color: $checkbox-label-color;
+
+  &:empty {
+    display: none;
+    margin: 0;
+  }
+}
+
+.__mark {
+  width: $checkbox-mark-size;
+  height: $checkbox-mark-size;
+
+  margin: 0;
+
+  color: $checkbox-mark-color;
+
+  border-radius: $checkbox-mark-radius;
+  border: $checkbox-mark-border-size solid $checkbox-mark-color;
+  background-color: $checkbox-background;
+
+  &:before {
+    margin: auto;
+
+    @include pseudo-icon($vri-checkbox, rem(11));
+
+    transform: translate(0, 0.1px);
+  }
+}
