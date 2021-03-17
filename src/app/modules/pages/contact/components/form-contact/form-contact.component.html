@@ -4,7 +4,7 @@
   <form action="">
     <article fxLayout="column" fxLayoutGap="0.875rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
-        <agl-heading>Your Details</agl-heading>
+        <agl-heading class="--second">Your Details</agl-heading>
         <div class="__right"><span>*</span>Your Details</div>
       </div>
       <div gdColumns.gt-xs="1fr 1fr" gdGap="1rem 1.875rem">
@@ -21,7 +21,7 @@
 
     <article fxLayout="column" fxLayoutGap="0.875rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
-        <agl-heading>Your Details</agl-heading>
+        <agl-heading class="--second">What Would You Like To Talk To Us About?</agl-heading>
       </div>
 
       <div>
@@ -31,11 +31,9 @@
 
     <article fxLayout="column" fxLayoutGap="0.875rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
-        <agl-heading>WHich Course(s) Are You Interested In?*</agl-heading>
+        <agl-heading class="--second">WHich Course(s) Are You Interested In?*</agl-heading>
       </div>
-
       <div class="__chek-group" gdColumns.gt-xs="1fr 1fr" gdGap="0 1.875rem">
-
         <agl-checkbox>
           <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
           Certified ScrumMaster Training
@@ -96,22 +94,19 @@
           Enterprise Organisation Change For Coaches
         </agl-checkbox>
       </div>
-
     </article>
 
-    <div>
-      <agl-textarea></agl-textarea>
-    </div>
+    <article fxLayout="column" fxLayoutGap="0.875rem">
+      <agl-heading class="--second">Message*</agl-heading>
+
+      <agl-textarea placeholder="Please let us know any other relevant information about your enquiry…"></agl-textarea>
+    </article>
 
     <div fxLayoutGap="2.8125rem" fxLayoutAlign="center">
       <div>
-        <agl-heading>Privacy*</agl-heading>
+        <agl-heading class="--second">Privacy*</agl-heading>
 
         <agl-checkbox>I understand and agree to the AgileBear Privacy Policy</agl-checkbox>
-      </div>
-
-      <div>
-
       </div>
 
       <div gdColumns="1fr 1fr" gdGap="0.625rem" gdInline>

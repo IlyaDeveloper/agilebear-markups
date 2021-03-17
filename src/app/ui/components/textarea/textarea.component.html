@@ -1,1 +1,8 @@
-<p>textarea works!</p>
+<textarea class="__field"
+          [placeholder]="placeholder"
+          [disabled]="disabled"
+          (ngModelChange)="onChange($event)"
+          (keyup)="onChange($event)"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          [(ngModel)]="value?.address || value"></textarea>
