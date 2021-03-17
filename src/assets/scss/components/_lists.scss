@@ -9,24 +9,9 @@
   line-height: 1.33;
   color: var(--cl-slate-grey);
 
-  &.--second {
-    font-weight: 300;
-
-    li {
-      margin-top: rem(12);
-
-      &:before {
-        content: '-';
-        color: var(--cl-slate-grey);
-        font-size: rem(20);
-
-        opacity: .5;
-      }
-    }
-  }
-
   li {
     position: relative;
+
     padding: 0 0 0 rem(22);
 
     &:before {
@@ -42,6 +27,26 @@
       color: var(--cl-green);
       line-height: 4px;
     }
+
+    &:not(:first-child){
+      margin-top: rem(30);
+    }
+  }
+
+  &.--second {
+    font-weight: 300!important;
+
+    li {
+      margin-top: rem(12) !important;
+
+      &:before {
+        content: '-';
+        color: var(--cl-slate-grey);
+        font-size: rem(20);
+
+        opacity: .5;
+      }
+    }
   }
 }
 
@@ -53,7 +58,7 @@
   li {
     position: relative;
 
-    margin-top: rem(24);
+
     padding: 0 0 0 rem(22);
 
     &:before {
@@ -67,8 +72,24 @@
       content: counter(item) "";
 
       font-size: rem(15);
+      font-weight: 500;
       color: var(--cl-orange);
       line-height: 4px;
+    }
+
+    &:not(:first-child) {
+      margin-top: rem(26);
+    }
+  }
+
+  &.--set-increment-11 {
+    counter-reset: item 11;
+
+    li {
+
+      //&:before {
+      //  counter-increment: item 11!important;
+      //}
     }
   }
 
@@ -76,14 +97,13 @@
     counter-reset: none !important;
 
     li {
-
       margin-top: rem(10);
 
       &:before {
         counter-increment: initial !important;
         content: attr(data-counter) !important;
         color: var(--cl-slate-grey);
-        opacity: .6;
+        opacity: .5;
       }
     }
   }

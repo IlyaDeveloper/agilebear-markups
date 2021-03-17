@@ -12,3 +12,15 @@
     border-bottom: 1px solid var(--cl-pale-violet);
   }
 }
+
+.__top-text{
+  max-width: rem(412);
+  margin: rem(30) 0 0;
+
+  font-size: rem(15);
+  font-weight: 300;
+  line-height: 1.87;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--cl-slate-grey);
+}

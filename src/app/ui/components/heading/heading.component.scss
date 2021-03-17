@@ -1,6 +1,8 @@
 @import "core";
 
 :host {
+  display: block;
+
   font-stretch: normal;
   font-style: normal;
   font-size: rem(28);
@@ -49,9 +51,13 @@
   }
 
   &.--large {
+    margin-left: rem(-12);
+    margin-bottom: rem(50)!important;
+
     font-weight: 200;
     font-size: rem(110);
     letter-spacing: rem(-11);
+    line-height: 1;
     color: var(--cl-pale-lilac);
 
     .__hard {
