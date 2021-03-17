@@ -7,6 +7,7 @@ import {FlexModule, GridModule} from '@angular/flex-layout';
 import {UiModule} from '../../../ui/ui.module';
 import {SharedModule} from '@shared/shared.module';
 import {FormContactComponent} from './components/form-contact/form-contact.component';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [ContactComponent, FormContactComponent],
@@ -17,6 +18,7 @@ import {FormContactComponent} from './components/form-contact/form-contact.compo
     FlexModule,
     UiModule,
     SharedModule,
+    NgSelectModule,
   ]
 })
 export class ContactModule {

@@ -1,22 +1,124 @@
 <div class="container">
-  <header>
-    <agl-heading>Your Details</agl-heading>
 
-    <div><span>*</span>Your Details</div>
-  </header>
 
   <form action="">
+    <article fxLayout="column" fxLayoutGap="0.875rem">
+      <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <agl-heading>Your Details</agl-heading>
+        <div class="__right"><span>*</span>Your Details</div>
+      </div>
+      <div gdColumns.gt-xs="1fr 1fr" gdGap="1rem 1.875rem">
+        <agl-input placeholder="First name"></agl-input>
+        <agl-input placeholder="Last name"></agl-input>
 
-    <fieldset>
+        <agl-input placeholder="Email Address*"></agl-input>
+        <agl-input placeholder="Mobile Number*"></agl-input>
 
-    </fieldset>
+        <agl-input placeholder="Job Title"></agl-input>
+        <agl-input placeholder="Company"></agl-input>
+      </div>
+    </article>
+
+    <article fxLayout="column" fxLayoutGap="0.875rem">
+      <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <agl-heading>Your Details</agl-heading>
+      </div>
+
+      <div>
+        <ng-select [placeholder]="'Public Courses'"></ng-select>
+      </div>
+    </article>
+
+    <article fxLayout="column" fxLayoutGap="0.875rem">
+      <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <agl-heading>WHich Course(s) Are You Interested In?*</agl-heading>
+      </div>
+
+      <div class="__chek-group" gdColumns.gt-xs="1fr 1fr" gdGap="0 1.875rem">
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
+          Certified ScrumMaster Training
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['cpo']"></agl-services-logos>
+          Certified Product Owner Training
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
+          The Cultural Change
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
+          Advanced Certified ScrumMaster Training
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
+          Advanced Certified Product Owner Training
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
+          User Story Workshops
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['csm']"></agl-services-logos>
+          Agile Coaching Sessions
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['lw']"></agl-services-logos>
+          Lean Workshops
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['so']"></agl-services-logos>
+          Scrum Overview
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['so']"></agl-services-logos>
+          Testing On Agile Projects: A Roadmap For Success
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['so']"></agl-services-logos>
+          Certified Scrum Developer Training
+        </agl-checkbox>
+
+        <agl-checkbox>
+          <agl-services-logos class="--s22" [usedLogo]="['so']"></agl-services-logos>
+          Enterprise Organisation Change For Coaches
+        </agl-checkbox>
+      </div>
+
+    </article>
+
+    <div>
+      <agl-textarea></agl-textarea>
+    </div>
+
+    <div fxLayoutGap="2.8125rem" fxLayoutAlign="center">
+      <div>
+        <agl-heading>Privacy*</agl-heading>
+
+        <agl-checkbox>I understand and agree to the AgileBear Privacy Policy</agl-checkbox>
+      </div>
+
+      <div>
+
+      </div>
+
+      <div gdColumns="1fr 1fr" gdGap="0.625rem" gdInline>
+        <agl-button>Reset Form</agl-button>
+
+        <agl-button class="--yellow-orange">Send Message</agl-button>
+      </div>
+    </div>
   </form>
-
-  <div class="">
-    <agl-heading>What Would You Like To Talk To Us About?</agl-heading>
-
-  </div>
-  <agl-heading>WHich Course(s) Are You Interested In?*</agl-heading>
-
-  <agl-heading>Privacy*</agl-heading>
 </div>

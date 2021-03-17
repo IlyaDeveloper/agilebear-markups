@@ -235,8 +235,8 @@ $popover-transition: top 0.3s linear;
 
 //* input
 $input-color: var(--cl-text-button);
-$input-background: var(--input-bg-color, var(--cl-slate-grey));
-$input-border-radius: var(--input-br-radius, $elemRadiusSmall);
+$input-background: var(--input-bg-color, var(--cl-white));
+$input-border-radius: var(--input-br-radius, rem(4));
 $input-border: var(--input-border, 2px solid var(--input-br-color, var(--cl-pale-violet)));
 $input-focus-bg-color: var(--cl-);
 $input-placeholder: $cl-placeholder;

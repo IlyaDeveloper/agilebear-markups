@@ -1,11 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'agl-check-box',
-  templateUrl: './check-box.component.html',
-  styleUrls: ['./check-box.component.scss']
+  selector: 'agl-checkbox',
+  templateUrl: './checkbox.component.html',
+  styleUrls: ['./checkbox.component.scss']
 })
-export class CheckBoxComponent {
+export class CheckboxComponent {
   @Input() typeItem = 'checkbox';
   @Input() fieldChecked = false;
   @Input() checked = false;

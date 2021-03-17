@@ -11,7 +11,7 @@ import {HeadingComponent} from './components/heading/heading.component';
 import {LabelComponent} from './components/label/label.component';
 import {ListComponent} from './components/list/list.component';
 import {InputComponent} from './components/input/input.component';
-import {CheckBoxComponent} from './components/check-box/check-box.component';
+import {CheckboxComponent} from './components/checkbox/checkbox.component';
 import {ValidationMessagesComponent} from './components/validation-messages/validation-messages.component';
 import {TextareaComponent} from './components/textarea/textarea.component';
 import {FormsModule} from '@angular/forms';
@@ -27,13 +27,14 @@ const COMPONENTS = [
     LabelComponent,
     ListComponent,
     InputComponent,
-    CheckBoxComponent,
-    ValidationMessagesComponent
+    CheckboxComponent,
+    ValidationMessagesComponent,
+    TextareaComponent
   ]
 ;
 
 @NgModule({
-  declarations: [...COMPONENTS, TextareaComponent],
+  declarations: [...COMPONENTS],
   exports: [...COMPONENTS],
   imports: [
     CommonModule,
