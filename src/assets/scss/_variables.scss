@@ -207,6 +207,11 @@ $enable-grid-classes: false;
 //  xl: 1170px
 //);
 
+$disabled-color:var(--cl-brown-grey);
+$disabled-bg-color: var(--cl-pale-lilac);
+$disabled-bg-color-second: clr('pale-lilac-two');
+$disabled-opacity: 0.9;
+
 //* ngb-popovers
 $popover-bg: #503895 !default;
 $popover-body-color: var(--cl-white) !default;
@@ -227,3 +232,21 @@ $popover-arrow-height: rem(8);
 $popover-arrow-color: $popover-bg;
 //$popover-arrow-outer-color: transparent;
 $popover-transition: top 0.3s linear;
+
+//* input
+$input-color: var(--cl-text-button);
+$input-background: var(--input-bg-color, var(--cl-slate-grey));
+$input-border-radius: var(--input-br-radius, $elemRadiusSmall);
+$input-border: var(--input-border, 2px solid var(--input-br-color, var(--cl-pale-violet)));
+$input-focus-bg-color: var(--cl-);
+$input-placeholder: $cl-placeholder;
+$input-transition: $transition-border;
+
+//  * Validations elements
+$validation-position-y: rem(-18) !default;
+$validation-position-x: 0 !default;
+$validation-font-size: rem(12) !default;
+$validation-font-style: italic !default;
+$validation-font-weight: 500 !default;
+$validation-color: $cl-red !default;
+$validation-bg-color: trasparent !default;

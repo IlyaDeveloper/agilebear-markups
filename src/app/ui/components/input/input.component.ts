@@ -9,6 +9,7 @@ export class InputComponent implements OnInit {
 
   @ViewChild('inputRef') inputRef: ElementRef;
 
+  @Input() label: string;
   @Input() placeholder = 'Enter text';
   @Input() submitted: boolean;
   @Input() value: any;
@@ -16,7 +17,6 @@ export class InputComponent implements OnInit {
   @Input() inputMode = 'text';
   @Input() autofocus: boolean;
   @Input() errorsMsg: string;
-
 
   isError: any = false;
   disabled: any = false;

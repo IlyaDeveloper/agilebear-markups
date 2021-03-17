@@ -2,28 +2,6 @@
 
 :host {
   @extend %input-host;
-
-  &:not(.--label-inside) {
-    .__placeholder {
-      display: none !important;
-    }
-  }
-
-
-  &.--large {
-    .__input {
-      height: rem(64);
-
-      //padding-top: rem(26); //5.1%;
-
-      font-weight: 600;
-      font-size: rem(32);
-      letter-spacing: 0.15px;
-      color: var(--cl-text-button);
-
-      background: transparent;
-    }
-  }
 }
 
 .__label {
@@ -32,36 +10,10 @@
 
 .__group {
   @extend %input-field-container;
-
-  &.--is-error {
-    &:after {
-      position: absolute;
-      top: 50%;
-      right: rem(12);
-      z-index: 1;
-
-      transform: translateY(-50%);
-
-      color: $validation-color;
-      @include pseudo-icon($vri-attention-round, 17);
-    }
-
-    .__input {
-      padding-right: rem(38) !important;
-
-      &:focus {
-        box-shadow: 0 0 0 1px $validation-color !important;
-      }
-    }
-  }
 }
 
 .__input {
   @extend %input-field;
-
-  &.--info-mrg {
-    padding-right: rem(36);
-  }
 }
 
 .__msg {

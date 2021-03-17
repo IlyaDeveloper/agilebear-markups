@@ -1,12 +1,3 @@
-//  * Validations elements
-$validation-position-y: rem(-18) !default;
-$validation-position-x: 0 !default;
-$validation-font-size: rem(12) !default;
-$validation-font-style: italic !default;
-$validation-font-weight: 500 !default;
-$validation-color: $cl-red !default;
-$validation-bg-color: trasparent !default;
-
 %validation-message {
   font-size: $validation-font-size;
   font-weight: $validation-font-weight;
