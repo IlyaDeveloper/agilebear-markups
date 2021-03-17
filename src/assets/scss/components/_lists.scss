@@ -28,13 +28,13 @@
       line-height: 4px;
     }
 
-    &:not(:first-child){
+    &:not(:first-child) {
       margin-top: rem(30);
     }
   }
 
   &.--second {
-    font-weight: 300!important;
+    font-weight: 300 !important;
 
     li {
       margin-top: rem(12) !important;
@@ -61,36 +61,35 @@
 
     padding: 0 0 0 rem(22);
 
-    &:before {
+    &:before, &:after {
       position: absolute;
       top: rem(9);
       left: 0;
 
       height: rem(9);
 
-      counter-increment: item;
-      content: counter(item) "";
-
       font-size: rem(15);
       font-weight: 500;
-      color: var(--cl-orange);
+      color: var(--list-num-mark-color, var(--cl-orange));
       line-height: 4px;
+    }
+
+    &:before {
+      counter-increment: item;
+      content: var(--list-num-counter, counter(item));
     }
 
     &:not(:first-child) {
       margin-top: rem(26);
     }
-  }
 
-  &.--set-increment-11 {
-    counter-reset: item 11;
-
-    li {
-
-      //&:before {
-      //  counter-increment: item 11!important;
-      //}
+    &.--is-yellow {
+      --list-num-mark-color: var(--cl-yellow-orange);
     }
+
+    /*   &.--is-red {
+         --list-num-mark-color: var(--cl-red);
+       }*/
   }
 
   &.--second {
@@ -104,6 +103,39 @@
         content: attr(data-counter) !important;
         color: var(--cl-slate-grey);
         opacity: .5;
+      }
+    }
+  }
+
+  &.--set-increment-11 {
+    counter-reset: item 11;
+  }
+
+  &.--of-label {
+    //--list-num-counter: 'Day0' counter(item);
+    --list-num-mark-color: var(--cl-red);
+
+    li {
+      display: flex;
+      align-items: baseline;
+
+      padding: 0;
+
+      &:after, &:before {
+        position: static;
+      }
+
+      &:after {
+        order: -1;
+
+        content: 'Day';
+      }
+
+      &:before {
+        margin-right: rem(20);
+
+        content: var(--list-num-counter, '0' counter(item));
+        font-weight: bold;
       }
     }
   }

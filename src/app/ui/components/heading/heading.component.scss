@@ -52,7 +52,7 @@
 
   &.--large {
     margin-left: rem(-12);
-    margin-bottom: rem(50)!important;
+    margin-bottom: rem(50) !important;
 
     font-weight: 200;
     font-size: rem(110);
@@ -73,6 +73,13 @@
     line-height: 1.33;
     font-weight: 600;
     color: var(--cl-green);
+  }
+
+  &.--revert {
+
+    .__hard {
+      order: -1;
+    }
   }
 }
 
