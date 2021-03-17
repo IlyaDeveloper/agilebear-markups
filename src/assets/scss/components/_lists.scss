@@ -23,6 +23,7 @@
 
 
       content: '•';
+      font-weight: 500;
       font-size: rem(28);
       color: var(--cl-green);
       line-height: 4px;
@@ -45,6 +46,28 @@
         font-size: rem(20);
 
         opacity: .5;
+      }
+    }
+  }
+
+  &.--third {
+    li {
+      font-size: rem(15);
+      font-weight: 300;
+      line-height: 1.87;
+
+      color: var(--cl-slate-grey);
+
+      mark {
+        font-size: rem(16);
+        font-weight: 500;
+      }
+
+      &:before{
+        top: rem(11);
+
+        font-size: rem(28);
+        color: var(--cl-yellow-orange)!important;
       }
     }
   }

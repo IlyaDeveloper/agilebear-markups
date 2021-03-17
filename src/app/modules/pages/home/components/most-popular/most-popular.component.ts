@@ -21,10 +21,6 @@ const MOST_POPULARS = [
   }
 ];
 
-
-
-
-
 @Component({
   selector: 'agl-most-popular',
   templateUrl: './most-popular.component.html',

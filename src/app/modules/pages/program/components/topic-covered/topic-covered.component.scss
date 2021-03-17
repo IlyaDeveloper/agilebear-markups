@@ -11,4 +11,14 @@
 
     border-bottom: 1px solid var(--cl-pale-violet);
   }
+
+  .__figure {
+
+  }
+}
+@include min-wide(tablet){
+  .__figure{
+    height: max-content;
+    margin-top: rem(-54);
+  }
 }
