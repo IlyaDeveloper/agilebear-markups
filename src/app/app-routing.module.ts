@@ -28,6 +28,10 @@ const routes: Routes = [
           path: 'scrum-training',
           loadChildren: () => import('./modules/pages/scrum-training/scrum-training.module').then(m => m.ScrumTrainingModule)
         },
+        {
+          path: 'services/program',
+          loadChildren: () => import('./modules/pages/program/program.module').then(m => m.ProgramModule)
+        },
       ]
   }
 ];
