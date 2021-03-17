@@ -47,6 +47,27 @@
       display: none;
     }
   }
+
+  &.--large {
+    font-weight: 200;
+    font-size: rem(110);
+    letter-spacing: rem(-11);
+    color: var(--cl-pale-lilac);
+
+    .__hard {
+      color: currentColor;
+      letter-spacing: rem(-8.8);
+    }
+  }
+
+  &.--small {
+    font-size: rem(18);
+
+    text-transform: initial;
+    line-height: 1.33;
+    font-weight: 600;
+    color: var(--cl-green);
+  }
 }
 
 .__hard {
@@ -57,4 +78,3 @@
 .__last {
   color: var(--cl-yellow-orange);
 }
-

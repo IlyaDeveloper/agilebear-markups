@@ -9,6 +9,7 @@ import {FlexModule, GridModule} from '@angular/flex-layout';
 import {ButtonDownloadComponent} from './components/button-download/button-download.component';
 import {HeadingComponent} from './components/heading/heading.component';
 import {LabelComponent} from './components/label/label.component';
+import {ListComponent} from './components/list/list.component';
 
 const COMPONENTS = [
     ButtonComponent,
@@ -17,7 +18,8 @@ const COMPONENTS = [
     LinkComponent,
     ButtonDownloadComponent,
     HeadingComponent,
-    LabelComponent
+    LabelComponent,
+    ListComponent
   ]
 ;
 
