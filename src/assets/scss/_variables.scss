@@ -23,12 +23,11 @@ $contentScale: (
   //    wide: screens(phonesSm),
   //    scale: 92%
   //),
-  //(
-  //  direction: 'max-width',
-  //  wide: screens(notebookLg),
-  //  scale: 86%
-  //),
-  //(
+  (
+    direction: 'max-width',
+    wide: screens(notebook),
+    scale: 89%
+  ), //(
   //  direction: 'max-width',
   //  wide: screens(desktopMd),
   //  scale: 80%
@@ -207,7 +206,7 @@ $enable-grid-classes: false;
 //  xl: 1170px
 //);
 
-$disabled-color:var(--cl-brown-grey);
+$disabled-color: var(--cl-brown-grey);
 $disabled-bg-color: var(--cl-pale-lilac);
 $disabled-bg-color-second: clr('pale-lilac-two');
 $disabled-opacity: 0.9;

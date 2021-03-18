@@ -54,3 +54,28 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
 
   opacity: 0.9;
 }
+
+@include max-wide(tablet) {
+  :host {
+    padding: 0 0 rem(60);
+  }
+
+  .__capt {
+    padding: calc(var(--header-hgt) + #{rem(90)}) 0 rem(10);
+    font-size: rem(56);
+  }
+
+  .__capt-3 {
+    font-size: rem(52);
+  }
+}
+
+@include max-wide(phones) {
+  .__capt {
+    font-size: rem(44);
+  }
+
+  .__capt-3 {
+    font-size: rem(40);
+  }
+}

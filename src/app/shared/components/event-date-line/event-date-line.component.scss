@@ -29,6 +29,10 @@
         color: var(--cl-slate-grey);
       }
     }
+
+    div{
+      flex-flow: row wrap!important;
+    }
   }
 }
 
@@ -74,5 +78,18 @@
     font-weight: 300;
     color: #a8b1bb;
     content: ',';
+  }
+}
+
+@include max-wide(phones){
+  :host{
+    &.--second {
+      font-size: rem(32);
+
+      div{
+        justify-content: start!important;
+        flex-flow: row wrap!important;
+      }
+    }
   }
 }

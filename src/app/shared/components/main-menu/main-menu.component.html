@@ -1,15 +1,28 @@
 <header class="__top" fxLayout="row" fxLayoutAlign="end center">
   <ng-content></ng-content>
 </header>
-<div class="__content"  fxFlex="1 1">
+
+<div class="__content" fxFlex="1 1">
   <nav class="__nav" gdInline gdGap="1.5rem" gdAlignColumns="center">
     <a class="__link" routerLink="/" (click)="goToHome()">Home</a>
     <a class="__link" routerLink="/about-us" (click)="closeMenu()">About Us</a>
-    <div class="__sub-menu">
 
+    <a class="__link" routerLink="/services" (click)="openSub('services')">Services</a>
+    <div class="__sub-menu" gdGap=".5rem" *ngIf="sub1">
+      <a class="__link --small"
+         [routerLink]="item.link"
+         *ngFor="let item of sunMenu1"
+         (click)="closeMenu()">{{item.name}}</a>
     </div>
-    <a class="__link" routerLink="/services" (click)="closeMenu()">Services</a>
-    <a class="__link" (click)="closeMenu()">Scrum Training</a>
+
+    <a class="__link" routerLink="/scrum-training" (click)="openSub('training')">Scrum Training</a>
+    <div class="__sub-menu" gdGap=" .5rem" *ngIf="sub2">
+      <a class="__link --small"
+         [routerLink]="item.link"
+         *ngFor="let item of sunMenu2"
+         (click)="closeMenu()">{{item.name}}</a>
+    </div>
+
     <a class="__link" (click)="closeMenu()">Contact Us</a>
   </nav>
 </div>

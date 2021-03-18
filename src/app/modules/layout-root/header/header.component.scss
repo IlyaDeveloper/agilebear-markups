@@ -179,3 +179,17 @@ $header-spacer: rem(10);
 .__s-logo {
   transform: translate(0, 6px);
 }
+
+@include max-wide(desktopMd) {
+  .__right, .__nav {
+    display: none !important;
+  }
+}
+
+@include min-wide(desktopMd) {
+  .__btn-menu {
+    display: none !important;
+  }
+}
+
+

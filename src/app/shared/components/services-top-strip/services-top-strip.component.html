@@ -1,4 +1,5 @@
-<div class="container" fxLayout="row wrap" fxLayoutAlign="space-between center">
+<div class="container" fxLayoutAlign.gt-sm="space-between center" fxLayoutGap.gt-sm="1rem"
+     gdGap.lt-md="2.5rem" gdAlignColumns.lt-md="center center" gdAlignRows.lt-md="center center">
   <div class="__capt">
     Duration:
 
@@ -7,7 +8,9 @@
     </strong>
   </div>
 
-  <agl-services-place gdGridAlign="start" [type]="orangeColor"></agl-services-place>
+  <div fxLayoutAlign="center center">
+    <agl-services-place class="__places --is-mob" gdGridAlign="start" [type]="orangeColor"></agl-services-place>
+  </div>
 
   <figure class="__logo">
     <img [attr.src]="['assets/img/' + img]" alt="">

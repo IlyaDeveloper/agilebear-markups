@@ -6,13 +6,9 @@ $item-spacer: rem(22);
   --btn-wdh: #{rem(186)};
 
   margin: auto 0;
-}
-
-.__cont {
 
 
-  & > * {
-
+  &.--is-mob {
 
   }
 }
@@ -54,6 +50,20 @@ $item-spacer: rem(22);
       left: auto;
 
       content: ''
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  :host {
+    &.--is-mob {
+      .__item {
+        margin: auto !important;
+
+        &:before, &:after {
+          content: none !important;
+        }
+      }
     }
   }
 }

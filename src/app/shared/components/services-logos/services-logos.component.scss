@@ -16,14 +16,23 @@
   }
 
   &.--gray {
-    filter: grayscale(1) ; //hue-rotate(157deg);
+    filter: grayscale(1);
   }
 }
-
 
 .__img {
   width: var(--services-logos-wdh, rem(78));
 
   object-fit: cover;
   object-position: center;
+}
+
+@include min-wide(phonesLg) {
+  :host {
+    &.--nowrap {
+      figure {
+        flex-flow: nowrap !important;
+      }
+    }
+  }
 }

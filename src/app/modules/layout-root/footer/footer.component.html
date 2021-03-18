@@ -1,7 +1,7 @@
 <footer class="__footer container" fxLayout="column">
   <ng-container *ngIf="footerType === 'a' || footerType === null">
     <article class="__book --a" gdColumns.gt-sm=" 2fr 1fr" gdGap="1.5rem">
-      <agl-services-logos [usedLogo]="logos"></agl-services-logos>
+      <agl-services-logos class="--nowrap" [usedLogo]="logos"></agl-services-logos>
 
       <div fxLayoutGap="2rem" fxLayoutAlign="center center">
         <agl-button class="--upload"></agl-button>
