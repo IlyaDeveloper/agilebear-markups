@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'agl-form-contact',
@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormContactComponent implements OnInit {
 
-  constructor() { }
+  selectedWouldData: number;
+  selectedCoursesData: number;
+
+  whatWouldData: any = [
+    {id: 1, name: 'Public Courses'},
+    {id: 2, name: 'Cancellations'},
+  ];
+
+  coursesData: any = [
+    'first',  'first',
+    'first',   'first'
+  ];
+
+  constructor() {
+  }
+
 
   ngOnInit(): void {
   }

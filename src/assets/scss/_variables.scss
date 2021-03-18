@@ -234,11 +234,11 @@ $popover-arrow-color: $popover-bg;
 $popover-transition: top 0.3s linear;
 
 //* input
-$input-color: var(--cl-text-button);
+$input-color: var(--cl-slate-grey);
 $input-background: var(--input-bg-color, var(--cl-white));
 $input-border-radius: var(--input-br-radius, rem(4));
 $input-border: var(--input-border, 2px solid var(--input-br-color, var(--cl-pale-violet)));
-$input-focus-bg-color: var(--cl-);
+$input-focus-bg-color: var(--cl-yellow-orange);
 $input-placeholder: $cl-placeholder;
 $input-transition: $transition-border;
 
@@ -250,3 +250,39 @@ $validation-font-style: italic !default;
 $validation-font-weight: 500 !default;
 $validation-color: $cl-red !default;
 $validation-bg-color: trasparent !default;
+
+
+//* $ng-select
+$ng-select-second-placeholder: 'Please select';
+$ng-select-highlight: clr('white');
+$ng-select-primary-text: clr('slate-grey');
+$ng-select-disabled-text: $disabled-bg-color-second;
+$ng-select-disabled-border-color: $disabled-color;
+$ng-select-disabled-opacity: $disabled-opacity;
+$ng-select-border: clr('pale-violet');
+$ng-select-border-radius: $elemRadiusSmall;
+$ng-select-border-width: rem(2);
+$ng-select-bg: var(--cl-white);
+$ng-select-selected: lighten($ng-select-highlight, 40) !default;
+$ng-select-marked: var(--cl-bluey-grey);
+$ng-select-placeholder: $cl-placeholder;
+$ng-select-height: rem(40);
+$ng-select-value-padding-left: rem(16);
+$ng-select-value-font-size: rem(14);
+$ng-select-label-font-size: rem(16);
+$ng-select-label-color: var(--cl-steel);
+$ng-select-panel-color: clr('brown-grey');
+$ng-select-item-active-color: var(--cl-yellow-orange);
+
+$ng-select-item-spacer: rem(16);
+$ng-select-box-shadow: 0 0 0 1px var(--cl-yellow-orange);
+$ng-select-box-shadow-opened: $sh-text;
+$ng-select-error-color: $cl-red;
+$ng-select-focused-color: var(--cl-yellow-orange);
+$ng-select-container-transition: $transition-border, $transition-shadow;
+$ng-select-arrow-color: var(--cl-slate-grey);
+$ng-select-arrow-hover-color: var(--cl-yellow-orange);
+$ng-select-arrow-size: 10;
+$ng-select-clear-color: var(--cl-slate-grey);
+$ng-select-clear-hover-color: var(--cl-yellow-orange);
+$ng-select-items-height: rem(40 * 5);

@@ -2,12 +2,11 @@
   display: inline-grid;
   grid-gap: rem(16);
 
-  margin-bottom: rem(24);
-
   font-family: $font-family-primary;
   font-size: rem(16);
   color: $input-color;
-  line-height: 138%;
+  line-height: 1.88;
+  letter-spacing: -0.4px;
 
   //* Disabled styles
   &.--disabled,
@@ -48,13 +47,13 @@
   height: var(--input-hgt, rem(40));
   width: var(--input-wdh, 100%);
 
-  padding: var(--input-pdd, rem(10.5) rem(16));
+  padding: var(--input-pdd, rem(12) rem(12));
 
   line-height: normal;
 
   outline: none;
 
-  font-size: rem(14);
+  font-size: rem(16);
   font-weight: 500;
   border-radius: $input-border-radius;
   border: $input-border;
@@ -82,33 +81,4 @@
 %input-messages {
   @extend %validation-message-position-left;
   @include validation-message-empty(input, --input-br-color, $validation-color);
-}
-
-%input-placeholder {
-  position: absolute;
-  top: 50%;
-  right: rem(32);
-  left: $contentGutter;
-
-  font-weight: 600;
-  font-size: rem(18);
-  line-height: 133%;
-  color: var(--cl-text-field) !important;
-  letter-spacing: 0.15px;
-  text-transform: uppercase;
-  text-align: left;
-
-  transform: translate(0, -50%);
-  transition: top 0.3s ease-out;
-
-  @include text-dot;
-}
-
-%input-placeholder-up {
-  top: rem(16);
-
-  display: block !important;
-
-  font-weight: normal;
-  font-size: rem(12);
 }

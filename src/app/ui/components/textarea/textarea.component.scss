@@ -7,5 +7,9 @@
 }
 
 .__field {
+  --input-hgt: auto;
 
+  @extend %input-field;
+
+  min-height: rem(261);
 }

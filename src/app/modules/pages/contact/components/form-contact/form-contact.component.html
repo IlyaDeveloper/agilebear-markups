@@ -1,7 +1,7 @@
 <div class="container">
 
 
-  <form action="">
+  <form action="" fxLayout="column" fxLayoutGap="2.375rem">
     <article fxLayout="column" fxLayoutGap="0.875rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
         <agl-heading class="--second">Your Details</agl-heading>
@@ -24,8 +24,25 @@
         <agl-heading class="--second">What Would You Like To Talk To Us About?</agl-heading>
       </div>
 
-      <div>
-        <ng-select [placeholder]="'Public Courses'"></ng-select>
+      <div gdColumns.gt-xs="1fr 1fr" gdGap="0 1.875rem">
+        <ng-select [placeholder]="'Please select'"
+                   [items]="whatWouldData"
+                   bindLabel="name"
+                   bindValue="id"
+                   [(ngModel)]="selectedWouldData"></ng-select>
+        <span></span>
+      </div>
+    </article>
+
+    <article fxLayout="column" fxLayoutGap="0.875rem" *ngIf="selectedCoursesData === 2">
+      <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <agl-heading class="--second">Which course would you like to cancel your booking for?</agl-heading>
+      </div>
+
+      <div gdColumns.gt-xs="1fr 1fr" gdGap="0 1.875rem">
+        <ng-select [placeholder]="'Please select'"
+                   [items]="coursesData"></ng-select>
+        <span></span>
       </div>
     </article>
 
