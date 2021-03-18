@@ -264,7 +264,7 @@ $ng-select-border-radius: $elemRadiusSmall;
 $ng-select-border-width: rem(2);
 $ng-select-bg: var(--cl-white);
 $ng-select-selected: lighten($ng-select-highlight, 40) !default;
-$ng-select-marked: var(--cl-bluey-grey);
+$ng-select-marked: var(--cl-pale-grey);
 $ng-select-placeholder: $cl-placeholder;
 $ng-select-height: rem(40);
 $ng-select-value-padding-left: rem(16);
@@ -286,3 +286,17 @@ $ng-select-arrow-size: 10;
 $ng-select-clear-color: var(--cl-slate-grey);
 $ng-select-clear-hover-color: var(--cl-yellow-orange);
 $ng-select-items-height: rem(40 * 5);
+
+//* checkbox
+$checkbox-label-font-size: rem(16) !default;
+$checkbox-label-color: var(--cl-slate-grey) !default;
+$checkbox-label-offset: 0 0 0 rem(12) !default;
+
+$checkbox-background: transparent !default;
+$checkbox-mark-size: rem(20) !default;
+$checkbox-mark-radius: rem(3) !default;
+$checkbox-mark-border-size: 2px !default;
+$checkbox-mark-color: $border-color !default;
+$checkbox-active-background-color: var(--cl-battleship-grey) !default;
+$checkbox-active-color: var(--cl-white) !default;
+

@@ -8,12 +8,6 @@
   background-color: var(--cl-pale-grey);
 }
 
-
-.__fieldset {
-
-}
-
-
 .__right {
   font-size: rem(15);
   font-weight: 300;
@@ -29,4 +23,24 @@
     letter-spacing: -0.4px;
     color: #dd0000;
   }
+}
+
+.__recaptcha {
+  min-height: rem(77);
+
+  border: solid 1px #d2d2d2;
+  background-color: #f9f9f9;
+}
+
+@include min-wide(laptop) {
+  .__bottom-ch {
+    display: inline-block;
+    max-width: rem(250);
+  }
+
+  .__recaptcha {
+    width: rem(303);
+
+  }
+
 }

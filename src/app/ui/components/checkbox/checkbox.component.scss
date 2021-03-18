@@ -1,19 +1,5 @@
 @import 'core';
 
-//* checkbox
-$checkbox-label-font-size: rem(16) !default;
-$checkbox-label-color: var(--cl-slate-grey) !default;
-$checkbox-label-offset: 0 0 0 rem(12) !default;
-
-$checkbox-background: transparent !default;
-$checkbox-mark-size: rem(2) !default;
-$checkbox-mark-size: rem(20) !default;
-$checkbox-mark-radius: rem(3) !default;
-$checkbox-mark-border-size: 2px !default;
-$checkbox-mark-color: $border-color !default;
-$checkbox-active-background-color: var(--cl-pale-violet) !default;
-$checkbox-active-color: var(--cl-white) !default;
-
 :host {
   position: relative;
 
@@ -76,7 +62,9 @@ $checkbox-active-color: var(--cl-white) !default;
 
 .__mark {
   width: $checkbox-mark-size;
+  min-width: $checkbox-mark-size;
   height: $checkbox-mark-size;
+  min-height: $checkbox-mark-size;
 
   margin: 0;
 

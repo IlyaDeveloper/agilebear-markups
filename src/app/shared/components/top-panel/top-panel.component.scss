@@ -10,7 +10,7 @@ $top-panel-bg-3: url('/assets/img/p-services.jpg');
 
   min-height: rem(560);
 
-  margin: calc(var(--header-hgt) * (-1)) rem(50) 0 0;
+  margin: calc(var(--header-hgt) * (-1)) 0 0;
   padding: 0 0 rem(112);
 
   background: var(--top-pannel-img, $top-panel-bg-1) no-repeat top center / cover;

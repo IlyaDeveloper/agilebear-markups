@@ -44,7 +44,13 @@
     }
   }
 
-  &:not(.--quotes) {
+  &.--valid {
+    .__last {
+      color: $cl-red;
+    }
+  }
+
+  &:not(.--quotes):not(.--valid) {
     .__last {
       display: none;
     }
@@ -80,10 +86,6 @@
       order: -1;
     }
   }
-
-  //&.--middle {
-  //
-  //}
 }
 
 .__hard {
