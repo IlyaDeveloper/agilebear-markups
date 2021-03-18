@@ -17,47 +17,47 @@ import {DOCUMENT} from '@angular/common';
 const SERVICES_LINKS = [
   {
     name: 'Certified ScrumMaster Training',
-    link: '/services/csm',
+    link: '/services/program',
     icon: 'csm'
   },
   {
     name: 'Certified Product Owner Training',
-    link: '/services/cspo',
+    link: '/services/program',
     icon: 'cspo'
   },
   {
     name: 'The Cultural Change',
-    link: '/services/tcc',
+    link: '/services/program',
     icon: 'tcc'
   },
   {
     name: 'Advanced Certified ScrumMaster Training',
-    link: '/services/acs',
+    link: '/services/program',
     icon: ''
   },
   {
     name: 'User Story Workshops',
-    link: '/services/usw',
+    link: '/services/program',
     icon: 'usw'
   },
   {
     name: 'Agile Coaching Sessions',
-    link: '/services/acs',
+    link: '/services/program',
     icon: 'acs'
   },
   {
     name: 'Lean Workshops',
-    link: '/services/lw',
+    link: '/services/program',
     icon: 'lw'
   },
   {
     name: 'Scrum Overview',
-    link: '/services/so',
+    link: '/services/program',
     icon: 'so'
   },
   {
     name: 'Scrum Dragon',
-    link: '/services/sd',
+    link: '/services/program',
     icon: 'sd'
   },
 ];
@@ -94,8 +94,11 @@ export class HeaderComponent implements OnInit {
   body: HTMLElement = this.document.getElementsByTagName('body')[0];
   isMenuOpen: boolean;
 
+  url: string;
+
   dwServiceList = SERVICES_LINKS;
   dwTrainingList = TRAINING_LINKS;
+
 
   constructor(
     private router: Router,
@@ -103,7 +106,16 @@ export class HeaderComponent implements OnInit {
   ) {
   }
 
+  get isServicesPage(): boolean {
+    return (this.url.includes('services'))
+  };
+
+  get isTrainingPage(): boolean {
+    return (this.url.includes('training'))
+  }
+
   ngOnInit(): void {
+    this.url = this.router.url.split('?')[0];
   }
 
   triggerMenu(): void {

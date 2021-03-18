@@ -1,0 +1,33 @@
+@import "core";
+
+:host {
+  display: flex;
+  align-items: center;
+
+  padding: rem(20) 0;
+
+  border-bottom: 1px solid var(--cl-pale-lilac-two);;
+}
+
+.__capt {
+  font-size: rem(28);
+  font-weight: 200;
+  line-height: 0.93;
+  letter-spacing: -1.4px;
+  text-transform: uppercase;
+  color: #a8b1bb;
+
+  strong {
+    font-weight: 800;
+    letter-spacing: normal;
+    color: var(--cl-steel);
+  }
+
+  span {
+    color: var(--cl-steel);
+  }
+}
+
+.__logo {
+  max-width: rem(170);
+}

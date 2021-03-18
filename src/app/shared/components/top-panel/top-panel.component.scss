@@ -3,6 +3,7 @@
 $top-panel-bg-1: url('/assets/img/p-home.jpg');
 $top-panel-bg-2: url('/assets/img/p-training.jpg');
 $top-panel-bg-3: url('/assets/img/p-services.jpg');
+$top-panel-bg-4: url('/assets/img/p-contact.jpg');
 
 :host {
   display: flex;
@@ -23,6 +24,11 @@ $top-panel-bg-3: url('/assets/img/p-services.jpg');
   &.--third {
     --top-pannel-img: #{$top-panel-bg-3}
   }
+
+  &.--fourth {
+    --top-pannel-img: #{$top-panel-bg-4};
+    --top-pannel-color: var(--cl-white);
+  }
 }
 
 .__capt {
@@ -38,7 +44,7 @@ $top-panel-bg-3: url('/assets/img/p-services.jpg');
 }
 
 .__capt-1 {
-  color: var(--cl-slate-grey);
+  color: var(--top-pannel-color, var(--cl-slate-grey));
 }
 
 .__capt-3 {

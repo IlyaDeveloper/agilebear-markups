@@ -1,1 +1,15 @@
-<p>services-top-strip works!</p>
+<div class="container" fxLayout="row wrap" fxLayoutAlign="space-between center">
+  <div class="__capt">
+    Duration:
+
+    <strong>
+      <span>{{days}}</span> Days
+    </strong>
+  </div>
+
+  <agl-services-place gdGridAlign="start" [type]="orangeColor"></agl-services-place>
+
+  <figure class="__logo">
+    <img [attr.src]="['assets/img/' + img]" alt="">
+  </figure>
+</div>

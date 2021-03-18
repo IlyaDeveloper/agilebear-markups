@@ -81,17 +81,19 @@ $header-spacer: rem(10);
     }
   }
 
-  &:not([ngbDropdown]) {
-    &.--active {
+  &.--active {
+    --header-link-before-bottom: #{rem(-26)};
+  }
+
+  @include only-mouse {
+    &:hover {
       --header-link-before-bottom: #{rem(-26)};
     }
-
-    @include only-mouse {
-      &:hover {
-        --header-link-before-bottom: #{rem(-26)};
-      }
-    }
   }
+
+  //&:not([ngbDropdown]) {
+  //
+  //}
 
   &.--tell {
     --header-link-before: none;
@@ -138,6 +140,7 @@ $header-spacer: rem(10);
   padding: 0;
 
   color: var(--cl-white);
+  line-height: 1.2;
   white-space: normal;
 
   &:before {
@@ -171,4 +174,8 @@ $header-spacer: rem(10);
       background: transparent;
     }
   }
+}
+
+.__s-logo {
+  transform: translate(0, 6px);
 }

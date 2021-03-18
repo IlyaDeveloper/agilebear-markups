@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'agl-services-top-strip',
   templateUrl: './services-top-strip.component.html',
   styleUrls: ['./services-top-strip.component.scss']
 })
-export class ServicesTopStripComponent implements OnInit {
+export class ServicesTopStripComponent {
 
-  constructor() { }
+  @Input() img: string;
+  @Input() days:string;
 
-  ngOnInit(): void {
+  get orangeColor() {
+    return false;
+  }
+
+
+  constructor() {
   }
 
 }

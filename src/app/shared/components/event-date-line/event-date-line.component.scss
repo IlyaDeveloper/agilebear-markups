@@ -12,6 +12,9 @@
 
   &.--second {
     font-size: rem(38);
+    letter-spacing: -1.6px;
+
+    color: var(--cl-slate-grey);
 
     &:before {
       margin-right: rem(6);
@@ -19,6 +22,12 @@
       font-weight: 600;
       @include pseudo-icon($agi-arrow-rt, 28);
       color: var(--cl-white);
+    }
+
+    .__day {
+      sup {
+        color: var(--cl-slate-grey);
+      }
     }
   }
 }
