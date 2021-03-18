@@ -96,3 +96,15 @@
 .__last {
   color: var(--cl-yellow-orange);
 }
+
+
+@include max-wide(phones) {
+  :host {
+    &.--second.--valid {
+      div {
+        display: inline-block!important;
+      }
+    }
+
+  }
+}

@@ -1,21 +1,17 @@
 <!--<label class="__label">{{ label }}</label>-->
 
 <div class="__group" [class.--is-error]="isError">
-  <!--  <mark class="__msg" *ngIf="isError">-->
-  <!--    <agl-validation-messages-->
-  <!--      [errors]="!errorsMsg ? [error] : null"-->
-  <!--      [fieldName]="validationLabel || label"-->
-  <!--      [prefix]="validationLabelPrefix"-->
-  <!--      [type]="type"-->
-  <!--      [errorsMsg]="errorsMsg"-->
-  <!--    >-->
-  <!--    </agl-validation-messages>-->
-  <!--  </mark>-->
+    <mark class="__msg" *ngIf="isError">
+      <agl-validation-messages
+        [errorsMsg]="errorsMsg"
+      >
+      </agl-validation-messages>
+    </mark>
 
   <input
     class="__input"
     [type]="type"
-    [placeholder]="placeholder"
+    [placeholder]="!importantPlace? placeholder: ''"
     [disabled]="disabled"
     (ngModelChange)="onChange($event)"
     (keyup)="onChange($event)"
@@ -26,5 +22,5 @@
     #inputRef
   />
 
-<!--  <div class="__placeholder">{{ placeholder }}</div>-->
+  <div class="__placeholder" *ngIf="!value && importantPlace">{{ placeholder }}</div>
 </div>

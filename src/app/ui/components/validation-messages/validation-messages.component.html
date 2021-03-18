@@ -1,13 +1,2 @@
-<div class="__message" *ngFor="let error of errors">
-  <div *ngIf="error.key === 'required' && type !== 'email'">
-    Required
-  </div>
 
-  <div *ngIf="error.key === 'required' && type === 'email'">Please enter your email address</div>
-
-  <div *ngIf="error.key === 'minlength'">Min length for {{ fieldName }} is {{ error.requiredLength }}</div>
-
-  <div *ngIf="error.key === 'email'">Invalid email address</div>
-</div>
-
-<div class="__message" *ngIf="errorsMsg">{{ errorsMsg }}</div>
+<div class="__message">{{ errorsMsg }}</div>

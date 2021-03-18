@@ -17,10 +17,9 @@ export class InputComponent implements OnInit {
   @Input() inputMode = 'text';
   @Input() autofocus: boolean;
   @Input() errorsMsg: string;
-
+  @Input() importantPlace: boolean;
   isError: any = false;
   disabled: any = false;
-
 
   constructor() {
   }

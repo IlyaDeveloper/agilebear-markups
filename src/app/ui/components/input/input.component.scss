@@ -10,6 +10,23 @@
 
 .__group {
   @extend %input-field-container;
+
+  .__placeholder {
+    position: absolute;
+    top: rem(6);
+    left: rem(14);
+    z-index: 1;
+
+    font-size: rem(16);
+    font-weight: 500;
+    color: $input-placeholder;
+
+    &:after{
+      content: "*";
+      color: $cl-red;
+    }
+
+  }
 }
 
 .__input {

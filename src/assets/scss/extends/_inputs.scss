@@ -79,6 +79,10 @@
 }
 
 %input-messages {
-  @extend %validation-message-position-left;
+  //@extend %validation-message-position-left;
   @include validation-message-empty(input, --input-br-color, $validation-color);
+
+  position: absolute;
+  top: rem(13);
+  right: rem(20);
 }

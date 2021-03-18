@@ -1,6 +1,4 @@
 <div class="container">
-
-
   <form action="" fxLayout="column" fxLayoutGap="2.375rem">
     <article fxLayout="column" fxLayoutGap="0.875rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
@@ -8,11 +6,11 @@
         <div class="__right"><span>*</span>Your Details</div>
       </div>
       <div gdColumns.gt-xs="1fr 1fr" gdGap="1rem 1.875rem">
-        <agl-input placeholder="First name"></agl-input>
-        <agl-input placeholder="Last name"></agl-input>
+        <agl-input placeholder="First name" [importantPlace]="true" errorsMsg="is required"></agl-input>
+        <agl-input placeholder="Last name" [importantPlace]="true"  errorsMsg="is required"></agl-input>
 
-        <agl-input placeholder="Email Address*"></agl-input>
-        <agl-input placeholder="Mobile Number*"></agl-input>
+        <agl-input placeholder="Email Address" [importantPlace]="true" errorsMsg="is required"></agl-input>
+        <agl-input placeholder="Mobile Number"  [importantPlace]="true" errorsMsg="is required"></agl-input>
 
         <agl-input placeholder="Job Title"></agl-input>
         <agl-input placeholder="Company"></agl-input>
@@ -165,7 +163,7 @@
       <div fxLayout="inline" fxLayoutGap="0.625rem" fxLayoutAlign="end center">
         <agl-button>Reset Form</agl-button>
 
-        <agl-button class="--yellow-orange">Send Message</agl-button>
+        <agl-button class="--yellow-orange" type="submit">Send Message</agl-button>
       </div>
     </div>
   </form>
