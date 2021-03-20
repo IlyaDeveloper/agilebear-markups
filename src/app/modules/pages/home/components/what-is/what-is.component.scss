@@ -1,7 +1,19 @@
 @import "core";
 
 :host {
-  display: block;
+  @extend %layout-section-pdd;
 
-  padding: $sectionSpacer 0;
+  margin-bottom: rem(9);
+
+  line-height: 1.7;
+  letter-spacing: -0.60px;
+
+  p {
+    margin-bottom: rem(6);
+    letter-spacing: -0.59px;
+  }
+
+  img {
+    margin-top: rem(10);
+  }
 }

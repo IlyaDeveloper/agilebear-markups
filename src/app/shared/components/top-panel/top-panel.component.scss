@@ -9,10 +9,10 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
   display: flex;
   flex-direction: column;
 
-  min-height: rem(560);
+  min-height: rem(550);
 
   margin: calc(var(--header-hgt) * (-1)) 0 0;
-  padding: 0 0 rem(112);
+  padding: 0 0 rem(36);
 
   background: var(--top-pannel-img, $top-panel-bg-1) no-repeat top center / cover;
   overflow: hidden;
@@ -32,13 +32,13 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
 }
 
 .__capt {
-  padding: calc(var(--header-hgt) + #{rem(150)}) 0 rem(112);
+  padding: calc(var(--header-hgt) + #{rem(139)}) 0 rem(112);
 
   text-shadow: 1px 1.7px 5px rgba(2, 3, 3, 0.25);
   font-size: rem(78);
   font-weight: 900;
   line-height: 0.85;
-  letter-spacing: rem(-3.9);
+  letter-spacing: rem(-6.2);
   text-transform: uppercase;
   color: var(--cl-white);
 }
@@ -51,6 +51,7 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
   font-size: rem(64);
   font-weight: 200;
   line-height: 0.75;
+  letter-spacing: rem(-3.9);
 
   opacity: 0.9;
 }

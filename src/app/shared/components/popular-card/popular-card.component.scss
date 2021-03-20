@@ -12,8 +12,12 @@
   object-position: center;
   object-fit: cover;
 
-  border-radius: rem(8);
+  border-radius: $elemRadius;
   overflow: hidden;
+}
+
+.__logo {
+  transform: translate(rem(-12), rem(-9));
 }
 
 .__capt {
@@ -22,15 +26,15 @@
   font-size: rem(22);
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: -1.1px;
+  letter-spacing: -1.5px;
   color: var(--cl-bluey-grey);
-  line-height: 1.1;
+  line-height: 1;
 
   @include text-dot-vertical(2);
 }
 
 .__desk {
-  margin: rem(10) 0 rem(45);
+  margin: rem(-4) 0 rem(40);
 
   font-size: rem(15);
   font-weight: 300;

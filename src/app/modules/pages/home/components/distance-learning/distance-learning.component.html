@@ -1,46 +1,55 @@
-<article class="container" gdColumns="1fr 1.4fr" gdColumns.lt-md="1fr" gdGap="3.125rem" gdGap.lt-sm="2rem">
+<article class="container"
+         gdColumns="1fr 1.4fr"
+         gdColumns.lt-md="1fr"
+         gdGap="1.25rem"
+         gdGap.lt-sm="2rem">
 
-  <div fxLayout="column" fxLayoutGap="1.5rem">
-    <div fxLayoutAlign="space-between center" fxLayoutGap="1.25rem">
+  <div class="__left" fxLayout="column" fxLayoutGap="1rem">
+    <div fxLayoutAlign="start" fxLayoutAlign.lt-sm="space-between center" fxLayoutGap="1.625rem">
       <agl-heading second="Distance Learning"></agl-heading>
 
-      <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
+      <agl-button-download class="__btn">DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
     </div>
 
-    <div  gdGap="2rem">
-      <div class="__step">
-        <h3 class="__step-capt"><span>Selling Point 01</span></h3>
-        <p>Stuae quo sunt excelsiores, eo dant indicia naturae. Causa autem fuit huc veniendi ut clariora quosdam
-          hinc.</p>
+    <div fxLayout="column" fxLayoutGap="1.6875rem">
+      <div gdGap="1.875rem">
+        <div class="__step">
+          <h3 class="__step-capt"><span>Selling Point 01</span></h3>
+          <p>
+            Stuae quo sunt excelsiores, eo dant indicia naturae.
+            <br>Causa autem fuit huc veniendi ut clariora quosdam hinc.
+          </p>
+        </div>
+
+        <div class="__step">
+          <h3 class="__step-capt">Selling Point 02</h3>
+          <p>
+            Stuae quo sunt excelsiores, eo dant indicia naturae.
+            <br>Causa autem fuit huc veniendi ut clariora quosdam hinc.
+          </p>
+        </div>
+
+        <div class="__step">
+          <h3 class="__step-capt">Selling Point 03</h3>
+          <p>
+            Stuae quo sunt excelsiores, eo dant indicia naturae.
+            <br>Causa autem fuit huc veniendi ut clariora quosdam hinc.
+          </p>
+        </div>
       </div>
 
-      <div class="__step">
-        <h3 class="__step-capt">Selling Point 01</h3>
-        <p>Stuae quo sunt excelsiores, eo dant indicia naturae. Causa autem fuit huc veniendi ut clariora quosdam
-          hinc.</p>
-      </div>
-
-      <div class="__step">
-        <h3 class="__step-capt">Selling Point 01</h3>
-        <p>Stuae quo sunt excelsiores, eo dant indicia naturae. Causa autem fuit huc veniendi ut clariora quosdam
-          hinc.</p>
-      </div>
-    </div>
-
-    <div gdGridAlign="center center">
-      <agl-button class="--yellow-orange">View All Courses</agl-button>
+      <agl-button class="--yellow-orange" gdGridAlign="center center">View All Courses</agl-button>
     </div>
   </div>
 
   <div class="__video" fxLayout="column">
     <span class="__video-t-c" fxLayoutAlign="center"></span>
 
-    <div class="__video-cont" fxFlex="1 1" >
+    <div class="__video-cont" fxFlex="1 1">
       <video poster="assets/img/agilebear_ipad-screen.jpg" #video (click)="videoClick()">
         <source src="assets/video/video.webm" type='video/webm; codecs="vp8, vorbis"'>
         <source src="assets/video/video.mp4" type="'video/mp4">
       </video>
     </div>
-
   </div>
 </article>
