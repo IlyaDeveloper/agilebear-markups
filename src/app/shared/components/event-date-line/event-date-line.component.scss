@@ -37,12 +37,6 @@
 }
 
 .__day {
-  &:after {
-    content: ',';
-    font-weight: 300;
-    color: #a8b1bb;
-  }
-
   &:last-of-type {
     &:before {
       content: '&';
@@ -55,12 +49,18 @@
     }
   }
 
-  /*
-    &:not(:last-of-type) {
-      &:after {
+  &.--not-after{
+    margin-right: 0 !important;
+  }
 
-      }
-    }*/
+  &:not(.--not-after) {
+
+    &:after {
+      content: ',';
+      font-weight: 300;
+      color: #a8b1bb;
+    }
+  }
 
   sup {
     top: -0.6em;
@@ -74,7 +74,12 @@
   }
 }
 
+.__year, .__month {
+  text-transform: uppercase;
+}
+
 .__month {
+
   &:after {
     font-weight: 300;
     color: #a8b1bb;

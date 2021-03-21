@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'agl-event-item',
@@ -22,6 +22,14 @@ export class EventItemComponent implements OnInit {
 
   constructor() {
   }
+
+
+  /*  @HostBinding('class.--is-yellow')*/
+
+  get isOrange(): boolean {
+    return (this.logo === 'cspo');
+  }
+
 
   ngOnInit(): void {
   }

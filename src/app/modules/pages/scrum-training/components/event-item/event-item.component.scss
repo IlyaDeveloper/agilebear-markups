@@ -5,7 +5,7 @@
   font-weight: 300;
   line-height: 0.93;
   text-transform: uppercase;
-  letter-spacing: -1.4px;
+  letter-spacing: -2.3px;
 
   color: var(--cl-bluey-grey);
 
@@ -21,31 +21,30 @@
 }
 
 .__type {
-  margin: rem(30) 0 rem(24);
+  margin: rem(38) 0 rem(20);
 
   font-size: rem(22);
 
   line-height: 1.18;
   text-transform: uppercase;
-  letter-spacing: -1.1px;
+  letter-spacing: -1.5px;
   color: var(--cl-steel);
 
   strong {
     font-weight: 800;
-    //letter-spacing: 1.1px;
   }
 }
 
 .__label {
-  margin-bottom: rem(10);
+  margin-bottom: rem(6);
 }
 
 .__bottom {
-  margin-top: rem(30);
+  //margin-top: rem(30);
 }
 
 .__desk {
-  margin-top: rem(50);
+  margin-top: rem(45);
 
   font-size: rem(15);
   font-weight: 300;
@@ -69,20 +68,22 @@
 .__picture {
   width: 100%;
 
+  margin-top: rem(10);
+
   border-radius: $elemRadius;
 
   overflow: hidden;
 }
 
 .__available {
-  margin-top: rem(20);
+  //margin-top: rem(20);
 
   font-size: rem(13);
   line-height: 1.38;
   color: var(--cl-bluey-grey);
   text-transform: uppercase;
 
-  strong{
+  strong {
     font-weight: 600;
     color: var(--cl-steel);
   }
@@ -91,5 +92,12 @@
 @include max-wide(phonesLg) {
   .__picture {
     margin-bottom: rem(30);
+  }
+}
+
+
+@include min-wide(laptop) {
+  .__logo {
+    margin-top: rem(12);
   }
 }

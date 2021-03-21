@@ -1,9 +1,9 @@
 <article
   gdColumns.gt-sm="3.875rem 1fr 23.125rem"
-  gdGap="0 1.75rem" gdAlignColumns="start start start">
+  gdGap.gt-sm="1.8125rem 2.5rem" gdGap="0 1.8125rem" gdAlignColumns="start start start">
 
   <div gdColumn.gt-sm="1" gdRow.gt-sm="1 span">
-    <agl-services-logos class="--s70" [usedLogo]="[logo]">
+    <agl-services-logos class=" __logo --s70" [usedLogo]="[logo]">
     </agl-services-logos>
   </div>
 
@@ -18,7 +18,7 @@
       </div>
     </ng-container>
 
-    <div class="__name" gdGap="0">
+    <div class="__name" >
       <mark *ngIf="advanced">Advanced</mark>
       <strong>{{ name }}</strong> training
     </div>
@@ -39,7 +39,7 @@
     </figure>
   </div>
 
-  <div gdColumn.gt-sm="3" gdRow.gt-sm="2" gdGap="1.5rem" *ngIf="available <=0">
+  <div gdColumn.gt-sm="3"  gdGap="1.0625rem" *ngIf="available <=0">
     <mark class="__available">
       <strong>This event is sold out. <br></strong>
       We can, however, add you to our reserve list - and will notify you if anyone drops out.
@@ -49,10 +49,11 @@
   </div>
 
   <div class="__bottom" gdColumn.gt-sm="3" gdRow.gt-sm="2 span"
-       fxLayoutAlign="space-between center"
-       fxLayoutGap="1.75rem"
+       fxLayoutAlign="end center"
+       fxLayoutAlign.lt-sm="space-between center"
+       fxLayoutGap="0.5625rem"
        *ngIf="available > 0">
-    <agl-link class="--arrow --y-orange">Find out more</agl-link>
-    <agl-button class="--yellow-orange">Book Your Place</agl-button>
+    <agl-link class="--arrow"  [ngClass]="{'--orange': isOrange , '--y-orange': !isOrange}">Find out more</agl-link>
+    <agl-button [ngClass]="{'--orange': isOrange , '--yellow-orange': !isOrange}">Book Your Place</agl-button>
   </div>
 </article>

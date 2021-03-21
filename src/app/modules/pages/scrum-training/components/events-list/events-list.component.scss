@@ -1,6 +1,6 @@
 @import "core";
 
-$item-spacer: rem(68);
+$item-spacer: rem(70);
 
 :host {
   display: block;
@@ -11,7 +11,7 @@ $item-spacer: rem(68);
 }
 
 .__item {
-  padding: 0 0 $item-spacer;
+  padding: 0 0 rem(25);
 
   &:not(:last-child) {
     //border-bottom: 1px solid var(--cl-pale-violet);

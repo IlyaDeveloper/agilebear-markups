@@ -1,6 +1,7 @@
 <div fxLayoutAlign="center center" fxLayoutGap="0.3rem">
   <div fxLayoutGap="0.5rem">
-    <span class="__day" *ngFor="let item of days">
+    <span class="__day" *ngFor="let item of days; let c = count; let i = index"
+          [class.--not-after]="(i == (c-2))&& (c>2)">
       {{item}}<sup>{{ item | endingNumb :{cutNumb: true} }}</sup>
     </span>
   </div>
