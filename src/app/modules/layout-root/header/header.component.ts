@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {DOCUMENT} from '@angular/common';
 
@@ -96,9 +96,27 @@ export class HeaderComponent implements OnInit {
 
   url: string;
 
+  @Input() type: string;
+
   dwServiceList = SERVICES_LINKS;
   dwTrainingList = TRAINING_LINKS;
 
+
+  get isTrainingPage(): boolean {
+    return (this.router.url.includes('scrum-training'));
+  };
+
+  get isServicesPage(): boolean {
+    return (this.router.url.includes('services'));
+  };
+
+  get isYellow(): boolean {
+    return (this.type === 'b');
+  }
+
+  get isOrange(): boolean {
+    return (this.type === 'c');
+  }
 
   constructor(
     private router: Router,
@@ -106,16 +124,8 @@ export class HeaderComponent implements OnInit {
   ) {
   }
 
-  get isServicesPage(): boolean {
-    return (this.url.includes('services'))
-  };
-
-  get isTrainingPage(): boolean {
-    return (this.url.includes('training'))
-  }
-
   ngOnInit(): void {
-    this.url = this.router.url.split('?')[0];
+    this.type = 'c';
   }
 
   triggerMenu(): void {

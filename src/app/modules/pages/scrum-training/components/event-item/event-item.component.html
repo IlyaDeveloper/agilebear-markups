@@ -1,4 +1,5 @@
 <article
+  class="__content"
   gdColumns.gt-sm="3.875rem 1fr 23.125rem"
   gdGap.gt-sm="1.8125rem 2.5rem" gdGap="0 1.8125rem" gdAlignColumns="start start start">
 
@@ -7,7 +8,7 @@
     </agl-services-logos>
   </div>
 
-  <div gdColumn.gt-sm="2" gdRow.gt-sm="1/4">
+  <div gdColumn.gt-sm="2" gdRow.gt-sm="1/3">
     <ng-container *ngIf=" (available <= 5) || (available > 20) || (available == 0)">
       <div>
         <agl-label class="__label" [ngClass]="{ '--blue': (available > 5),  '--red': (available == 0) }">
@@ -50,7 +51,6 @@
 
   <div class="__bottom" gdColumn.gt-sm="3" gdRow.gt-sm="2 span"
        fxLayoutAlign="end center"
-       fxLayoutAlign.lt-sm="space-between center"
        fxLayoutGap="0.5625rem"
        *ngIf="available > 0">
     <agl-link class="--arrow"  [ngClass]="{'--orange': isOrange , '--y-orange': !isOrange}">Find out more</agl-link>

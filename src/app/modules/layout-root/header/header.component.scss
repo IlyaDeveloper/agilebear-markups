@@ -62,12 +62,12 @@ $header-spacer: rem(10);
   }
 
   &[ngbDropdown] {
-    padding-right: rem(20);
+    padding-right: rem(25);
 
     &:after {
       position: absolute;
       top: 50%;
-      right: 0;
+      right: rem(6);
 
       @include pseudo-icon($agi-arrow-dw, 12);
 
@@ -140,7 +140,6 @@ $header-spacer: rem(10);
 }
 
 .__dropdown-item {
-
   padding: 0;
 
   color: var(--cl-white);

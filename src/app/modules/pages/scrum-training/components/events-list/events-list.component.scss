@@ -11,7 +11,7 @@ $item-spacer: rem(70);
 }
 
 .__item {
-  padding: 0 0 rem(25);
+  padding: 0 0 rem(53);
 
   &:not(:last-child) {
     //border-bottom: 1px solid var(--cl-pale-violet);
@@ -38,3 +38,11 @@ $item-spacer: rem(70);
 }
 
 
+@include max-wide(tablet) {
+  .__item {
+    padding: 0 0 rem(40);
+  }
+  .__caption {
+    margin: 0 0 rem(40);
+  }
+}

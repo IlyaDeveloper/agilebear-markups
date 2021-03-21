@@ -64,7 +64,7 @@
     </nav>
 
     <div class="__right" fxLayout="row nowrap" fxLayoutAlign="space-between center">
-      <agl-button>Book Now!</agl-button>
+      <agl-button [ngClass]="{'--orange': isOrange , '--yellow-orange': isYellow}">Book Now!</agl-button>
 
       <a class="__link --tell" href="tel:01173179269">0117 317 9269</a>
     </div>

@@ -76,8 +76,6 @@
 }
 
 .__available {
-  //margin-top: rem(20);
-
   font-size: rem(13);
   line-height: 1.38;
   color: var(--cl-bluey-grey);
@@ -89,12 +87,30 @@
   }
 }
 
-@include max-wide(phonesLg) {
+@include max-wide(laptop) {
   .__picture {
     margin-bottom: rem(30);
   }
-}
 
+  .__content {
+    position: relative;
+  }
+
+
+  .__logo {
+    position: absolute;
+    top: rem(8);
+    left: -2px;
+    z-index: 1;
+
+    padding: rem(12);
+
+    filter: drop-shadow(0 0px rem(15) var(--cl-white));
+    background: var(--cl-white);
+
+    border-radius: $elemRadius 0 51%;
+  }
+}
 
 @include min-wide(laptop) {
   .__logo {

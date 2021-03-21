@@ -1,11 +1,11 @@
-import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'agl-event-item',
   templateUrl: './event-item.component.html',
   styleUrls: ['./event-item.component.scss']
 })
-export class EventItemComponent implements OnInit {
+export class EventItemComponent {
 
   @Input() name: string;
   @Input() advanced: boolean;
@@ -23,15 +23,8 @@ export class EventItemComponent implements OnInit {
   constructor() {
   }
 
-
-  /*  @HostBinding('class.--is-yellow')*/
-
   get isOrange(): boolean {
     return (this.logo === 'cspo');
-  }
-
-
-  ngOnInit(): void {
   }
 
 }

@@ -50,7 +50,7 @@
   }
 
   &.--not-after{
-    margin-right: 0 !important;
+    margin-right: rem(5) !important;
   }
 
   &:not(.--not-after) {
