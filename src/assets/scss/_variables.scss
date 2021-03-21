@@ -138,6 +138,7 @@ $icon-font-family: 'agilebear' !default;
 $icon-font-prefix: 'agi-';
 $icon-font-path: $font-path + '/#{$icon-font-family}' !default;
 
+$agi-arrow-rt-r: "\e90e";
 $agi-file-pdf-path1: "\e90c";
 $agi-file-pdf-path2: "\e90d";
 $agi-arrow-lt: "\e900";
@@ -154,6 +155,7 @@ $agi-soc-tw: "\e90a";
 $agi-upload: "\e90b";
 
 $icons-font-map: (
+  arrow-rt-r: $agi-arrow-rt-r,
   arrow-lt: $agi-arrow-lt,
   arrow-rt: $agi-arrow-rt,
   arrow-dw: $agi-arrow-dw,

@@ -8,11 +8,10 @@
   </div>
 
   <div gdColumn.gt-sm="2" gdRow.gt-sm="1/4">
-
     <ng-container *ngIf=" (available <= 5) || (available > 20) || (available == 0)">
       <div>
-        <agl-label class="__label" [ngClass]="{ '--blue': (available > 5),  '--orange': (available == 0) }">
-          <ng-container *ngIf="available <= 5">LAST FEW PLACES</ng-container>
+        <agl-label class="__label" [ngClass]="{ '--blue': (available > 5),  '--red': (available == 0) }">
+          <ng-container *ngIf="(available > 0) && (available <= 5)">LAST FEW PLACES</ng-container>
           <ng-container *ngIf="available > 20">NEWLY ANNOUNCED'</ng-container>
           <ng-container *ngIf="available == 0">SOLD OUT</ng-container>
         </agl-label>

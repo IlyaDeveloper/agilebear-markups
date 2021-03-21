@@ -20,7 +20,7 @@
       margin-right: rem(6);
 
       font-weight: 600;
-      @include pseudo-icon($agi-arrow-rt, 28);
+      @include pseudo-icon($agi-arrow-rt-r, 28);
       color: var(--cl-white);
     }
 
@@ -30,8 +30,8 @@
       }
     }
 
-    div{
-      flex-flow: row wrap!important;
+    div {
+      flex-flow: row wrap !important;
     }
   }
 }
@@ -50,16 +50,17 @@
       color: #a8b1bb;
     }
 
-    &:after{
+    &:after {
       content: none !important;
     }
   }
-/*
-  &:not(:last-of-type) {
-    &:after {
 
-    }
-  }*/
+  /*
+    &:not(:last-of-type) {
+      &:after {
+
+      }
+    }*/
 
   sup {
     top: -0.6em;
@@ -81,14 +82,14 @@
   }
 }
 
-@include max-wide(phones){
-  :host{
+@include max-wide(phones) {
+  :host {
     &.--second {
       font-size: rem(32);
 
-      div{
-        justify-content: start!important;
-        flex-flow: row wrap!important;
+      div {
+        justify-content: start !important;
+        flex-flow: row wrap !important;
       }
     }
   }
