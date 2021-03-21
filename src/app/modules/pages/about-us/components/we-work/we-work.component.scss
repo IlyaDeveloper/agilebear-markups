@@ -15,24 +15,28 @@
   overflow: hidden;
 }
 
-.__img{
-  border-radius: rem(8);
+.__img {
+  margin-top: rem(10);
+
+  border-radius: $elemRadius;
 }
 
 .__capt {
+  margin-bottom: rem(16) !important;
+
   line-height: 1.47;
   letter-spacing: -0.75px;
 }
 
 .__brands {
-  margin: rem(-30);
+  margin: rem(-32);
   padding: rem(15);
 }
 
 .__logo {
-  min-width: rem(110);
-  max-width: rem(110);
-  height: rem(118);
+  min-width: rem(120);
+  max-width: rem(120);
+  height: rem(120);
 
   margin: rem(15);
   padding: rem(8);

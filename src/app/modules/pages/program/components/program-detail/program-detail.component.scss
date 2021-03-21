@@ -1,16 +1,12 @@
 @import "core";
 
 :host {
-  display: block;
+  @extend %layout-section-host;
+}
 
-  overflow: hidden;
-
-  .container {
-    padding-top: $sectionSpacer;
-    padding-bottom: $sectionSpacer;
-
-    border-bottom: 1px solid var(--cl-pale-violet);
-  }
+.container {
+  @extend %layout-section-container;
+  @extend %layout-section-container-line;
 }
 
 .__top-text{

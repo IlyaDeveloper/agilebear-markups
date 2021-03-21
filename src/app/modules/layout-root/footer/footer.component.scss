@@ -70,9 +70,6 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   color: var(--cl-bluey-grey);
 }
 
-.__links {
-  margin: auto auto auto -19%;
-}
 
 .__text-l {
   position: relative;
@@ -210,11 +207,6 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   .__text-l:before {
     width: 200%;
   }
-
-}
-
-@include max-wide(tablet) {
-
 }
 
 @include max-wide(phonesLg) {
@@ -251,6 +243,20 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   }
 }
 
+@include max-wide(phones) {
+  .__book {
+    &:before {
+      right: -40px;
+    }
+  }
+
+  .__text-l:before {
+    height: 13vh;
+    width: 94%;
+    shape-outside: polygon(94% 0, 0% 272%, 100% 100%);
+  }
+}
+
 @include min-wide(notebookLg) {
   :host {
     &:before {
@@ -259,7 +265,6 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     }
 
     &:after {
-      //right: 0;
       left: 8%;
     }
   }
@@ -270,5 +275,11 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
       transform: skewX(104deg);
     }
+  }
+}
+
+@include min-wide(laptop) {
+  .__links {
+    margin: auto auto auto -19%;
   }
 }

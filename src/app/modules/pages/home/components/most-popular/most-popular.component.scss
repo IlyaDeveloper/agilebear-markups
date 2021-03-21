@@ -5,6 +5,7 @@
   @extend %layout-section-clip;
 }
 
-.container{
+.container {
   @extend %layout-section-container;
+  @extend %layout-section-container-line;
 }

@@ -27,7 +27,7 @@
     content: '';
 
     opacity: 0.5;
-    border-radius: rem(8);
+    border-radius: $elemRadius;
 
     background-color: var(--cl-pale-lilac-two);
   }
@@ -41,5 +41,18 @@
     height: var(--team-photo-img-h, rem(345));
 
     border-radius: rem(8);
+  }
+}
+
+@include max-wide(phonesSm) {
+  :host {
+    &.--small {
+
+      &:before {
+
+
+        margin: 0 0 rem(20) rem(-100);
+      }
+    }
   }
 }

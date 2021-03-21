@@ -3,9 +3,9 @@
     <agl-heading>Meet The Team</agl-heading>
   </div>
 
-  <div gdGap="5rem" gdGap.lt-md=" 2.5rem">
-    <div gdColumns.gt-md="2fr minmax(30rem,1fr)"
-         gdColumns.lt-md="1fr"
+  <div gdGap="3.4375rem" gdGap.lt-md="2.5rem">
+    <div gdColumns.gt-sm="2fr minmax(30rem,1fr)"
+         gdColumns.lt-sm="1fr"
          gdGap="2rem">
       <article gdGap="1rem">
         <agl-heading class="--second">Nigel Baker</agl-heading>
@@ -22,16 +22,16 @@
         </p>
       </article>
 
-      <agl-team-photo [ngClass.lt-md]="'--small'"  fxFlexOrder.lt-md="-1" [src]="'team-member-1.jpg'"></agl-team-photo>
+      <agl-team-photo class="__img" [ngClass.lt-md]="'--small'"  fxFlexOrder.lt-md="-1" [src]="'team-member-1.jpg'"></agl-team-photo>
     </div>
 
     <div class="__list"
-         gdColumns.gt-md="repeat(auto-fit, minmax(0, 1fr))"
-         gdColumns.lt-md="1fr"
+         gdColumns="repeat(auto-fit, minmax(300px, 1fr))"
+         gdColumns.lt-sm="1fr"
          gdAlignRows="start start"
-         gdAlignColumns="start start" ß
+         gdAlignColumns="start start"
          gdGap="1.875rem">
-      <article gdGap="1rem">
+      <article gdGap="1.3rem">
         <agl-team-photo class="--small" [src]="'team-member-2.jpg'"></agl-team-photo>
 
         <agl-heading class="--second">Paul Goddard</agl-heading>
@@ -47,7 +47,7 @@
         </p>
       </article>
 
-      <article gdGap="1rem">
+      <article gdGap="1.3rem">
         <agl-team-photo class="--small" [src]="'team-member-3.jpg'"></agl-team-photo>
 
         <agl-heading class="--second">Len Charles</agl-heading>
@@ -61,7 +61,7 @@
         </p>
       </article>
 
-      <article gdGap="1rem">
+      <article gdGap="1.3rem">
         <agl-team-photo class="--small" [src]="'team-member-4.jpg'"></agl-team-photo>
 
         <agl-heading class="--second">Joanne Nye</agl-heading>

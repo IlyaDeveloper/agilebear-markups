@@ -1,31 +1,11 @@
 @import "core";
 
 :host {
-  position: relative;
+  @extend %layout-section-host;
+  @extend %layout-section-clip;
+}
 
-  display: block;
-
-  overflow: hidden;
-
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 40%;
-    bottom: 60%;
-    z-index: -1;
-
-    content: '';
-
-    clip-path: polygon(0 0%, 0 100%, 100% 0);
-
-    background: var(--cl-pale-lilac-two);;
-  }
-
-  .container {
-    padding-top: $sectionSpacer;
-    padding-bottom: $sectionSpacer;
-
-    border-bottom: 1px solid var(--cl-pale-violet);
-  }
+.container {
+  @extend %layout-section-container;
+  @extend %layout-section-container-line;
 }

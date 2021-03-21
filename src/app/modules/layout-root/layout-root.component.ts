@@ -8,23 +8,23 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class LayoutRootComponent implements OnInit {
 
-  url: string;
+  // url: string;
 
   constructor(private router: Router) {
   }
 
   get isFooterType(): string {
-    if (this.url.includes('contact')) {
+    if (this.router.url.includes('contact')) {
       return 'b';
-    } else if (this.url.includes('scrum-training')) {
+    } else if (this.router.url.includes('scrum-training')) {
       return 'c';
-    } else if (this.url.includes('training')) {
+    } else if (this.router.url.includes('training')) {
       return 'c2';
     }
     return 'a';
   }
 
   ngOnInit(): void {
-    this.url = this.router.url.split('?')[0];
+    // this.url = this.router.url;
   }
 }

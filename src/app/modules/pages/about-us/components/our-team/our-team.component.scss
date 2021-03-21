@@ -1,21 +1,28 @@
 @import "core";
 
 :host {
-  display: block;
+  @extend %layout-section-host;
+}
 
-  overflow: hidden;
+.container {
+  padding-top: calc(#{$sectionSpacer} + #{rem(30)});
+  padding-bottom: rem(65);
 
-  .container {
-    padding-top: calc(#{$sectionSpacer} + #{rem(30)});
-    padding-bottom: rem(65);
-
-    border-bottom: 1px solid var(--cl-pale-violet);
-  }
+  @extend %layout-section-container-line;
 }
 
 .__text {
+  margin-bottom: rem(9);
+
   font-size: rem(15);
   font-weight: 300;
   line-height: 1.87;
   color: var(--cl-slate-grey);
+}
+
+@include min-wide(desktop) {
+  .__img {
+    margin-top: rem(-62);
+    margin-bottom: rem(25);
+  }
 }

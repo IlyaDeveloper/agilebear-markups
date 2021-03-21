@@ -48,7 +48,20 @@
 %layout-section-container {
   padding-top: $sectionSpacer;
   padding-bottom: calc(#{$sectionSpacer} + #{rem(10)});
-
-  border-bottom: 1px solid var(--cl-pale-violet);
 }
+
+%layout-section-container-line {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    right: var(--container-gutter);
+    bottom: 0;
+    left: var(--container-gutter);
+
+    content: '';
+    border-bottom: 1px solid var(--cl-pale-violet);
+  }
+}
+
 

@@ -39,6 +39,7 @@ $header-spacer: rem(10);
 
   font-weight: 500;
   text-shadow: 0.5px 0.9px rem(4) rgba(2, 3, 3, 0.3);
+  text-decoration: none;
 
   font-size: rem(16);
   letter-spacing: -0.25px;
@@ -97,7 +98,7 @@ $header-spacer: rem(10);
     --link-color-hover: #{var(--cl-yellow-orange)};
 
     //margin-left: rem(30);
-    
+
     letter-spacing: 0.1px;
     font-size: rem(17);
     font-weight: 600;
@@ -113,22 +114,28 @@ $header-spacer: rem(10);
   width: rem(400);
 
   margin-top: -1px;
-  padding: rem(24) rem(10) 58%;
+  padding: rem(13) rem(10) 58%;
 
   color: var(--cl-white);
 
   border-radius: 0;
 
-  clip-path: polygon(0 0, 100% 0%, 100% 81%, 0% 100%);
-  background-color: var(--cl-slate-grey);
+  clip-path: polygon(0 0, 100% 0%, 100% 62%, 0% 100%);
+  background-color: rgba(clr('slate-grey'), 0.8);
 
   &:before {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-
+    right: 12%;
     bottom: rem(-10);
+    z-index: -1;
+
+    content: '';
+
+    clip-path: polygon(0 0, 100% 0%, 100% 66%, 0% 100%);
+    background-color: rgba(clr('slate-grey'), 0.3);
+
   }
 }
 
@@ -152,11 +159,11 @@ $header-spacer: rem(10);
 
       &:after {
         position: absolute;
-        top: 100%;
-        left: 2px;
-        right: 2px;
+        bottom: rem(4);
+        left: 1px;
+        right: 1px;
 
-        height: rem(2);
+        height: rem(3);
 
         margin: rem(-2) 0 0;
         content: '';
@@ -195,7 +202,7 @@ $header-spacer: rem(10);
     white-space: nowrap;
   }
 
-  .__right{
+  .__right {
     min-width: rem(300);
   }
 }

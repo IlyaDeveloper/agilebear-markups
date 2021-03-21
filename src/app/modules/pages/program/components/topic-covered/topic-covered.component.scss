@@ -1,21 +1,16 @@
 @import "core";
 
 :host {
-  display: block;
-
-  overflow: hidden;
-
-  .container {
-    padding-top: $sectionSpacer;
-    padding-bottom: $sectionSpacer;
-
-    border-bottom: 1px solid var(--cl-pale-violet);
-  }
-
-  .__figure {
-
-  }
+  @extend %layout-section-host;
 }
+
+.container {
+  @extend %layout-section-container;
+  @extend %layout-section-container-line;
+}
+
+
+
 @include min-wide(tablet){
   .__figure{
     height: max-content;
