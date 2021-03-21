@@ -1,6 +1,6 @@
 <footer class="__footer container" fxLayout="column">
   <ng-container *ngIf="footerType === 'a' || footerType === null">
-    <article class="__book --a" gdColumns.gt-sm=" 2fr 1fr" gdGap="1.5rem">
+    <article class="__book --a" gdColumns.gt-xs=" 2fr 1fr" gdGap="1.5rem">
       <agl-services-logos class="--nowrap" [usedLogo]="logos"></agl-services-logos>
 
       <div fxLayoutGap="2rem" fxLayoutAlign="center center">
@@ -33,7 +33,7 @@
     </article>
   </ng-container>
 
-  <article class="__content" fxFlex="1 1">
+  <article class="__content clear" fxFlex="1 1">
     <ng-container *ngIf="footerType === 'a' || footerType === null">
       <p class="__text-l">
         <span>Something here that explains that Nigel is certified in all the above ScrumAlliance Course.The same may also true of your other trainers - either way - I think it would be a goodidea ifwe explain here exactly what these certifications means. and also itwould be nice if when we rollover each badge we have a little explainer appear that give the full title etc.
@@ -42,7 +42,7 @@
     </ng-container>
 
     <ng-container *ngIf="footerType === 'c' || footerType === 'c2'">
-      <p class="__text-l">
+      <p class="__text-l --mark">
         <mark>*</mark>
         <span>
           During the world crisis, the ScrumAlliance are permitting us to offer you the opportunity to attend live online
@@ -56,7 +56,7 @@
       </p>
     </ng-container>
 
-    <p class="__text-r">
+    <p class="__text-r ">
       “Your obvious enthusiasm and knowledge makes the time fly and brings to life the material!”
     </p>
   </article>
@@ -74,7 +74,7 @@
       <span>Registered Company Number: 6453580 VAT Number: 924403937</span>
     </div>
 
-    <div fxLayoutGap="1rem" fxLayoutAlign="center">
+    <div class="__links" fxLayoutGap="1rem" fxLayoutAlign="center">
       <agl-link [link]="'/privacy'">Privacy Policy</agl-link>
       <span>|</span>
       <agl-link [link]="'/terms-of-use'">Terms Of Use</agl-link>

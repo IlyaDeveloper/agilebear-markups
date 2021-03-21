@@ -7,7 +7,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
   display: grid;
 
-  padding: rem(63) 0 rem(15);
+  padding: rem(63) 0 rem(10);
 
   min-height: rem(500);
 
@@ -24,9 +24,11 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   }
 
   &:before {
-    top: 50%;
-    right: 60%;
+    top: 62%;
+    right: 63%;
     left: 0;
+
+    min-height: rem(188);
 
     clip-path: polygon(100% 100%, 0 0, 0 100%);
     background: var(--footer-plash-bg-l, $footer-color-main);
@@ -34,7 +36,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
   &:after {
     right: 0;
-    left: 10%;
+    left: 2%;
     z-index: -2;
 
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
@@ -56,24 +58,26 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
 .__text-r {
   position: absolute;
-  right: 0;
-  bottom: 0;
-
+  right: rem(-25);
+  bottom: rem(-4);
   margin: 0;
-  max-width: rem(430);
+  max-width: rem(496);
 
   font-size: rem(28);
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -1.4px;
+  letter-spacing: -2px;
   color: var(--cl-bluey-grey);
+}
+
+.__links {
+  margin: auto auto auto -19%;
 }
 
 .__text-l {
   position: relative;
 
-  margin: rem(18) 0 0;
-  padding: 0 0 0 rem(15);
+  margin: rem(22) 0 0;
 
   font-size: rem(11);
   font-weight: 300;
@@ -97,11 +101,15 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     float: right;
 
     height: 14vh;
-    width: 156%;
+    width: 250%;
 
-    content: '';
+    content: "";
 
-    shape-outside: polygon(80% 0, 0% 282%, 100% 100%);
+    shape-outside: polygon(79% 0, 59% 173%, 80% 268%);
+  }
+
+  &.--mark {
+    padding: 0 0 0 rem(15);
   }
 }
 
@@ -128,9 +136,14 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 }
 
 .__copy {
+  margin: auto auto rem(-6);
+
+  max-width: rem(380);
+
   font-size: rem(15);
   line-height: 1.25;
   text-align: center;
+  color: var(--cl-steel);
 
   span {
     font-weight: 300;
@@ -149,7 +162,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     top: 0;
     bottom: 0;
     left: -30vw;
-    right: 0;
+    right: rem(40);
     z-index: -1;
 
     content: '';
@@ -158,11 +171,11 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     border-left: none;
     border-right: none;
 
-    transform: skewX(111deg);
+    transform: skewX(108deg);
   }
 
   &.--a {
-    margin: 4% 26% 0 0;
+    margin: 7.5% 33% 0 0;
   }
 }
 
@@ -172,13 +185,11 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
 @include max-wide(laptop) {
   .__text-r {
-    position: relative;
-
+    position: static;
 
     margin: rem(32) 0 0 auto;
 
     text-align: right;
-
   }
 
   .__book:before {
@@ -195,8 +206,19 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   .__btn-center {
     margin: 0 auto;
   }
+
+  .__text-l:before {
+    //height: 33vh;
+    width: 200%;
+
+    //shape-outside: polygon(90% 0, 0% 232%, 100% 100%);
+  }
+
 }
 
+@include max-wide(tablet) {
+
+}
 
 @include max-wide(phonesLg) {
   :host {
@@ -213,10 +235,9 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   }
 
   .__text-l:before {
-    height: 33vh;
-    width: 143%;
-
-    shape-outside: polygon(90% 0, 0% 232%, 100% 100%);
+    height: 14vh;
+    width: 54%;
+    shape-outside: polygon(100% 0, 0% 242%, 100% 100%);
   }
 
   .__copy {
@@ -230,5 +251,15 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   .__book {
     margin-right: 0 !important;
     padding-right: 0 !important;
+  }
+}
+
+@include min-wide(notebookLg){
+  .__book {
+    &:before {
+      right: rem(0);
+
+      transform: skewX(104deg);
+    }
   }
 }

@@ -82,18 +82,14 @@ $header-spacer: rem(10);
   }
 
   &.--active {
-    --header-link-before-bottom: #{rem(-26)};
+    --header-link-before-bottom: #{rem(-14)};
   }
 
   @include only-mouse {
     &:hover {
-      --header-link-before-bottom: #{rem(-26)};
+      --header-link-before-bottom: #{rem(-14)};
     }
   }
-
-  //&:not([ngbDropdown]) {
-  //
-  //}
 
   &.--tell {
     --header-link-before: none;
@@ -189,6 +185,13 @@ $header-spacer: rem(10);
 @include min-wide(desktopMd) {
   .__btn-menu {
     display: none !important;
+  }
+}
+
+@include min-wide(notebook) {
+  .__nav {
+    margin: (-$header-spacer) auto (-$header-spacer) rem(94);
+    white-space: nowrap;
   }
 }
 
