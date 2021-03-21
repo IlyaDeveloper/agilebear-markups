@@ -3,10 +3,10 @@
        *ngFor="let item of list"
        [attr.src]="[ 'assets/img/services/'+ (isGray ?  item.imgS : item.img )]"
        alt=""
+       [popoverClass]="'--top-offset'"
        [disablePopover]="popoverTrigger"
        [popoverTitle]="item.caption"
        [ngbPopover]="item.text"
        [openDelay]="300" [closeDelay]="600"
-       triggers="mouseenter:mouseleave"
-  >
+       triggers="mouseenter:mouseleave">
 </figure>

@@ -214,21 +214,21 @@ $disabled-opacity: 0.9;
 //* ngb-popovers
 $popover-bg: #503895 !default;
 $popover-body-color: var(--cl-white) !default;
-$popover-body-padding-y: rem(10) !default;
+$popover-body-padding-y: rem(8) !default;
 $popover-body-padding-x: $contentGutterX2 !default;
 $popover-border-width: 1px !default;
-$popover-border-radius: rem(8) !default;
+$popover-border-radius: rem(6) !default;
 //$popover-border-color: clr('dark-stroke') !default;
 $popover-box-shadow: 0 3 rem(19) rgba(0, 0, 0, 0.2) !default;
-$popover-font-size: rem(14) !default;
+$popover-font-size: rem(12) !default;
 $popover-max-width: rem(296) !default;
 $popover-header-bg: #503895 !default;
 $popover-header-color: var(--cl-white) !default;
-$popover-header-padding-y: .5rem !default;
+$popover-header-padding-y: .3125rem !default;
 $popover-header-padding-x: .75rem !default;
-$popover-arrow-width: rem(16);
-$popover-arrow-height: rem(8);
-$popover-arrow-color: $popover-bg;
+//$popover-arrow-width: rem(16);
+//$popover-arrow-height: rem(8);
+//$popover-arrow-color: $popover-bg;
 //$popover-arrow-outer-color: transparent;
 $popover-transition: top 0.3s linear;
 

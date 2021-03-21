@@ -7,6 +7,8 @@
 
     padding-top: 0;
 
+    font-weight: 600;
+    line-height: 1.1;
     white-space: pre-wrap;
     text-align: center;
   }
@@ -15,8 +17,13 @@
     padding-bottom: 0;
 
     text-align: center;
-
+    font-weight: 700;
     border: none;
+  }
+
+
+  &.--top-offset {
+    top: rem(-13) !important;
   }
 }
 
@@ -27,7 +34,7 @@
 
       padding: $contentGutter;
 
-      font-size: rem(12);
+      //font-size: rem(12);
     }
   }
 }

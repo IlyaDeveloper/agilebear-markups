@@ -41,6 +41,7 @@ $header-spacer: rem(10);
   text-shadow: 0.5px 0.9px rem(4) rgba(2, 3, 3, 0.3);
 
   font-size: rem(16);
+  letter-spacing: -0.25px;
 
   &:before {
     position: absolute;
@@ -60,7 +61,7 @@ $header-spacer: rem(10);
   }
 
   &[ngbDropdown] {
-    padding-right: rem(16);
+    padding-right: rem(20);
 
     &:after {
       position: absolute;
@@ -95,9 +96,9 @@ $header-spacer: rem(10);
     --header-link-before: none;
     --link-color-hover: #{var(--cl-yellow-orange)};
 
-    margin-left: rem(30);
-
-    letter-spacing: rem(-0.43);
+    //margin-left: rem(30);
+    
+    letter-spacing: 0.1px;
     font-size: rem(17);
     font-weight: 600;
     text-shadow: $sh-text;
@@ -192,6 +193,10 @@ $header-spacer: rem(10);
   .__nav {
     margin: (-$header-spacer) auto (-$header-spacer) rem(94);
     white-space: nowrap;
+  }
+
+  .__right{
+    min-width: rem(300);
   }
 }
 

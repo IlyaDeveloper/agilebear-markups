@@ -59,7 +59,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 .__text-r {
   position: absolute;
   right: rem(-25);
-  bottom: rem(-4);
+  bottom: rem(0);
   margin: 0;
   max-width: rem(496);
 
@@ -101,11 +101,11 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     float: right;
 
     height: 14vh;
-    width: 250%;
+    width: 242%;
 
     content: "";
 
-    shape-outside: polygon(79% 0, 59% 173%, 80% 268%);
+    shape-outside: polygon(80% 0, 59% 173%, 80% 268%);
   }
 
   &.--mark {
@@ -208,10 +208,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   }
 
   .__text-l:before {
-    //height: 33vh;
     width: 200%;
-
-    //shape-outside: polygon(90% 0, 0% 232%, 100% 100%);
   }
 
 }
@@ -254,7 +251,19 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   }
 }
 
-@include min-wide(notebookLg){
+@include min-wide(notebookLg) {
+  :host {
+    &:before {
+      top: 50%;
+      right: 61%;
+    }
+
+    &:after {
+      //right: 0;
+      left: 8%;
+    }
+  }
+
   .__book {
     &:before {
       right: rem(0);
