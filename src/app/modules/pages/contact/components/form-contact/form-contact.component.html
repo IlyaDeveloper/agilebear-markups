@@ -1,11 +1,11 @@
 <div class="container">
   <form [formGroup]="form" (submit)="onSubmit($event)" fxLayout="column" fxLayoutGap="2.375rem">
-    <article fxLayout="column" fxLayoutGap="0.875rem">
+    <article fxLayout="column" fxLayoutGap="0.375rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
         <agl-heading class="--second">Your Details</agl-heading>
         <div class="__right"><span>*</span>Your Details</div>
       </div>
-      <div gdColumns.gt-xs="1fr 1fr" gdGap="1rem 1.875rem">
+      <div gdColumns.gt-xs="1fr 1fr" gdGap="0.875rem 1.875rem">
         <agl-input placeholder="First name"
                    formControlName="firstName"
                    [submitted]="isSubmitted"
@@ -44,7 +44,7 @@
       </div>
     </article>
 
-    <article fxLayout="column" fxLayoutGap="0.875rem">
+    <article fxLayout="column" fxLayoutGap="0.4375rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
         <agl-heading class="--second">What Would You Like To Talk To Us About?</agl-heading>
       </div>
@@ -81,7 +81,7 @@
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
         <agl-heading class="--second --valid">WHich Course(s) Are You Interested In?</agl-heading>
       </div>
-      <div class="__chek-group" gdColumns.gt-xs="1fr 1fr" gdGap="0.325rem 1.875rem">
+      <div class="__chek-group" gdColumns.gt-xs="1fr 1fr" gdGap="0.1875rem 1.875rem">
         <agl-checkbox fxLayoutAlign="start">
           <span gdInline gdColumns="max-content 1fr" gdAlignColumns="start start" gdGap="0.3rem">
             <agl-services-logos class="--s22 gm-mt-2" [usedLogo]="['csm']"></agl-services-logos>
@@ -169,35 +169,38 @@
       </div>
     </article>
 
-    <article fxLayout="column" fxLayoutGap="0.875rem">
-      <agl-heading class="--second --valid">Message</agl-heading>
+    <article class="__last" fxLayout="column" fxLayoutGap="0.875rem">
+      <article fxLayout="column" fxLayoutGap="0.875rem">
+        <agl-heading class="--second">Message</agl-heading>
 
-      <agl-textarea placeholder="Please let us know any other relevant information about your enquiry…"></agl-textarea>
-    </article>
+        <agl-textarea placeholder="Please let us know any other relevant information about your enquiry…"></agl-textarea>
+      </article>
 
-    <div fxLayout.lt-md="column"
-         fxLayoutGap.gt-md="2.8125rem" fxLayoutGap.lt-md="1.5rem"
-         fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="stretch">
-      <div fxLayout="column" fxLayoutGap="0.825rem">
-        <agl-heading class="--second --valid">Privacy</agl-heading>
+      <article fxLayout.lt-md="column"
+               fxLayoutGap.gt-md="2.8125rem" fxLayoutGap.lt-md="1.5rem"
+               fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="stretch">
+        <div fxLayout="column" fxLayoutGap="0.825rem">
+          <agl-heading class="--second --valid">Privacy</agl-heading>
 
-        <agl-checkbox fxLayoutAlign="start" formControlName="iAgree">
+          <agl-checkbox fxLayoutAlign="start" formControlName="iAgree">
           <span class="__bottom-ch">
             I understand and agree to the AgileBear
             <agl-link class="--y-orange --arrow" [link]="'/privacy-policy'"> Privacy Policy</agl-link>
           </span>
-        </agl-checkbox>
-      </div>
+          </agl-checkbox>
+        </div>
 
-      <div class="__recaptcha" fxLayoutAlign="center center">
-        this should be your recaptcha
-      </div>
+        <div class="__recaptcha" fxLayoutAlign="center center">
+          this should be your recaptcha
+        </div>
 
-      <div fxLayout="inline" fxLayoutGap="0.625rem" fxLayoutAlign="end center">
-        <agl-button>Reset Form</agl-button>
+        <div fxLayout="inline" fxLayoutGap="0.625rem" fxLayoutAlign="end center">
+          <agl-button>Reset Form</agl-button>
 
-        <agl-button class="--yellow-orange" type="submit">Send Message</agl-button>
-      </div>
-    </div>
+          <agl-button class="--yellow-orange" type="submit">Send Message</agl-button>
+        </div>
+      </article>
+    </article>
+
   </form>
 </div>

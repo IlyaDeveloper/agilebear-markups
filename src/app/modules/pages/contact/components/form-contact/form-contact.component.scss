@@ -1,6 +1,8 @@
 @import "core";
 
 :host {
+  --container-limit: #{rem(1000)};
+
   display: block;
 
   padding: $sectionSpacer 0;
@@ -25,11 +27,20 @@
   }
 }
 
+.__last {
+  margin-top: rem(-10);
+}
+
 .__recaptcha {
   min-height: rem(77);
 
+
   border: solid 1px #d2d2d2;
   background-color: #f9f9f9;
+}
+
+.__bottom-ch {
+  font-weight: 400;
 }
 
 @include min-wide(laptop) {
