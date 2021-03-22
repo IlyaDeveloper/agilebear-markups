@@ -1,12 +1,13 @@
 <!--<label class="__label">{{ label }}</label>-->
 
 <div class="__group" [class.--is-error]="isError">
-    <mark class="__msg" *ngIf="isError">
-      <agl-validation-messages
-        [errorsMsg]="errorsMsg"
-      >
-      </agl-validation-messages>
-    </mark>
+  <mark class="__msg" *ngIf="isError">
+<!--    <agl-validation-messages-->
+<!--      [errorsMsg]="errorsMsg"-->
+<!--    >-->
+<!--    </agl-validation-messages>-->
+    <stan></stan>
+  </mark>
 
   <input
     class="__input"
@@ -23,4 +24,13 @@
   />
 
   <div class="__placeholder" *ngIf="!value && importantPlace">{{ placeholder }}</div>
+
+  <mark class="__hidden-value"
+        fxLayout="row nowrap" fxLayoutAlign="start center" fxLayoutGap="0.6rem"
+        *ngIf="isError"
+  >
+    <span *ngIf="!value">{{ placeholder }}</span>
+    <span *ngIf="value">{{ inputRef.value }}</span>
+    <agl-validation-messages [errorsMsg]="errorsMsg"></agl-validation-messages>
+  </mark>
 </div>

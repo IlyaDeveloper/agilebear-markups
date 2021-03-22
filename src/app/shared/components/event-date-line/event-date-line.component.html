@@ -5,6 +5,9 @@
       {{item}}<sup>{{ item | endingNumb :{cutNumb: true} }}</sup>
     </span>
   </div>
-  <mark class="__month">{{ month }}</mark>
-  <mark class="__year">{{ year }}</mark>
+
+  <div fxLayout="row nowrap" fxLayoutGap="0.3rem">
+    <mark class="__month">{{ month }}</mark>
+    <mark class="__year">{{ year }}</mark>
+  </div>
 </div>

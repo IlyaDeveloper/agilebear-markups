@@ -8,6 +8,7 @@ import {Component, Input, Inject, OnInit, ViewChild, ElementRef} from '@angular/
 export class InputComponent implements OnInit {
 
   @ViewChild('inputRef') inputRef: ElementRef;
+  @ViewChild('inputPlaceholderRef') inputPlaceholderRef: ElementRef;
 
   @Input() label: string;
   @Input() placeholder = 'Enter text';
@@ -18,8 +19,10 @@ export class InputComponent implements OnInit {
   @Input() autofocus: boolean;
   @Input() errorsMsg: string;
   @Input() importantPlace: boolean;
-  isError: any = false;
+  isError: any = true;
   disabled: any = false;
+
+  place;
 
   constructor() {
   }
@@ -34,6 +37,7 @@ export class InputComponent implements OnInit {
 
   public onChange(event) {
   }
+
 
   public onFocus(event) {
 

@@ -11,22 +11,7 @@
 .__group {
   @extend %input-field-container;
 
-  .__placeholder {
-    position: absolute;
-    top: rem(6);
-    left: rem(14);
-    z-index: 1;
-
-    font-size: rem(16);
-    font-weight: 500;
-    color: $input-placeholder;
-
-    &:after{
-      content: "*";
-      color: $cl-red;
-    }
-
-  }
+  overflow: hidden;
 }
 
 .__input {
@@ -35,4 +20,53 @@
 
 .__msg {
   @extend %input-messages;
+
+  & ~ .__placeholder {
+    &:after {
+      content: none;
+    }
+  }
+}
+
+
+.__placeholder {
+  position: absolute;
+  top: rem(6);
+  left: rem(14);
+  //z-index: 1;
+  z-index: -1;
+
+  font-size: rem(16);
+  font-weight: 500;
+  color: $input-placeholder;
+
+  &:after {
+    content: "*";
+    color: $cl-red;
+  }
+}
+
+.__hidden-value {
+  white-space: nowrap;
+
+  position: absolute;
+  top: 0;
+  left: rem(14);
+  height: 100%;
+
+  z-index: -1;
+
+  span {
+    font-size: rem(16);
+    font-weight: 500;
+    letter-spacing: 0;
+
+    visibility: hidden;
+  }
+
+  &:after {
+    content: "*";
+    color: $cl-red;
+  }
+
 }

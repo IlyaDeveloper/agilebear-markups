@@ -8,8 +8,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class LayoutRootComponent implements OnInit {
 
-  // url: string;
-
   constructor(private router: Router) {
   }
 
@@ -25,6 +23,5 @@ export class LayoutRootComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.url = this.router.url;
   }
 }

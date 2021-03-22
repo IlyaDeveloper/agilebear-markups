@@ -41,6 +41,9 @@
 %input-field-container {
   position: relative;
   z-index: 1;
+
+  background-color: $input-background;
+  border-radius: $input-border-radius;
 }
 
 %input-field {
@@ -55,9 +58,10 @@
 
   font-size: rem(16);
   font-weight: 500;
-  border-radius: $input-border-radius;
+
   border: $input-border;
-  background-color: $input-background;
+  background: transparent;
+  border-radius: $input-border-radius;
   color: inherit;
 
   transition: $input-transition;

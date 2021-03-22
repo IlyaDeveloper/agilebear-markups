@@ -94,13 +94,10 @@ export class HeaderComponent implements OnInit {
   body: HTMLElement = this.document.getElementsByTagName('body')[0];
   isMenuOpen: boolean;
 
-  url: string;
-
   @Input() type: string;
 
   dwServiceList = SERVICES_LINKS;
   dwTrainingList = TRAINING_LINKS;
-
 
   get isTrainingPage(): boolean {
     return (this.router.url.includes('scrum-training'));
@@ -125,7 +122,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.type = 'c';
   }
 
   triggerMenu(): void {
