@@ -68,7 +68,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 .__text-r {
   position: absolute;
   right: rem(-25);
-  bottom: rem(0);
+  bottom: rem(7);
   margin: 0;
   max-width: rem(496);
 
@@ -105,8 +105,8 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
   &:before {
     float: right;
 
-    height: var(--text-l-before-hgt, 14vh);
-    width: var(--text-l-before-wdh, 242%);
+    height: var(--text-l-before-hgt, 11vh);
+    width: var(--text-l-before-wdh, 262%);
 
     content: "";
 
@@ -121,7 +121,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 .__down {
   --link-color: currentColor;
 
-  margin: rem(80) 0 0;
+  margin: rem(76) 0 0;
 
   color: var(--cl-steel);
 
@@ -194,9 +194,16 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     --text-l-before-wdh: 200%;
 
     &.--large-text {
-      --text-l-before-hgt: 29vh;
-      //--text-l-before-wdh: 130%;
-      //--text-l-before-plg: 80% 0, 59% 173%, 80% 268%;
+      //--text-l-before-hgt: 29vh;
+    }
+
+    &.--gray{
+      .__text-r{
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+      }
     }
   }
 
@@ -230,7 +237,7 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     --text-l-before-plg: 100% 0, 0% 242%, 100% 100%;
 
     &.--large-text {
-      --text-l-before-hgt: 38vh;
+      //--text-l-before-hgt: 38vh;
       --text-l-before-wdh: 130%;
       //--text-l-before-plg: 80% 0, 59% 173%, 80% 268%;
     }
@@ -268,15 +275,9 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     --text-l-before-plg: 94% 0, 0% 272%, 100% 100%;
 
     &.--large-text {
-      //--text-l-before-hgt: 26vh;
       --text-l-before-wdh: 130%;
       --text-l-before-plg: 99% 0, 49% 123%, 70% 258%;
     }
-
-    //&.--third {
-    //  //--text-l-before-hgt: 18vh;
-    //  //--text-l-before-wdh: 94%;
-    //}
   }
   .__book {
     &:before {
