@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {UiComponent} from './ui.component';
+import {UiPageComponent} from './ui-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: UiComponent
+    component: UiPageComponent
   }
 ];
 
@@ -13,5 +13,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UiRoutingModule {
+export class UiPageRoutingModule {
 }

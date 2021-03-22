@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {UiRoutingModule} from './ui-routing.module';
-import {UiComponent} from './ui.component';
+import {UiPageRoutingModule} from './ui-page-routing.module';
+import {UiPageComponent} from './ui-page.component';
 import {FlexModule, GridModule} from '@angular/flex-layout';
 import {SharedModule} from '../../../shared/shared.module';
 import {HeaderModule} from '../../layout-root/header/header.module';
@@ -15,10 +15,10 @@ import {ProgramModule} from '../program/program.module';
 import {ContactModule} from '../contact/contact.module';
 
 @NgModule({
-  declarations: [UiComponent],
+  declarations: [UiPageComponent],
   imports: [
     CommonModule,
-    UiRoutingModule,
+    UiPageRoutingModule,
     GridModule,
     FlexModule,
     SharedModule,
@@ -32,5 +32,5 @@ import {ContactModule} from '../contact/contact.module';
     ContactModule
   ]
 })
-export class UiModule {
+export class UiPageModule {
 }

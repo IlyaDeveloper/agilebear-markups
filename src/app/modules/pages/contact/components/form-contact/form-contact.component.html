@@ -54,12 +54,12 @@
           [ngClass]="{ 'select-error': isSubmitted  }"
           ng-select-validation-msg="an option is required"
           [placeholder]="'Please select...'"
-                   [items]="whatWouldData"
-                   bindLabel="name"
-                   bindValue="id"
-                   formControlName="whatWouldSelect"
-                   [(ngModel)]="selectedWouldData"
-                   (change)="onWouldDataChanged($event)">
+          [items]="whatWouldData"
+          bindLabel="name"
+          bindValue="id"
+          formControlName="whatWouldSelect"
+          [(ngModel)]="selectedWouldData"
+          (change)="onWouldDataChanged($event)">
         </ng-select>
         <span></span>
       </div>
@@ -173,7 +173,8 @@
       <article fxLayout="column" fxLayoutGap="0.875rem">
         <agl-heading class="--second">Message</agl-heading>
 
-        <agl-textarea placeholder="Please let us know any other relevant information about your enquiry…"></agl-textarea>
+        <agl-textarea
+          placeholder="Please let us know any other relevant information about your enquiry…"></agl-textarea>
       </article>
 
       <article fxLayout.lt-md="column"

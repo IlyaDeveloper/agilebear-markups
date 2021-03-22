@@ -31,12 +31,17 @@ const routes: Routes = [
         {
           path: 'services/program',
           loadChildren: () => import('./modules/pages/program/program.module').then(m => m.ProgramModule)
-        },
+        }
       ]
   },
   {
-    path: 'ui',
-    loadChildren: () => import('./modules/pages/ui/ui.module').then(m => m.UiModule)
+    path: 'ui-page',
+    loadChildren: () => import('./modules/pages/ui-page/ui-page.module').then(m => m.UiPageModule)
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'pahe-404'
   }
 ];
 
