@@ -21,6 +21,11 @@ $header-spacer: rem(10);
   background-color: rgba(clr('slate-grey'), 0.4);
 
   //background: red;
+
+  &.--not-fixed {
+    display: block;
+    position: relative !important;
+  }
 }
 
 .__nav {

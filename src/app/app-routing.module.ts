@@ -33,6 +33,10 @@ const routes: Routes = [
           loadChildren: () => import('./modules/pages/program/program.module').then(m => m.ProgramModule)
         },
       ]
+  },
+  {
+    path: 'ui',
+    loadChildren: () => import('./modules/pages/ui/ui.module').then(m => m.UiModule)
   }
 ];
 

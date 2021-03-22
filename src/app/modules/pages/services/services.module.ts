@@ -11,6 +11,9 @@ import { ServicesListComponent } from './components/services-list/services-list.
 
 @NgModule({
   declarations: [ServicesComponent, ServicesListComponent],
+  exports: [
+    ServicesListComponent
+  ],
   imports: [
     CommonModule,
     ServicesRoutingModule,

@@ -13,6 +13,11 @@ import { DistanceLearningComponent } from './components/distance-learning/distan
 
 @NgModule({
   declarations: [HomeComponent, MostPopularComponent, WhatIsComponent, DistanceLearningComponent],
+  exports: [
+    MostPopularComponent,
+    WhatIsComponent,
+    DistanceLearningComponent
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,

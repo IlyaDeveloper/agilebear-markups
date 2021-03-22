@@ -22,7 +22,25 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
   }
 
   &.--third {
-    --top-pannel-img: #{$top-panel-bg-3}
+    --top-pannel-img: #{$top-panel-bg-3};
+
+    &:before {
+      position: absolute;
+      top: 65%;
+      left: 0;
+      right: 62%;
+      bottom: 0;
+
+      content: '';
+
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+
+      background: var(--cl-white);
+    }
+
+    &, .container {
+      position: relative;
+    }
   }
 
   &.--fourth {
@@ -56,6 +74,12 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
   opacity: 0.9;
 }
 
+.__logo {
+  position: absolute;
+  left: rem(16);
+  bottom: rem(-44);
+}
+
 @include max-wide(tablet) {
   :host {
     padding: 0 0 rem(60);
@@ -72,11 +96,30 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
 }
 
 @include max-wide(phones) {
+  :host {
+    &.--third {
+      &:before {
+        right: 40% !important;
+      }
+    }
+  }
+
   .__capt {
     font-size: rem(44);
   }
 
   .__capt-3 {
     font-size: rem(40);
+  }
+}
+
+@include min-wide(notebookLg) {
+  :host {
+    &.--third {
+      &:before {
+        top: 55%;
+        right: 59%;
+      }
+    }
   }
 }

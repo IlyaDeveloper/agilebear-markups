@@ -1,0 +1,11 @@
+@import "core";
+
+:host {
+  display: block;
+
+  padding: rem(50) rem(30);
+
+  background: pink;
+
+  overflow: hidden;
+}

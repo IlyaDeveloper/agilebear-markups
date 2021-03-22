@@ -11,15 +11,19 @@ import { EventsListComponent } from './components/events-list/events-list.compon
 
 
 @NgModule({
-  declarations: [ScrumTrainingComponent, EventItemComponent, EventsListComponent],
-  imports: [
-    CommonModule,
-    ScrumTrainingRoutingModule,
-    GridModule,
-    FlexModule,
-    UiModule,
-    SharedModule
-  ]
+    declarations: [ScrumTrainingComponent, EventItemComponent, EventsListComponent],
+  exports: [
+    ScrumTrainingComponent,
+    EventsListComponent
+  ],
+    imports: [
+        CommonModule,
+        ScrumTrainingRoutingModule,
+        GridModule,
+        FlexModule,
+        UiModule,
+        SharedModule
+    ]
 })
 export class ScrumTrainingModule {
 }

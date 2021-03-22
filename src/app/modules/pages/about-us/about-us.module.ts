@@ -12,16 +12,22 @@ import {WeWorkComponent} from './components/we-work/we-work.component';
 import { WhatsOnOfferComponent } from './components/whats-on-offer/whats-on-offer.component';
 
 @NgModule({
-  declarations: [AboutUsComponent, WeAreComponent, OurTeamComponent, WeWorkComponent, WhatsOnOfferComponent],
-  imports: [
-    CommonModule,
-    AboutUsRoutingModule,
-    GridModule,
-    FlexModule,
-    UiModule,
-    SharedModule,
-    ExtendedModule
-  ]
+    declarations: [AboutUsComponent, WeAreComponent, OurTeamComponent, WeWorkComponent, WhatsOnOfferComponent],
+  exports: [
+    WeAreComponent,
+    OurTeamComponent,
+    WeWorkComponent,
+    WhatsOnOfferComponent
+  ],
+    imports: [
+        CommonModule,
+        AboutUsRoutingModule,
+        GridModule,
+        FlexModule,
+        UiModule,
+        SharedModule,
+        ExtendedModule
+    ]
 })
 export class AboutUsModule {
 }

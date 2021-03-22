@@ -13,15 +13,21 @@ import { ProgramDetailComponent } from './components/program-detail/program-deta
 
 
 @NgModule({
-  declarations: [ProgramComponent, IntroductionComponent, CourseOptionsComponent, TopicCoveredComponent, ProgramDetailComponent],
-  imports: [
-    CommonModule,
-    ProgramRoutingModule,
-    GridModule,
-    FlexModule,
-    UiModule,
-    SharedModule
-  ]
+    declarations: [ProgramComponent, IntroductionComponent, CourseOptionsComponent, TopicCoveredComponent, ProgramDetailComponent],
+  exports: [
+    ProgramDetailComponent,
+    CourseOptionsComponent,
+    TopicCoveredComponent,
+    IntroductionComponent
+  ],
+    imports: [
+        CommonModule,
+        ProgramRoutingModule,
+        GridModule,
+        FlexModule,
+        UiModule,
+        SharedModule
+    ]
 })
 export class ProgramModule {
 }

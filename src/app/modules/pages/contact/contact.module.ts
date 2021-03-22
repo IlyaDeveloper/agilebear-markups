@@ -11,7 +11,10 @@ import {NgSelectModule} from '@ng-select/ng-select';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [ContactComponent, FormContactComponent],
+    declarations: [ContactComponent, FormContactComponent],
+    exports: [
+        FormContactComponent
+    ],
     imports: [
         CommonModule,
         ContactRoutingModule,

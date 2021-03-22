@@ -8,10 +8,11 @@ import {Component, Input} from '@angular/core';
 export class ServicesTopStripComponent {
 
   @Input() img: string;
-  @Input() days:string;
+  @Input() days: string;
+  @Input() type: boolean;
 
-  get orangeColor() {
-    return false;
+  get orangeColor(): boolean {
+    return this.type;
   }
 
 

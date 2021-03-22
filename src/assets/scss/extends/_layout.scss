@@ -14,6 +14,7 @@
 
 %layout-section-clip {
   position: relative;
+  z-index: 1;
 
   &:before {
     position: absolute;
