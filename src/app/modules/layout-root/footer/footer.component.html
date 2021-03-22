@@ -20,13 +20,14 @@
   <ng-container *ngIf="footerType == 'c' || footerType == 'c2'">
     <article class="__book" gdColumns="4.875rem 1fr 1fr"
              gdColumns.lt-md="1fr"
-             gdAlignColumns.lt-md="start" gdAlignRows.lt-md="start"
+             gdAlignColumns.lt-md="center center" gdAlignRows.lt-md="center center"
              gdGap="1.5rem" gdGap.lt-md="1rem">
       <agl-services-logos [usedLogo]="[ orangeColor ?  'cspo' : 'csm']"></agl-services-logos>
 
-      <agl-services-place gdGridAlign="start" [type]="orangeColor"></agl-services-place>
+      <agl-services-place class="--is-mob" gdGridAlign="start" gdGridAlign.lt-md="center center"
+                          [type]="orangeColor"></agl-services-place>
 
-      <div fxLayoutGap="2rem" fxLayoutAlign="center center" gdGridAlign.gt-md="end">
+      <div fxLayoutGap="2rem" fxLayoutAlign="center center" gdGridAlign.gt-md="center">
         <agl-button-download>DOWNLOAD<BR>TRAINING<BR>PORTFOLIO</agl-button-download>
         <agl-button class="--upload"></agl-button>
       </div>

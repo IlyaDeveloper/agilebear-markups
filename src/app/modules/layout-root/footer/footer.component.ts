@@ -16,12 +16,16 @@ export class FooterComponent implements OnInit {
 
   @Input() footerType: string = 'a'; // 'a' || null; // footer-type = b  footer-type = c  footer-type = c2
 
-  @HostBinding('class.--gray') get grayColor() {
+  @HostBinding('class.--gray') get grayColor(): boolean {
     return (this.footerType === 'b');
   }
 
-  @HostBinding('class.--second') get orangeColor() {
+  @HostBinding('class.--second') get orangeColor(): boolean {
     return (this.footerType === 'c2');
+  }
+
+  @HostBinding('class.--large-text') get largeText(): boolean {
+    return (this.footerType === 'c2' || this.footerType === 'c');
   }
 
   constructor() {
@@ -29,5 +33,4 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
