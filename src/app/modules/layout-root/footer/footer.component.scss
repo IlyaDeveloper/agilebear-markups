@@ -299,6 +299,21 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 }
 
 @include min-wide(laptop) {
+
+  :host {
+    &.--large-text {
+      .__book {
+        &:before {
+          right: rem(5);
+        }
+      }
+    }
+  }
+
+  .__right-upload {
+    margin-right: rem(20);
+  }
+
   .__links {
     margin: auto auto auto -19%;
   }
