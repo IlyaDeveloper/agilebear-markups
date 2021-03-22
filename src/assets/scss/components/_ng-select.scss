@@ -36,6 +36,14 @@
     }
   }
 
+  &:not([ng-select-validation-msg]) {
+    .ng-placeholder {
+      &:after {
+        content: none !important;
+      }
+    }
+  }
+
   .ng-select-container {
     width: auto !important;
 
@@ -70,6 +78,8 @@
   }
 
   .ng-placeholder {
+    @extend %input-placeholder;
+
     font-weight: normal;
   }
 
@@ -186,29 +196,35 @@
     }
   }
 
-/*  &.ng-select-opened {
-    .ng-select-container,
-    .ng-dropdown-panel {
-      border-radius: $ng-select-border-radius !important;
-      border-color: $ng-select-panel-color;
-    }
+  /*  &.ng-select-opened {
+      .ng-select-container,
+      .ng-dropdown-panel {
+        border-radius: $ng-select-border-radius !important;
+        border-color: $ng-select-panel-color;
+      }
 
-    .ng-select-container {
-      border-color: $cl-primary !important;
-      box-shadow: none !important;
-    }
+      .ng-select-container {
+        border-color: $cl-primary !important;
+        box-shadow: none !important;
+      }
 
-    .ng-dropdown-panel {
-      box-shadow: $ng-select-box-shadow-opened;
-    }
-  }*/
+      .ng-dropdown-panel {
+        box-shadow: $ng-select-box-shadow-opened;
+      }
+    }*/
 
   &.select-error {
     &:after {
       @extend %validation-message;
-      @extend %validation-message-position-left;
+      //@extend %validation-message-position-left;
 
       content: attr(ng-select-validation-msg);
+
+      position: absolute;
+      top: rem(12);
+      right: rem(58);
+      //z-index: 1;
+      //z-index: -1;
     }
 
     .ng-select-container {

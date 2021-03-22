@@ -1,19 +1,46 @@
 <div class="container">
-  <form action="" fxLayout="column" fxLayoutGap="2.375rem">
+  <form [formGroup]="form" (submit)="onSubmit($event)" fxLayout="column" fxLayoutGap="2.375rem">
     <article fxLayout="column" fxLayoutGap="0.875rem">
       <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
         <agl-heading class="--second">Your Details</agl-heading>
         <div class="__right"><span>*</span>Your Details</div>
       </div>
       <div gdColumns.gt-xs="1fr 1fr" gdGap="1rem 1.875rem">
-        <agl-input placeholder="First name" [importantPlace]="true" errorsMsg="is required"></agl-input>
-        <agl-input placeholder="Last name" [importantPlace]="true" errorsMsg="is required"></agl-input>
+        <agl-input placeholder="First name"
+                   formControlName="firstName"
+                   [submitted]="isSubmitted"
+                   [autofocus]="false"
+                   errorsMsg="is required"></agl-input>
 
-        <agl-input placeholder="Email Address" [importantPlace]="true" errorsMsg="is required"></agl-input>
-        <agl-input placeholder="Mobile Number" [importantPlace]="true" errorsMsg="is required"></agl-input>
+        <agl-input placeholder="Last name" [importantPlace]="true"
+                   formControlName="lastName"
+                   [submitted]="isSubmitted"
+                   [autofocus]="false"
+                   errorsMsg="is required"></agl-input>
 
-        <agl-input placeholder="Job Title"></agl-input>
-        <agl-input placeholder="Company"></agl-input>
+        <agl-input placeholder="Email Address"
+                   formControlName="email"
+                   [submitted]="isSubmitted"
+                   [autofocus]="false"
+                   [importantPlace]="true" errorsMsg="is required"></agl-input>
+
+        <agl-input placeholder="Mobile Number" [importantPlace]="true"
+                   formControlName="mobNumber"
+                   [submitted]="isSubmitted"
+                   [autofocus]="false"
+                   errorsMsg="is required"></agl-input>
+
+        <agl-input placeholder="Job Title"
+                   [submitted]="isSubmitted"
+                   [autofocus]="false"
+                   formControlName="jobName">
+        </agl-input>
+
+        <agl-input placeholder="Company"
+                   [submitted]="isSubmitted"
+                   [autofocus]="false"
+                   formControlName="companyName">
+        </agl-input>
       </div>
     </article>
 
@@ -23,11 +50,17 @@
       </div>
 
       <div gdColumns.gt-xs="1fr 1fr" gdGap="0 1.875rem">
-        <ng-select [placeholder]="'Please select'"
+        <ng-select
+          [ngClass]="{ 'select-error': isSubmitted  }"
+          ng-select-validation-msg="an option is required"
+          [placeholder]="'Please select...'"
                    [items]="whatWouldData"
                    bindLabel="name"
                    bindValue="id"
-                   [(ngModel)]="selectedWouldData"></ng-select>
+                   formControlName="whatWouldSelect"
+                   [(ngModel)]="selectedWouldData"
+                   (change)="onWouldDataChanged($event)">
+        </ng-select>
         <span></span>
       </div>
     </article>
@@ -148,7 +181,7 @@
       <div fxLayout="column" fxLayoutGap="0.825rem">
         <agl-heading class="--second --valid">Privacy</agl-heading>
 
-        <agl-checkbox fxLayoutAlign="start">
+        <agl-checkbox fxLayoutAlign="start" formControlName="iAgree">
           <span class="__bottom-ch">
             I understand and agree to the AgileBear
             <agl-link class="--y-orange --arrow" [link]="'/privacy-policy'"> Privacy Policy</agl-link>

@@ -1,7 +1,7 @@
 <input
   class="__input"
   type="checkbox"
-  [class]="{ '.--is-checked': checked }"
+  [ngClass]="{ '--is-checked': checked, '--is-error': isError}"
   [checked]="checked"
   (change)="onChange($event)"
   (click)="onClick($event)"

@@ -1,5 +1,7 @@
 @import 'core';
 
+$error-spacer: rem(105);
+
 :host {
   @extend %input-host;
 }
@@ -16,6 +18,10 @@
 
 .__input {
   @extend %input-field;
+
+  &.--error-pdd {
+    padding-right: $error-spacer;
+  }
 }
 
 .__msg {
@@ -28,22 +34,14 @@
   }
 }
 
-
 .__placeholder {
+  @extend %input-placeholder;
+
   position: absolute;
   top: rem(6);
   left: rem(14);
   //z-index: 1;
   z-index: -1;
-
-  font-size: rem(16);
-  font-weight: 500;
-  color: $input-placeholder;
-
-  &:after {
-    content: "*";
-    color: $cl-red;
-  }
 }
 
 .__hidden-value {
@@ -52,7 +50,10 @@
   position: absolute;
   top: 0;
   left: rem(14);
+  right: rem(14);
+
   height: 100%;
+  max-width: 100%;
 
   z-index: -1;
 
@@ -61,7 +62,11 @@
     font-weight: 500;
     letter-spacing: 0;
 
+    max-width: calc(100% - #{$error-spacer});
+
     visibility: hidden;
+
+    overflow: hidden;
   }
 
   &:after {

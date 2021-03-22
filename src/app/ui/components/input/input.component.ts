@@ -1,14 +1,29 @@
-import {Component, Input, Inject, OnInit, ViewChild, ElementRef} from '@angular/core';
+import {Component, Input, Inject, OnInit, ViewChild, forwardRef, ElementRef} from '@angular/core';
+import {ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {DOCUMENT} from '@angular/common';
+import {ElementBase} from '@ui/components/element-base';
 
 @Component({
   selector: 'agl-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => InputComponent),
+      multi: true
+    },
+    {
+      provide: NG_VALIDATORS,
+      useExisting: forwardRef(() => InputComponent),
+      multi: true
+    }
+  ]
 })
-export class InputComponent implements OnInit {
+export class InputComponent extends ElementBase implements OnInit {
 
   @ViewChild('inputRef') inputRef: ElementRef;
-  @ViewChild('inputPlaceholderRef') inputPlaceholderRef: ElementRef;
+  @ViewChild('validationMessages') validationMessages: ElementRef;
 
   @Input() label: string;
   @Input() placeholder = 'Enter text';
@@ -19,12 +34,13 @@ export class InputComponent implements OnInit {
   @Input() autofocus: boolean;
   @Input() errorsMsg: string;
   @Input() importantPlace: boolean;
-  isError: any = true;
+
   disabled: any = false;
 
-  place;
+  widthValidationMessages;
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    super();
   }
 
   ngOnInit(): void {
@@ -36,6 +52,7 @@ export class InputComponent implements OnInit {
   }
 
   public onChange(event) {
+
   }
 
 

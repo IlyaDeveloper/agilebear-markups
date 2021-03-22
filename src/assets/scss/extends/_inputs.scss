@@ -90,3 +90,14 @@
   top: rem(13);
   right: rem(20);
 }
+
+%input-placeholder {
+  font-size: rem(16);
+  font-weight: 500;
+  color: $input-placeholder;
+
+  &:after {
+    content: "*";
+    color: $cl-red;
+  }
+}

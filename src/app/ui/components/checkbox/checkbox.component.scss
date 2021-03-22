@@ -6,6 +6,7 @@
   display: inline-flex;
   align-items: center;
 
+
   //* Disabled styles
   &.--disabled > .__input,
   & > .__input:disabled {
@@ -29,7 +30,7 @@
 
   opacity: 0;
 
-  &--is-checked ~ div .__mark,
+  &.--is-checked ~ div .__mark,
   &:checked ~ div .__mark {
     color: $checkbox-active-color !important;
     border-color: transparent !important;
@@ -43,6 +44,10 @@
 
   &:not(:disabled) {
     cursor: pointer;
+  }
+
+  &.--is-error ~ div .__mark{
+    border-color: $validation-color !important;
   }
 }
 

@@ -2,15 +2,16 @@
 
 <div class="__group" [class.--is-error]="isError">
   <mark class="__msg" *ngIf="isError">
-<!--    <agl-validation-messages-->
-<!--      [errorsMsg]="errorsMsg"-->
-<!--    >-->
-<!--    </agl-validation-messages>-->
+    <!--    <agl-validation-messages-->
+    <!--      [errorsMsg]="errorsMsg"-->
+    <!--    >-->
+    <!--    </agl-validation-messages>-->
     <stan></stan>
   </mark>
 
   <input
     class="__input"
+    [ngClass]="{'--error-pdd': isError }"
     [type]="type"
     [placeholder]="!importantPlace? placeholder: ''"
     [disabled]="disabled"

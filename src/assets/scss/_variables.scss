@@ -293,7 +293,7 @@ $checkbox-label-font-size: rem(16) !default;
 $checkbox-label-color: var(--cl-slate-grey) !default;
 $checkbox-label-offset: 0 0 0 rem(12) !default;
 
-$checkbox-background: transparent !default;
+$checkbox-background: var(--cl-white) !default;
 $checkbox-mark-size: rem(20) !default;
 $checkbox-mark-radius: rem(3) !default;
 $checkbox-mark-border-size: 2px !default;
