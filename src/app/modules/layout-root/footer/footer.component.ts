@@ -24,6 +24,12 @@ export class FooterComponent implements OnInit {
     return (this.footerType === 'c2');
   }
 
+/*
+  @HostBinding('class.--third') get thirdText(): boolean {
+    return (this.footerType === 'c');
+  }
+*/
+
   @HostBinding('class.--large-text') get largeText(): boolean {
     return (this.footerType === 'c2' || this.footerType === 'c');
   }

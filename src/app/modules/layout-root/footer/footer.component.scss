@@ -16,7 +16,6 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 
   background: var(--cl-white);
 
-
   &:before,
   &:after {
     position: absolute;
@@ -271,8 +270,13 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
     &.--large-text {
       //--text-l-before-hgt: 26vh;
       --text-l-before-wdh: 130%;
-      //--text-l-before-plg: 80% 0, 59% 173%, 80% 268%;
+      --text-l-before-plg: 99% 0, 49% 123%, 70% 258%;
     }
+
+    //&.--third {
+    //  //--text-l-before-hgt: 18vh;
+    //  //--text-l-before-wdh: 94%;
+    //}
   }
   .__book {
     &:before {
@@ -303,7 +307,6 @@ $footer-color-main: var(--footer-color-main, var(--cl-yellow-orange));
 }
 
 @include min-wide(laptop) {
-
   :host {
     &.--large-text {
       .__book {

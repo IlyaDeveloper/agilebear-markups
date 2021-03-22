@@ -16,10 +16,10 @@
 
 //.gm-cl-yellow-orange
 //
-//.clear,
-//.clear:before,
-//.clear:after{
-//  content:"";
-//  display:block;
-//  clear:both;
-//}
+.clear,
+.clear:before,
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
