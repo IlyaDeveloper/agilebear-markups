@@ -7,11 +7,13 @@
 .container {
   @extend %layout-section-container;
   @extend %layout-section-container-line;
+
+  padding-bottom: rem(53)!important;
 }
 
 .__top-text{
   max-width: rem(412);
-  margin: rem(30) 0 0;
+  margin: rem(22) 0 0;
 
   font-size: rem(15);
   font-weight: 300;

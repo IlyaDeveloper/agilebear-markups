@@ -7,4 +7,11 @@
 .container {
   @extend %layout-section-container;
   @extend %layout-section-container-line;
+
+  padding-bottom: rem(56);
+
+}
+
+
+@include min-wide(laptop){
 }

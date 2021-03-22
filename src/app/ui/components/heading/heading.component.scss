@@ -60,7 +60,7 @@
 
   &.--large {
     margin-left: rem(-12);
-    margin-bottom: rem(50) !important;
+    margin-bottom: rem(33) !important;
 
     font-weight: 200;
     font-size: rem(110);
@@ -69,23 +69,36 @@
     color: var(--cl-pale-lilac);
 
     .__hard {
+      margin-left: rem(-21);
+
       color: currentColor;
-      letter-spacing: rem(-8.8);
+      letter-spacing: rem(-9);
     }
   }
 
   &.--small {
+    margin-bottom: rem(24) !important;
+
     font-size: rem(18);
 
     text-transform: initial;
     line-height: 1.33;
     font-weight: 600;
+    letter-spacing: 0!important;
     color: var(--cl-green);
   }
 
   &.--revert {
+    margin-left: 0;
+    span{
+      margin-left: rem(-6);
+      letter-spacing: rem(-13);
+    }
+
     .__hard {
       order: -1;
+
+      margin-left: 0;
     }
   }
 }
