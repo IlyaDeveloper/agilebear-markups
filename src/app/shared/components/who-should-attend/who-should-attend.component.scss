@@ -45,6 +45,8 @@ $who-img-2: url('/assets/img/who_2.jpg');
   }
 
   &.--second {
+    --wsa-left-top: 57%;
+
     &:before {
       background: $who-img-2 no-repeat top center/cover !important;
     }
@@ -55,47 +57,58 @@ $who-img-2: url('/assets/img/who_2.jpg');
   position: relative;
   z-index: 1;
 
-  padding: 15% 20% 12% 15%;
+  padding: 15% 14% 12% 15%;
 
   &:before {
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: var(--wsa-left-top, 50%);
+    left: rem(20);
     z-index: -1;
 
     content: 'WHO \0a SHOULD \0a ATTEND?\0a';
-    font-size: var(--who-should-attend-b-text-size, rem(140)); // ;
+    font-size: var(--who-should-attend-b-text-size, rem(138)); // ;
     font-weight: 900;
-    line-height: 0.86;
-    letter-spacing: rem(-11.2);
+    line-height: 0.88;
+    letter-spacing: rem(-13.2);
     color: rgba(255, 255, 255, 0.85);
     white-space: pre;
 
-    transform: translate(0, -50%);
+    transform: translate(0, -50%) scaleX(0.98);
   }
 }
 
 .__title {
+  margin: rem(-13) 0 rem(16);
+
+  font-size: rem(25);
+  letter-spacing: -0.3px;
   font-weight: 900;
 }
 
 .__text {
-  max-width: rem(345);
-}
+  max-width: rem(385);
 
-.__text-top {
-  margin: rem(-190) 0 0  -3.5vw;
+  margin-left: rem(30);
 
-  font-size: rem(16);
+  letter-spacing: -0.15px;
   line-height: 1.2;
 }
 
-.__text-r {
-  margin-top: rem(90);
+.__text-top {
+  position: absolute;
+  top: rem(-28);
+  left: rem(36);
 
-  font-size: rem(24);
+  font-size: rem(16);
+  line-height: 1.4;
+}
+
+.__text-r {
+  margin-top: rem(40);
+
+  font-size: rem(28);
   font-weight: 400;
-  line-height: 1.84;
+  line-height: 1.87;
   text-align: right;
 }
 
@@ -123,12 +136,16 @@ $who-img-2: url('/assets/img/who_2.jpg');
     }
   }
 
+  .__left {
+    padding-right: 20%;
+  }
+
   .__text-top {
-    margin-top: 0%;
+    margin-top: 3%;
   }
 
   .__text-r {
-    margin-top: 24%;
+    margin-top: 0%;
   }
 }
 
@@ -139,11 +156,13 @@ $who-img-2: url('/assets/img/who_2.jpg');
     height: rem(450);
   }
 
-  .__left{
+  .__left {
     padding-top: 6%;
+    padding-right: 6%;
     padding-bottom: 6%;
   }
+
   .__text-r {
-    margin-top: 54%;
+    margin-top: 10%;
   }
 }
