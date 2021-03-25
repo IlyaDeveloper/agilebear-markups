@@ -21,9 +21,80 @@
     border: none;
   }
 
-
   &.--top-offset {
     top: rem(-13) !important;
+  }
+
+  &.--orange {
+    background-color: var(--cl-orange);
+
+    .popover-header {
+      background-color: var(--cl-orange);
+    }
+
+    .arrow:after {
+      border-top-color: var(--cl-orange);
+    }
+  }
+
+  &.--yellow {
+    background-color: var(--cl-yellow-orange);
+
+    .popover-header {
+      background-color: var(--cl-yellow-orange);
+    }
+
+    .arrow:after {
+      border-top-color: var(--cl-yellow-orange);
+    }
+  }
+
+  &.--blue {
+    background-color: #4bb3e6;
+
+    .popover-header {
+      background-color: #4bb3e6;
+    }
+
+    .arrow:after {
+      border-top-color: #4bb3e6;
+    }
+  }
+
+  &.--gray {
+    background-color: #98a3ae;
+
+    .popover-header {
+      background-color: #98a3ae;
+    }
+
+    .arrow:after {
+      border-top-color: #98a3ae;
+    }
+  }
+
+  &.--green {
+    background-color: var(--cl-s-dark-lime-green);
+
+    .popover-header {
+      background-color: var(--cl-s-dark-lime-green);
+    }
+
+    .arrow:after {
+      border-top-color: var(--cl-s-dark-lime-green);
+    }
+  }
+
+  &.--red {
+    background-color: var(--cl-red);
+
+    .popover-header {
+      background-color: var(--cl-red);
+    }
+
+    .arrow:after {
+      border-top-color: var(--cl-reda);
+    }
   }
 }
 
@@ -33,8 +104,6 @@
       max-width: rem(200);
 
       padding: $contentGutter;
-
-      //font-size: rem(12);
     }
   }
 }

@@ -25,6 +25,10 @@
 
   object-fit: cover;
   object-position: center;
+
+  //&:hover {
+  //  filter: grayscale(1);
+  //}
 }
 
 @include min-wide(phonesLg) {

@@ -33,7 +33,7 @@ const SERVICES_LINKS = [
   {
     name: 'Advanced Certified ScrumMaster Training',
     link: '/services/program',
-    icon: ''
+    icon: 'a-csm'
   },
   {
     name: 'User Story Workshops',

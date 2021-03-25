@@ -23,29 +23,44 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
 
   &.--third {
     --top-pannel-img: #{$top-panel-bg-3};
-
-    &:before {
-      position: absolute;
-      top: 65%;
-      left: 0;
-      right: 62%;
-      bottom: 0;
-
-      content: '';
-
-      clip-path: polygon(0 0, 0% 100%, 100% 100%);
-
-      background: var(--cl-white);
-    }
-
-    &, .container {
-      position: relative;
-    }
+    --top-panel-tr-op-b: 1;
   }
 
   &.--fourth {
     --top-pannel-img: #{$top-panel-bg-4};
     --top-pannel-color: var(--cl-white);
+  }
+
+  &, .container {
+    position: relative;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 6%;
+    bottom: 2%;
+
+    content: '';
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+
+    background: rgba(clr('white'), var(--top-panel-tr-op-a, .25));
+  }
+
+  &:after {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 61%;
+    bottom: 0;
+
+    content: '';
+
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+
+    background: rgba(clr('white'), var(--top-panel-tr-op-b, .2));
   }
 }
 
@@ -78,6 +93,7 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
   position: absolute;
   left: rem(16);
   bottom: rem(-44);
+  z-index: 1;
 }
 
 @include max-wide(tablet) {
@@ -97,10 +113,8 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
 
 @include max-wide(phones) {
   :host {
-    &.--third {
-      &:before {
-        right: 40% !important;
-      }
+    &:after {
+      right: 40% !important;
     }
   }
 
@@ -115,11 +129,9 @@ $top-panel-bg-4: url('/assets/img/p-contact.jpg');
 
 @include min-wide(notebookLg) {
   :host {
-    &.--third {
-      &:before {
-        top: 55%;
-        right: 59%;
-      }
+    &:after {
+      top: 55%;
+      right: 59%;
     }
   }
 }

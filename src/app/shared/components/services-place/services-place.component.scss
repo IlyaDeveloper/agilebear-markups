@@ -3,16 +3,12 @@
 $item-spacer: rem(22);
 
 :host {
-  --btn-wdh: #{rem(186)};
-
   margin: auto 0;
-
-  &.--is-mob {
-
-  }
 }
 
 .__item {
+  position: relative;
+
   padding: 0 $item-spacer;
 
   font-size: rem(16);
@@ -22,8 +18,7 @@ $item-spacer: rem(22);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-
-  position: relative;
+  text-decoration: none;
 
   &:before, &:after {
     position: absolute;
@@ -49,6 +44,12 @@ $item-spacer: rem(22);
       left: auto;
 
       content: ''
+    }
+  }
+
+  @include only-mouse {
+    &:hover {
+      color: var(--cl-yellow-orange);
     }
   }
 }

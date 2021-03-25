@@ -19,6 +19,7 @@ $header-spacer: rem(10);
   color: var(--cl-white);
 
   background-color: rgba(clr('slate-grey'), var(--header-opacity, 0.4));
+  box-shadow: 0 0 0 2px rgba(#fff, 0.2);
 
   transition: background-color .6s ease-in-out;
 
@@ -79,6 +80,7 @@ $header-spacer: rem(10);
       border: none !important;
 
       transform: translate(0, -50%);
+      transition: transform .5s linear;
     }
 
     &.show {
@@ -117,17 +119,41 @@ $header-spacer: rem(10);
 }
 
 .__dropdown {
-  width: rem(400);
+  display: block !important;
 
-  margin-top: -1px;
+  width: rem(400);
+  //min-height: rem(19);
+
+  margin-top: 0;
   padding: rem(13) rem(10) 58%;
 
   color: var(--cl-white);
 
   border-radius: 0;
+  border: none;
 
   clip-path: polygon(0 0, 100% 0%, 100% 62%, 0% 100%);
-  background-color: rgba(clr('slate-grey'), 0.8);
+  background-color: rgba(clr('slate-grey'), 0.5);
+
+  overflow: hidden;
+
+  &:not(.show) {
+    //--dropdown-item-transform: 0 !important;
+
+    animation: show-menu 0.3s 1 forwards alternate-reverse cubic-bezier(.17, .67, .83, .67), visibility-an 1s linear;;
+
+    animation-play-state: running;
+    //opacity: 0;
+    visibility: hidden;
+  }
+
+  &.show {
+    //--dropdown-item-transform: 1 !important;
+
+    animation: show-menu 0.6s 1 forwards alternate cubic-bezier(.89, .37, .75, .43), visibility-an 1s linear;
+    //opacity: 1;
+    visibility: visible;
+  }
 
   &:before {
     position: absolute;
@@ -140,8 +166,7 @@ $header-spacer: rem(10);
     content: '';
 
     clip-path: polygon(0 0, 100% 0%, 100% 66%, 0% 100%);
-    background-color: rgba(clr('slate-grey'), 0.3);
-
+    background-color: rgba(clr('slate-grey'), 0.6);
   }
 }
 
@@ -151,6 +176,9 @@ $header-spacer: rem(10);
   color: var(--cl-white);
   line-height: 1.2;
   white-space: normal;
+
+  //transform: scaleY(var(--dropdown-item-transform, 0)) !important;
+  //transition: transform 8s cubic-bezier(.14, .91, .75, .96) !important;
 
   &:before {
     width: max-content;
@@ -164,13 +192,13 @@ $header-spacer: rem(10);
 
       &:after {
         position: absolute;
-        bottom: rem(4);
+        bottom: rem(-6);
         left: 1px;
         right: 1px;
 
         height: rem(3);
 
-        margin: rem(-2) 0 0;
+        //margin: rem(-2) 0 0;
         content: '';
 
         background: #96a1af;
@@ -181,6 +209,8 @@ $header-spacer: rem(10);
   @include only-mouse {
     &:hover {
       background: transparent;
+
+      color: var(--cl-yellow-orange);
     }
   }
 }
@@ -212,4 +242,26 @@ $header-spacer: rem(10);
   }
 }
 
+@include keyframes(show-menu) {
+  from {
+    max-height: 0;
+
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  to {
+    max-height: rem(500);
+  }
+}
+
+@include keyframes(visibility-an) {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
 

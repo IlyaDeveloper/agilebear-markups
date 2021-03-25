@@ -19,25 +19,25 @@ export class MainMenuComponent implements OnInit {
   }
 
 
-  sub1: boolean = false;
-  sub2: boolean = false;
+  // sub1: boolean = false;
+  // sub2: boolean = false;
 
   ngOnInit(): void {
   }
 
   closeMenu() {
     this.clickLinkEvent.emit();
-    this.sub1 = false;
-    this.sub2 = false;
+    // this.sub1 = false;
+    // this.sub2 = false;
   }
 
-  openSub(val?: string) {
-    if (val === 'services') {
-      this.sub1 = !this.sub1;
-    } else if (val === 'training') {
-      this.sub2 = !this.sub2;
-    }
-  }
+  // openSub(val?: string) {
+  //   if (val === 'services') {
+  //     this.sub1 = !this.sub1;
+  //   } else if (val === 'training') {
+  //     this.sub2 = !this.sub2;
+  //   }
+  // }
 
   goToHome() {
     this.closeMenu();

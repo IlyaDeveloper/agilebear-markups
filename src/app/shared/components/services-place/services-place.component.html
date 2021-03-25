@@ -1,7 +1,7 @@
 <div class="__cont" fxLayoutAlign.gt-sm="center center" fxLayout.gt-sm="row nowrap" gdGap.lt-sm="2rem">
-  <span class="__item">Enquiries…</span>
+  <a class="__item" href>Enquiries…</a>
 
-  <span class="__item" *ngIf="!type">Upcoming Courses</span>
+  <a class="__item" href *ngIf="!type">Upcoming Courses</a>
 
   <agl-button class="--nowrap"
               [ngClass]="{'--yellow-orange': !type, '--orange': type }">Book Your Place

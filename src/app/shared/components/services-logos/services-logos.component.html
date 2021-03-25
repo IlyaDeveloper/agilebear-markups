@@ -1,12 +1,15 @@
 <figure fxLayout="inline row" fxLayout.lt-sm=" inline row wrap" fxLayoutGap="0.5rem" fxLayoutAlign="center center">
   <img class="__img"
-       *ngFor="let item of list"
-       [attr.src]="[ 'assets/img/services/'+ (isGray ?  item.imgS : item.img )]"
+       *ngFor="let item of list; let i = index"
+       [class.gm-pointer]="!popoverTrigger"
+       [attr.src]="[ 'assets/img/services/'+ ((isGray || ( (i == state)) ) ?  item.imgS : item.img )]"
        alt=""
-       [popoverClass]="'--top-offset'"
+       [popoverClass]="'--top-offset' + ' ' + item.colorClass"
        [disablePopover]="popoverTrigger"
        [popoverTitle]="item.caption"
        [ngbPopover]="item.text"
        [openDelay]="300" [closeDelay]="600"
+       (mouseenter)="state = i"
        triggers="mouseenter:mouseleave">
 </figure>
+
