@@ -21,6 +21,10 @@ html {
       @include scroll-small;
     }
   }
+
+  &.--scroll-header-opacity {
+    --header-opacity: 0.6;
+  }
 }
 
 body {

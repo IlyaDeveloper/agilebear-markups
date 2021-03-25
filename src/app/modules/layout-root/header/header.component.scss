@@ -18,9 +18,9 @@ $header-spacer: rem(10);
 
   color: var(--cl-white);
 
-  background-color: rgba(clr('slate-grey'), 0.4);
+  background-color: rgba(clr('slate-grey'), var(--header-opacity, 0.4));
 
-  //background: red;
+  transition: background-color .6s ease-in-out;
 
   &.--not-fixed {
     display: block;

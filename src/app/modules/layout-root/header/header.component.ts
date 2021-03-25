@@ -1,4 +1,4 @@
-import {Component, Inject, Input, OnInit} from '@angular/core';
+import {Component, HostListener, Inject, Input, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {DOCUMENT} from '@angular/common';
 
@@ -113,6 +113,16 @@ export class HeaderComponent implements OnInit {
 
   get isOrange(): boolean {
     return (this.type === 'c');
+  }
+
+  @HostListener('window:scroll', []) onWindowScroll() {
+    const scrollPos = document.documentElement.scrollTop;
+
+    if (scrollPos >= 5) {
+      this.html.classList.add('--scroll-header-opacity');
+    } else {
+      this.html.classList.remove('--scroll-header-opacity');
+    }
   }
 
   constructor(
